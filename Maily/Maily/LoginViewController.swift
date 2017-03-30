@@ -19,7 +19,13 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        setInitElement()
+    }
+    
+    func setInitElement() {
+        logInButton.isEnabled = false
+        logInButton.isHighlighted = true
     }
 
     override func didReceiveMemoryWarning() {

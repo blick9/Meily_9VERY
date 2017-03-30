@@ -13,6 +13,7 @@
 		A7504E5C1E8CF6840031ABC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7504E5B1E8CF6840031ABC9 /* Assets.xcassets */; };
 		A7504E5F1E8CF6840031ABC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7504E5D1E8CF6840031ABC9 /* LaunchScreen.storyboard */; };
 		A7504E671E8D0BF90031ABC9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7504E661E8D0BF90031ABC9 /* SignUpViewController.swift */; };
+		A7504E691E8D20190031ABC9 /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7504E681E8D20190031ABC9 /* TextFieldStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A7504E5E1E8CF6840031ABC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7504E601E8CF6840031ABC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7504E661E8D0BF90031ABC9 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		A7504E681E8D20190031ABC9 /* TextFieldStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +60,12 @@
 			children = (
 				A7504E541E8CF6840031ABC9 /* AppDelegate.swift */,
 				A7504E561E8CF6840031ABC9 /* LoginViewController.swift */,
+				A7504E661E8D0BF90031ABC9 /* SignUpViewController.swift */,
 				A7504E581E8CF6840031ABC9 /* Login.storyboard */,
+				A7504E681E8D20190031ABC9 /* TextFieldStyle.swift */,
 				A7504E5B1E8CF6840031ABC9 /* Assets.xcassets */,
 				A7504E5D1E8CF6840031ABC9 /* LaunchScreen.storyboard */,
 				A7504E601E8CF6840031ABC9 /* Info.plist */,
-				A7504E661E8D0BF90031ABC9 /* SignUpViewController.swift */,
 			);
 			path = Maily;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7504E671E8D0BF90031ABC9 /* SignUpViewController.swift in Sources */,
+				A7504E691E8D20190031ABC9 /* TextFieldStyle.swift in Sources */,
 				A7504E571E8CF6840031ABC9 /* LoginViewController.swift in Sources */,
 				A7504E551E8CF6840031ABC9 /* AppDelegate.swift in Sources */,
 			);
