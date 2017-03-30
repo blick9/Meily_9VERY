@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5F2F94B91E8CFBCE0073D3A2 /* Goal_add.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F2F94B81E8CFBCE0073D3A2 /* Goal_add.storyboard */; };
+		5F2F94BB1E8D2BCE0073D3A2 /* GoalAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2F94BA1E8D2BCE0073D3A2 /* GoalAddViewController.swift */; };
 		A7504E551E8CF6840031ABC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7504E541E8CF6840031ABC9 /* AppDelegate.swift */; };
 		A7504E571E8CF6840031ABC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7504E561E8CF6840031ABC9 /* ViewController.swift */; };
 		A7504E5C1E8CF6840031ABC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7504E5B1E8CF6840031ABC9 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		5F2F94B81E8CFBCE0073D3A2 /* Goal_add.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Goal_add.storyboard; sourceTree = "<group>"; };
+		5F2F94BA1E8D2BCE0073D3A2 /* GoalAddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalAddViewController.swift; sourceTree = "<group>"; };
 		A7504E511E8CF6840031ABC9 /* Maily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7504E541E8CF6840031ABC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7504E561E8CF6840031ABC9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 				A7504E541E8CF6840031ABC9 /* AppDelegate.swift */,
 				A7504E561E8CF6840031ABC9 /* ViewController.swift */,
 				5F2F94B81E8CFBCE0073D3A2 /* Goal_add.storyboard */,
+				5F2F94BA1E8D2BCE0073D3A2 /* GoalAddViewController.swift */,
 				A7504E5B1E8CF6840031ABC9 /* Assets.xcassets */,
 				A7504E5D1E8CF6840031ABC9 /* LaunchScreen.storyboard */,
 				A7504E601E8CF6840031ABC9 /* Info.plist */,
@@ -137,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7504E571E8CF6840031ABC9 /* ViewController.swift in Sources */,
+				5F2F94BB1E8D2BCE0073D3A2 /* GoalAddViewController.swift in Sources */,
 				A7504E551E8CF6840031ABC9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

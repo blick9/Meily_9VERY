@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--목표만들기-->
+        <!--목표 만들기-->
         <scene sceneID="ce9-56-Mzn">
             <objects>
-                <viewController id="0v0-2P-Tr7" customClass="ViewController" customModule="Maily" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0v0-2P-Tr7" customClass="GoalAddViewController" customModule="Maily" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="27q-1F-lyL"/>
                         <viewControllerLayoutGuide type="bottom" id="t2d-26-5y8"/>
@@ -167,14 +167,23 @@
                         </subviews>
                         <color key="backgroundColor" red="0.21957963705062866" green="0.21962407231330872" blue="0.21957683563232422" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="목표만들기" id="awS-Jd-iBL">
+                    <navigationItem key="navigationItem" title="목표 만들기" id="awS-Jd-iBL">
                         <barButtonItem key="leftBarButtonItem" title="취소" id="hWB-xp-UhZ"/>
                         <barButtonItem key="rightBarButtonItem" title="저장" id="Z95-kr-RdS"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="dueDayTextField" destination="gzp-zQ-0BS" id="emT-es-Tqy"/>
+                        <outlet property="dueMonthTextField" destination="h4o-jC-efl" id="iyQ-lo-Da4"/>
+                        <outlet property="dueYearTextField" destination="siH-zW-zQe" id="ugV-cL-pYT"/>
+                        <outlet property="goalTitleTextField" destination="ggq-J3-Any" id="CSd-D4-xb7"/>
+                        <outlet property="priority1Button" destination="Egu-JU-JI9" id="Yd3-kx-zhc"/>
+                        <outlet property="priority2Button" destination="ddH-EN-siY" id="yVg-rr-qAf"/>
+                        <outlet property="priority3Button" destination="rzs-7G-anG" id="lk0-Ct-YLJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Gn-4K-xMN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="854" y="-189"/>
+            <point key="canvasLocation" x="853.62318840579712" y="-189.13043478260872"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5wI-zx-CCL">
