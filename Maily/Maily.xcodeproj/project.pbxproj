@@ -14,6 +14,8 @@
 		B77980111E8CFB5C00C4684D /* Goal_collection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B77980101E8CFB5C00C4684D /* Goal_collection.storyboard */; };
 		B77980141E8D04AC00C4684D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B77980121E8D04AC00C4684D /* Main.storyboard */; };
 		B77980161E8D05DC00C4684D /* GoalCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77980151E8D05DC00C4684D /* GoalCollectionViewController.swift */; };
+		B77980181E8D601100C4684D /* GoalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77980171E8D601100C4684D /* GoalCollectionViewCell.swift */; };
+		B779805A1E8E34AF00C4684D /* watch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B77980591E8E34AF00C4684D /* watch.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		B77980101E8CFB5C00C4684D /* Goal_collection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Goal_collection.storyboard; sourceTree = "<group>"; };
 		B77980131E8D04AC00C4684D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B77980151E8D05DC00C4684D /* GoalCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalCollectionViewController.swift; sourceTree = "<group>"; };
+		B77980171E8D601100C4684D /* GoalCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalCollectionViewCell.swift; sourceTree = "<group>"; };
+		B77980591E8E34AF00C4684D /* watch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = watch.jpg; path = ../../../Desktop/watch.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +66,9 @@
 				A7504E561E8CF6840031ABC9 /* ViewController.swift */,
 				B77980121E8D04AC00C4684D /* Main.storyboard */,
 				B77980101E8CFB5C00C4684D /* Goal_collection.storyboard */,
+				B77980171E8D601100C4684D /* GoalCollectionViewCell.swift */,
 				B77980151E8D05DC00C4684D /* GoalCollectionViewController.swift */,
+				B77980591E8E34AF00C4684D /* watch.jpg */,
 				A7504E5B1E8CF6840031ABC9 /* Assets.xcassets */,
 				A7504E5D1E8CF6840031ABC9 /* LaunchScreen.storyboard */,
 				A7504E601E8CF6840031ABC9 /* Info.plist */,
@@ -133,6 +139,7 @@
 				A7504E5C1E8CF6840031ABC9 /* Assets.xcassets in Resources */,
 				B77980111E8CFB5C00C4684D /* Goal_collection.storyboard in Resources */,
 				B77980141E8D04AC00C4684D /* Main.storyboard in Resources */,
+				B779805A1E8E34AF00C4684D /* watch.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7504E571E8CF6840031ABC9 /* ViewController.swift in Sources */,
+				B77980181E8D601100C4684D /* GoalCollectionViewCell.swift in Sources */,
 				A7504E551E8CF6840031ABC9 /* AppDelegate.swift in Sources */,
 				B77980161E8D05DC00C4684D /* GoalCollectionViewController.swift in Sources */,
 			);
