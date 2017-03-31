@@ -12,14 +12,23 @@ private let reuseIdentifier = "Cell"
 
 class GoalCollectionViewController: UICollectionViewController {
     
-
+    
     
     var goalTitlesArray = ["lose weight 3kg until March","All pass weekly Test","333","444","51135452434"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        var addGoalCard = UIButton(frame: CGRect(x: 270, y: 500, width: 96, height: 100))
+        addGoalCard.setImage(#imageLiteral(resourceName: "Add_Bt"), for: .normal)
+        self.view.addSubview(addGoalCard)
         
+       // goalInnerView.layer.cornerRadius = 5
+
+
+        //UIScreen.main.bounds
+        
+//        self.collectionViewLayout.
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -55,7 +64,7 @@ class GoalCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 5
+        return goalTitlesArray.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
