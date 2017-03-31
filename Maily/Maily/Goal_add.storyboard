@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,7 +18,7 @@
                         <viewControllerLayoutGuide type="bottom" id="t2d-26-5y8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="목표만들기" id="dYJ-eG-Toy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="년" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="siH-zW-zQe">
@@ -95,9 +95,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="emE-G5-Aen">
-                                <rect key="frame" x="25" y="130" width="364" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="emE-G5-Aen">
+                                <rect key="frame" x="25" y="69" width="325" height="70"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MjX-8g-3ax">
                                         <rect key="frame" x="167.66666666666666" y="20" width="30" height="30"/>
@@ -126,10 +125,12 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.17252564430236816" green="0.17256247997283936" blue="0.17252331972122192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="jdS-4g-zy0"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R1k-76-gP5">
-                                <rect key="frame" x="25" y="235" width="364" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R1k-76-gP5">
+                                <rect key="frame" x="25" y="169" width="325" height="70"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZV-ya-dMt">
                                         <rect key="frame" x="20" y="20" width="30" height="30"/>
@@ -163,9 +164,20 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1725256443" green="0.17256247999999999" blue="0.17252331970000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="DuY-Ue-4sw"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.21957963705062866" green="0.21962407231330872" blue="0.21957683563232422" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="emE-G5-Aen" firstAttribute="leading" secondItem="dYJ-eG-Toy" secondAttribute="leading" constant="25" id="Bxz-ne-OEG"/>
+                            <constraint firstAttribute="trailing" secondItem="emE-G5-Aen" secondAttribute="trailing" constant="25" id="IJk-f8-8hN"/>
+                            <constraint firstItem="R1k-76-gP5" firstAttribute="top" secondItem="emE-G5-Aen" secondAttribute="bottom" constant="30" id="Kjh-C5-l0r"/>
+                            <constraint firstItem="emE-G5-Aen" firstAttribute="top" secondItem="27q-1F-lyL" secondAttribute="bottom" constant="5" id="dXz-Lb-yVG"/>
+                            <constraint firstAttribute="trailing" secondItem="R1k-76-gP5" secondAttribute="trailing" constant="25" id="mIV-oc-LKz"/>
+                            <constraint firstItem="R1k-76-gP5" firstAttribute="leading" secondItem="dYJ-eG-Toy" secondAttribute="leading" constant="25" id="uGA-zw-y0q"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="목표 만들기" id="awS-Jd-iBL">
                         <barButtonItem key="leftBarButtonItem" title="취소" id="hWB-xp-UhZ"/>
