@@ -9,6 +9,8 @@
 import UIKit
 
 class SignUpViewController: UIViewController {
+    var isActivate = (email : false, pw : false, confimPw : false)
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
@@ -19,11 +21,13 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
 
         setInitElement()
-        passwordTextField.addTarget(self, action: #selector(passwordVaildator(password:)), for: .editingChanged)
     }
     
     func setInitElement() {
         statusButton(isActivate: false)
+        emailTextField.addTarget(self, action: #selector(emailValidate(email:)), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(passwordValidate(password:)), for: .editingChanged)
+        confirmPasswordTextField.addTarget(self, action: #selector(confirmPasswordValidate(confirmPassword:)), for: .editingChanged)
     }
     
     func statusButton(isActivate: Bool) {
@@ -37,26 +41,60 @@ class SignUpViewController: UIViewController {
     }
     
     
-    func passwordVaildator(password: UITextField) {
-        print(password.text)
-        if (password.text?.unicodeScalars.count)! >= 4 {
-            statusButton(isActivate: true)
-            noticeLabel.text = ""
+    func emailValidate(email: UITextField) {
+        if email.text?.unicodeScalars.isEmpty == false {
+            isActivate.email = true
+            indicateNotice(message: "")
         } else {
-            statusButton(isActivate: false)
-            noticeLabel.text = "비밀번호는 4자리 이상으로 입력해주세요."
+            isActivate.email = false
+            indicateNotice(message: "E-mail을 입력해주세요.")
+        }
+    }
+
+    func passwordValidate(password: UITextField) {
+
+        let alphanumerics = CharacterSet.alphanumerics
+        let digits = CharacterSet.decimalDigits
+        
+//        for char in (password.text?.unicodeScalars)! {
+//            print(char)
+//        }
+        
+        if (password.text?.unicodeScalars.count)! >= 4 { // 4자리 이상, 영문 + 숫자 포함
+            isActivate.pw = true
+            indicateNotice(message: "")
+        } else {
+            isActivate.pw = false
+            indicateNotice(message: "비밀번호는 4자리 이상으로 입력해주세요.")
         }
     }
     
-    func indicatePasswordNotice(password: String) {
-        
+    func confirmPasswordValidate(confirmPassword: UITextField) {
+        if confirmPassword.text == passwordTextField.text {
+            isActivate.confimPw = true
+            indicateNotice(message: "")
+        } else {
+            isActivate.confimPw = false
+            indicateNotice(message: "비밀번호가 일치하지 않습니다.")
+        }
     }
-
+    
+    func indicateNotice(message: String) {
+        noticeLabel.text = message
+        if isActivate.email == true && isActivate.pw == true && isActivate.confimPw == true {
+            statusButton(isActivate: true)
+        } else {
+            statusButton(isActivate: false)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    
+    // Button Action
     @IBAction func backButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
