@@ -11,10 +11,25 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class GoalCollectionViewController: UICollectionViewController {
+    
+    
+    
+    var goalTitlesArray = ["lose weight 3kg until March","All pass weekly Test","333","444","51135452434"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var addGoalCard = UIButton(frame: CGRect(x: 270, y: 500, width: 96, height: 100))
+        addGoalCard.setImage(#imageLiteral(resourceName: "Add_Bt"), for: .normal)
+        self.view.addSubview(addGoalCard)
+        
+       // goalInnerView.layer.cornerRadius = 5
 
+
+        //UIScreen.main.bounds
+        
+//        self.collectionViewLayout.
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -40,23 +55,22 @@ class GoalCollectionViewController: UICollectionViewController {
     */
 
     // MARK: UICollectionViewDataSource
-
+/*
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 3
     }
-
+*/
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return goalTitlesArray.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
-        // Configure the cell
-    
+        var cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! GoalCollectionViewCell
+        cell.goalCardTitle.text = goalTitlesArray[indexPath.row]
+        
         return cell
     }
 
