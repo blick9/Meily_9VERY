@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="v5S-nk-izg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="v5S-nk-izg">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -117,7 +117,7 @@
         <!--나의 목표-->
         <scene sceneID="adD-56-c9i">
             <objects>
-                <collectionViewController id="9A9-Zz-1b8" customClass="GoalCollectionViewController" customModule="Maily" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="GoalMain" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9A9-Zz-1b8" customClass="GoalCollectionViewController" customModule="Maily" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="u7B-nj-fCW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -187,7 +187,9 @@
                             <outlet property="delegate" destination="9A9-Zz-1b8" id="xMF-rr-nCT"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="나의 목표" id="FOP-dq-U37"/>
+                    <navigationItem key="navigationItem" title="나의 목표" id="FOP-dq-U37">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="zPB-aS-gTn"/>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="abS-iV-f8X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -239,7 +241,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="E1F-Vz-sw5">
             <objects>
-                <tabBarController id="v5S-nk-izg" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTab" useStoryboardIdentifierAsRestorationIdentifier="YES" id="v5S-nk-izg" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="KJn-Tv-ez7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -247,6 +249,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="BKC-cy-nKS" kind="relationship" relationship="viewControllers" id="yYP-8i-iTZ"/>
+                        <segue destination="A02-db-b6y" kind="relationship" relationship="viewControllers" id="XI3-e7-t7l"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qld-cK-0XO" userLabel="First Responder" sceneMemberID="firstResponder"/>

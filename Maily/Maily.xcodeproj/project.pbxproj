@@ -17,6 +17,7 @@
 		A7504E671E8D0BF90031ABC9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7504E661E8D0BF90031ABC9 /* SignUpViewController.swift */; };
 		A7504E691E8D20190031ABC9 /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7504E681E8D20190031ABC9 /* TextFieldStyle.swift */; };
 		A7504E8C1E8E8E4D0031ABC9 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7504E8A1E8E8E4D0031ABC9 /* Login.storyboard */; };
+		A7504EC91E916DB40031ABC9 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7504EC81E916DB40031ABC9 /* CustomTabBarController.swift */; };
 		B77980111E8CFB5C00C4684D /* Goal_collection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B77980101E8CFB5C00C4684D /* Goal_collection.storyboard */; };
 		B77980141E8D04AC00C4684D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B77980121E8D04AC00C4684D /* Main.storyboard */; };
 		B77980161E8D05DC00C4684D /* GoalCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77980151E8D05DC00C4684D /* GoalCollectionViewController.swift */; };
@@ -35,6 +36,7 @@
 		A7504E661E8D0BF90031ABC9 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		A7504E681E8D20190031ABC9 /* TextFieldStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldStyle.swift; sourceTree = "<group>"; };
 		A7504E8B1E8E8E4D0031ABC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
+		A7504EC81E916DB40031ABC9 /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		B77980101E8CFB5C00C4684D /* Goal_collection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Goal_collection.storyboard; sourceTree = "<group>"; };
 		B77980131E8D04AC00C4684D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B77980151E8D05DC00C4684D /* GoalCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalCollectionViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				A7504E541E8CF6840031ABC9 /* AppDelegate.swift */,
+				A7504EC81E916DB40031ABC9 /* CustomTabBarController.swift */,
 				B77980121E8D04AC00C4684D /* Main.storyboard */,
 				B77980101E8CFB5C00C4684D /* Goal_collection.storyboard */,
 				B77980151E8D05DC00C4684D /* GoalCollectionViewController.swift */,
@@ -167,6 +170,7 @@
 			files = (
 				A7504E671E8D0BF90031ABC9 /* SignUpViewController.swift in Sources */,
 				B779805C1E8E911000C4684D /* GoalCollectionViewCell.swift in Sources */,
+				A7504EC91E916DB40031ABC9 /* CustomTabBarController.swift in Sources */,
 				A7504E691E8D20190031ABC9 /* TextFieldStyle.swift in Sources */,
 				5F2F94E31E8E92900073D3A2 /* GoalAddViewController.swift in Sources */,
 				A7504E571E8CF6840031ABC9 /* LoginViewController.swift in Sources */,

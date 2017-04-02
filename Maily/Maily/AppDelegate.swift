@@ -16,6 +16,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let isLogin = false
+        
+        if isLogin == false {
+            let loginSB = UIStoryboard(name: "Login", bundle: nil)
+            let loginVC = loginSB.instantiateViewController(withIdentifier: "LoginMain") as? LoginViewController
+            self.window?.rootViewController = loginVC
+        } else {
+            let goalCollectionSB = UIStoryboard(name: "Goal_collection", bundle: nil)
+            let goalCollectionVC = goalCollectionSB.instantiateViewController(withIdentifier: "MainTab")
+//            let collectionVC = UINavigationController(rootViewController: goalCollectionVC)
+            self.window?.rootViewController = goalCollectionVC
+        }
+        
+        // Change NavigationBar Design
+//        let image = UIImage(named: "TopBar")
+        UINavigationBar.appearance().tintColor = UIColor(red: 245/255, green: 170/255, blue: 197/255, alpha: 1)
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
+        UINavigationBar.appearance().barTintColor = UIColor.black
+        
+        // Translucent.
+//        UINavigationBar.appearance().isTranslucent = true
+        
+        // Remove line of navigation bar
+//        UINavigationBar.appearance().shadowImage = UIImage()
+        //        UINavigationBar.appearance().setBackgroundImage(nil, for: .default)
+        
+        // Change TabBar Design
+        UITabBar.appearance().tintColor = UIColor(red: 248/255, green: 187/255, blue: 208/255, alpha: 1)
+        UITabBar.appearance().barTintColor = UIColor(red: 59/255, green: 59/255, blue: 59/255, alpha: 1)
+        
+        
         return true
     }
 
