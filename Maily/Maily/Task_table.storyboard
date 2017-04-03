@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,18 +23,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LIh-KF-AGL">
-                                <rect key="frame" x="16" y="10" width="342" height="657"/>
+                                <rect key="frame" x="12" y="10" width="354" height="657"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="5" indentationWidth="10" reuseIdentifier="cell" rowHeight="80" id="xyh-wc-0ev" customClass="DailyTaskTableViewCell" customModule="Maily" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="342" height="80"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="5" indentationWidth="10" reuseIdentifier="cell" rowHeight="80" id="xyh-wc-0ev" customClass="DailyTaskTableViewCell" customModule="Maily" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="354" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xyh-wc-0ev" id="4zI-4f-gWx">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="80"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="354" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RPJ-Vg-5Rb">
-                                                    <rect key="frame" x="0.0" y="0.0" width="342" height="72"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="344" height="72"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="자기 전 ~80p까지 읽기!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2w1-LL-Ppd">
@@ -50,16 +49,12 @@
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <color key="backgroundColor" red="1" green="0.99215686270000003" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </view>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="book_icon" translatesAutoresizingMaskIntoConstraints="NO" id="lsb-7q-p2m">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="book_icon" translatesAutoresizingMaskIntoConstraints="NO" id="lsb-7q-p2m">
                                                             <rect key="frame" x="21" y="24" width="24" height="24"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="24" id="Ag5-fJ-PaC"/>
-                                                                <constraint firstAttribute="width" secondItem="lsb-7q-p2m" secondAttribute="height" multiplier="1:1" id="dij-zZ-0aa"/>
-                                                                <constraint firstAttribute="width" secondItem="lsb-7q-p2m" secondAttribute="height" multiplier="1:1" id="ims-h9-Ph9"/>
-                                                            </constraints>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </imageView>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.20781612399999999" green="0.2078586519" blue="0.2078134418" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.35637550903598247" green="0.35990397942247732" blue="0.35990397942247732" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </view>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -74,7 +69,7 @@
                                 </prototypes>
                                 <sections/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pg0-C7-Kpr">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pg0-C7-Kpr">
                                 <rect key="frame" x="262" y="500" width="96" height="100"/>
                                 <state key="normal" image="Add_Bt"/>
                             </button>
@@ -82,14 +77,15 @@
                         <color key="backgroundColor" red="0.23137254901960785" green="0.23137254901960785" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="z4Q-Td-Hb3" firstAttribute="top" secondItem="pg0-C7-Kpr" secondAttribute="bottom" constant="67" id="2AY-n2-7T7"/>
-                            <constraint firstItem="LIh-KF-AGL" firstAttribute="leading" secondItem="b5Q-q0-yZq" secondAttribute="leadingMargin" id="Jv6-Zh-zfL"/>
+                            <constraint firstItem="LIh-KF-AGL" firstAttribute="leading" secondItem="b5Q-q0-yZq" secondAttribute="leadingMargin" constant="-4" id="Jv6-Zh-zfL"/>
                             <constraint firstAttribute="topMargin" secondItem="LIh-KF-AGL" secondAttribute="top" constant="-10" id="VaZ-LG-vgy"/>
-                            <constraint firstItem="LIh-KF-AGL" firstAttribute="centerX" secondItem="b5Q-q0-yZq" secondAttribute="centerX" id="XLh-uf-fVw"/>
-                            <constraint firstItem="LIh-KF-AGL" firstAttribute="trailing" secondItem="pg0-C7-Kpr" secondAttribute="trailing" id="jSd-s5-PSX"/>
+                            <constraint firstItem="LIh-KF-AGL" firstAttribute="centerX" secondItem="b5Q-q0-yZq" secondAttribute="centerX" constant="1.5" id="XLh-uf-fVw"/>
                             <constraint firstItem="z4Q-Td-Hb3" firstAttribute="top" secondItem="LIh-KF-AGL" secondAttribute="bottom" id="q5L-HM-ecz"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="오늘 목표" id="xek-LN-38a"/>
+                    <navigationItem key="navigationItem" title="오늘 목표" id="xek-LN-38a">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="cOr-4p-qkW"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="dailyAddButton" destination="pg0-C7-Kpr" id="OhZ-05-Paz"/>
                         <outlet property="dailyTable" destination="LIh-KF-AGL" id="ShZ-wK-HK9"/>

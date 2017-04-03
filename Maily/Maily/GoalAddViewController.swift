@@ -21,8 +21,8 @@ class GoalAddViewController: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        datePicker.tintColor=UIColor.black
-        datePicker.backgroundColor=UIColor.white
+        datePicker.tintColor = UIColor.black
+        datePicker.backgroundColor = UIColor.white
       
     }
 
