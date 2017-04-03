@@ -23,7 +23,11 @@
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
+<<<<<<< Updated upstream
 	<string>Main</string>
+=======
+	<string>Goal_add</string>
+>>>>>>> Stashed changes
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
