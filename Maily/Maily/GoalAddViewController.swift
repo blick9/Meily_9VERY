@@ -17,11 +17,13 @@ class GoalAddViewController: UIViewController {
     @IBOutlet weak var priority3Button: UIButton!
     @IBOutlet weak var priority2Button: UIButton!
     @IBOutlet weak var priority1Button: UIButton!
-    
+    var datePicker=UIDatePicker(frame: CGRect(x:300,y:375,width:216,height:38))
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        datePicker.tintColor=UIColor.black
+        datePicker.backgroundColor=UIColor.white
+      
     }
 
     override func didReceiveMemoryWarning() {
