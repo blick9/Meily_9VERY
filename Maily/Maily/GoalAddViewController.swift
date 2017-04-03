@@ -11,18 +11,14 @@ import UIKit
 class GoalAddViewController: UIViewController {
 
     @IBOutlet weak var goalTitleTextField: UITextField!
-    @IBOutlet weak var dueYearTextField: UITextField!
-    @IBOutlet weak var dueDayTextField: UITextField!
-    @IBOutlet weak var dueMonthTextField: UITextField!
     @IBOutlet weak var priority3Button: UIButton!
     @IBOutlet weak var priority2Button: UIButton!
     @IBOutlet weak var priority1Button: UIButton!
-    var datePicker=UIDatePicker(frame: CGRect(x:300,y:375,width:216,height:38))
+   
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        datePicker.tintColor=UIColor.black
-        datePicker.backgroundColor=UIColor.white
+        setDatePicker()
       
     }
 
@@ -30,7 +26,15 @@ class GoalAddViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    func setDatePicker()
+    {
+        var datePicker=UIDatePicker(frame: CGRect(x:107,y:375,width:230,height:38))
+        datePicker.datePickerMode = .date
+        datePicker.locale = Locale(identifier: "ko_KR")
+        datePicker.tintColor=UIColor.black
+        datePicker.backgroundColor=UIColor.white
+        self.view.addSubview(datePicker)
+    }
 
     /*
     // MARK: - Navigation
