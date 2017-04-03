@@ -123,10 +123,10 @@
 		B7B1FA0A1E91F8C700CD8CCC /* Daily_Task */ = {
 			isa = PBXGroup;
 			children = (
+				B7B1F9FD1E91E9E200CD8CCC /* Task_table.storyboard */,
 				B7B1FA111E91FAA200CD8CCC /* DailyTaskViewController.swift */,
 				B7B1FA0D1E91F9D300CD8CCC /* DailyTaskTableViewCell.swift */,
 				A7504ECA1E91D7190031ABC9 /* DailyTaskTableView.storyboard */,
-				B7B1F9FD1E91E9E200CD8CCC /* Task_table.storyboard */,
 			);
 			name = Daily_Task;
 			sourceTree = "<group>";
