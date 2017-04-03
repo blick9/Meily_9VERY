@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DailyTaskViewController: UIViewController {
+class DailyTaskViewController: UIViewController, UITableViewDelegate {
 
     @IBOutlet weak var dailyAddButton: UIButton!
     
