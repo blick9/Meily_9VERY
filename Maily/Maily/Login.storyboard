@@ -12,7 +12,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Maily" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginMain" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Maily" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -25,7 +25,7 @@
                                 <rect key="frame" x="117" y="98" width="140" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ID" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Hyt-eq-xB0" customClass="TextFieldStyle" customModule="Maily" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Hyt-eq-xB0" customClass="TextFieldStyle" customModule="Maily" customModuleProvider="target">
                                 <rect key="frame" x="60" y="272" width="255" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -51,12 +51,15 @@
                                 <rect key="frame" x="159" y="406" width="56" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Check_Bt"/>
+                                <connections>
+                                    <action selector="logInActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8dW-bk-uXZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.23137254901960785" green="0.23137254901960785" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
-                        <outlet property="idTextField" destination="Hyt-eq-xB0" id="kL4-1T-tDp"/>
+                        <outlet property="emailTextField" destination="Hyt-eq-xB0" id="5R4-Ij-8i0"/>
                         <outlet property="logInButton" destination="2QX-cw-YD3" id="gPi-Zt-eik"/>
                         <outlet property="logoImageView" destination="pB4-Ww-PJm" id="yhH-yf-WWP"/>
                         <outlet property="passwordTextField" destination="C3v-rd-f2c" id="kHX-C0-kqx"/>
