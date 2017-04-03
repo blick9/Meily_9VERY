@@ -19,9 +19,10 @@ class GoalCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var addGoalCard = UIButton(frame: CGRect(x: 270, y: 500, width: 96, height: 100))
-        addGoalCard.setImage(#imageLiteral(resourceName: "Add_Bt"), for: .normal)
-        self.view.addSubview(addGoalCard)
+        let addGoalButton = UIButton(frame: CGRect(x: 270, y: 500, width: 96, height: 100))
+        addGoalButton.setImage(#imageLiteral(resourceName: "Add_Bt"), for: .normal)
+        addGoalButton.addTarget(self, action: #selector(presentGoalAddView), for: .touchUpInside)
+        self.view.addSubview(addGoalButton)
         
        // goalInnerView.layer.cornerRadius = 5
 
@@ -37,6 +38,12 @@ class GoalCollectionViewController: UICollectionViewController {
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
+    }
+    
+    func presentGoalAddView() {
+        let goalAddSB = UIStoryboard(name: "Goal_add", bundle: nil)
+        let goalAddVC = goalAddSB.instantiateViewController(withIdentifier: "GoalAdd")
+        present(goalAddVC, animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
