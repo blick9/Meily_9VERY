@@ -14,7 +14,7 @@ class GoalCollectionViewController: UICollectionViewController {
     
     
     
-    var goalTitlesArray = ["lose weight 3kg until March","All pass weekly Test","333","444","51135452434"]
+    var goalTitlesArray = ["lose weight 3kg until March","All pass weekly Test","333","444","51135452434","dafdasf","asdfasdf","asdfasdf"]
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -15,6 +15,17 @@ class CustomTabBarController : UITabBarController, UITabBarControllerDelegate {
         let goalCollectionSB = UIStoryboard(name: "Goal_collection", bundle: nil)
         let loginSB = UIStoryboard(name: "Login", bundle: nil)
 //        goalCollectionSB
+        
+        viewControllers = []
+        removeTabBarTextItems()
+
     }
-    
+    func removeTabBarTextItems() {
+        if let items = tabBar.items {
+            for item in items {
+                item.title = ""
+                item.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0);
+            }
+        }
+    }
 }
