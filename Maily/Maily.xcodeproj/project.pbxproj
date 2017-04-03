@@ -10,6 +10,7 @@
 		5F2F94E11E8E92430073D3A2 /* Goal_add.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F2F94E01E8E92430073D3A2 /* Goal_add.storyboard */; };
 		5F2F94E31E8E92900073D3A2 /* GoalAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2F94E21E8E92900073D3A2 /* GoalAddViewController.swift */; };
 		5F2F951F1E920D330073D3A2 /* ColorButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2F951E1E920D330073D3A2 /* ColorButtonStyle.swift */; };
+		A72054BF1E92142600008F13 /* DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72054BE1E92142600008F13 /* DB.swift */; };
 		A7504E551E8CF6840031ABC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7504E541E8CF6840031ABC9 /* AppDelegate.swift */; };
 		A7504E571E8CF6840031ABC9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7504E561E8CF6840031ABC9 /* LoginViewController.swift */; };
 		A7504E5A1E8CF6840031ABC9 /* LunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7504E581E8CF6840031ABC9 /* LunchScreen.storyboard */; };
@@ -17,17 +18,22 @@
 		A7504E5F1E8CF6840031ABC9 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		A7504E671E8D0BF90031ABC9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7504E661E8D0BF90031ABC9 /* SignUpViewController.swift */; };
 		A7504E691E8D20190031ABC9 /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7504E681E8D20190031ABC9 /* TextFieldStyle.swift */; };
-		A7504E8C1E8E8E4D0031ABC9 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7504E8A1E8E8E4D0031ABC9 /* Login.storyboard */; };
+		A7504EC91E916DB40031ABC9 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7504EC81E916DB40031ABC9 /* CustomTabBarController.swift */; };
+		A7504ECB1E91D7190031ABC9 /* DailyTaskTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7504ECA1E91D7190031ABC9 /* DailyTaskTableView.storyboard */; };
+		A7504ECF1E91D7DB0031ABC9 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7504ECE1E91D7DB0031ABC9 /* Login.storyboard */; };
 		B77980111E8CFB5C00C4684D /* Goal_collection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B77980101E8CFB5C00C4684D /* Goal_collection.storyboard */; };
-		B77980141E8D04AC00C4684D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B77980121E8D04AC00C4684D /* Main.storyboard */; };
 		B77980161E8D05DC00C4684D /* GoalCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77980151E8D05DC00C4684D /* GoalCollectionViewController.swift */; };
 		B779805C1E8E911000C4684D /* GoalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B779805B1E8E911000C4684D /* GoalCollectionViewCell.swift */; };
+		B7B1F9FE1E91E9E200CD8CCC /* Task_table.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7B1F9FD1E91E9E200CD8CCC /* Task_table.storyboard */; };
+		B7B1FA0E1E91F9D300CD8CCC /* DailyTaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B1FA0D1E91F9D300CD8CCC /* DailyTaskTableViewCell.swift */; };
+		B7B1FA121E91FAA200CD8CCC /* DailyTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B1FA111E91FAA200CD8CCC /* DailyTaskViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5F2F94E01E8E92430073D3A2 /* Goal_add.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Goal_add.storyboard; sourceTree = "<group>"; };
 		5F2F94E21E8E92900073D3A2 /* GoalAddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalAddViewController.swift; sourceTree = "<group>"; };
 		5F2F951E1E920D330073D3A2 /* ColorButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorButtonStyle.swift; sourceTree = "<group>"; };
+		A72054BE1E92142600008F13 /* DB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DB.swift; sourceTree = "<group>"; };
 		A7504E511E8CF6840031ABC9 /* Maily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7504E541E8CF6840031ABC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7504E561E8CF6840031ABC9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -36,11 +42,15 @@
 		A7504E601E8CF6840031ABC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7504E661E8D0BF90031ABC9 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		A7504E681E8D20190031ABC9 /* TextFieldStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldStyle.swift; sourceTree = "<group>"; };
-		A7504E8B1E8E8E4D0031ABC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
+		A7504EC81E916DB40031ABC9 /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		A7504ECA1E91D7190031ABC9 /* DailyTaskTableView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DailyTaskTableView.storyboard; sourceTree = "<group>"; };
+		A7504ECE1E91D7DB0031ABC9 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		B77980101E8CFB5C00C4684D /* Goal_collection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Goal_collection.storyboard; sourceTree = "<group>"; };
-		B77980131E8D04AC00C4684D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B77980151E8D05DC00C4684D /* GoalCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalCollectionViewController.swift; sourceTree = "<group>"; };
 		B779805B1E8E911000C4684D /* GoalCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalCollectionViewCell.swift; sourceTree = "<group>"; };
+		B7B1F9FD1E91E9E200CD8CCC /* Task_table.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Task_table.storyboard; sourceTree = "<group>"; };
+		B7B1FA0D1E91F9D300CD8CCC /* DailyTaskTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyTaskTableViewCell.swift; sourceTree = "<group>"; };
+		B7B1FA111E91FAA200CD8CCC /* DailyTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyTaskViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,22 +84,51 @@
 			isa = PBXGroup;
 			children = (
 				A7504E541E8CF6840031ABC9 /* AppDelegate.swift */,
-				B77980121E8D04AC00C4684D /* Main.storyboard */,
-				B77980101E8CFB5C00C4684D /* Goal_collection.storyboard */,
-				B77980151E8D05DC00C4684D /* GoalCollectionViewController.swift */,
-				5F2F94E21E8E92900073D3A2 /* GoalAddViewController.swift */,
-				A7504E561E8CF6840031ABC9 /* LoginViewController.swift */,
-				A7504E661E8D0BF90031ABC9 /* SignUpViewController.swift */,
-				A7504E8A1E8E8E4D0031ABC9 /* Login.storyboard */,
-				A7504E581E8CF6840031ABC9 /* LunchScreen.storyboard */,
-				5F2F94E01E8E92430073D3A2 /* Goal_add.storyboard */,
-				5F2F951E1E920D330073D3A2 /* ColorButtonStyle.swift */,
+				A72054BE1E92142600008F13 /* DB.swift */,
 				A7504E681E8D20190031ABC9 /* TextFieldStyle.swift */,
-				B779805B1E8E911000C4684D /* GoalCollectionViewCell.swift */,
+				5F2F951E1E920D330073D3A2 /* ColorButtonStyle.swift */,
+				A7504E581E8CF6840031ABC9 /* LunchScreen.storyboard */,
+				B7B1FA081E91F8A400CD8CCC /* Login */,
+				B7B1FA091E91F8BB00CD8CCC /* Goal */,
+				B7B1FA0A1E91F8C700CD8CCC /* Daily_Task */,
 				A7504E5B1E8CF6840031ABC9 /* Assets.xcassets */,
 				A7504E601E8CF6840031ABC9 /* Info.plist */,
 			);
 			path = Maily;
+			sourceTree = "<group>";
+		};
+		B7B1FA081E91F8A400CD8CCC /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A7504E561E8CF6840031ABC9 /* LoginViewController.swift */,
+				A7504E661E8D0BF90031ABC9 /* SignUpViewController.swift */,
+				A7504ECE1E91D7DB0031ABC9 /* Login.storyboard */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		B7B1FA091E91F8BB00CD8CCC /* Goal */ = {
+			isa = PBXGroup;
+			children = (
+				B77980151E8D05DC00C4684D /* GoalCollectionViewController.swift */,
+				5F2F94E21E8E92900073D3A2 /* GoalAddViewController.swift */,
+				B779805B1E8E911000C4684D /* GoalCollectionViewCell.swift */,
+				A7504EC81E916DB40031ABC9 /* CustomTabBarController.swift */,
+				B77980101E8CFB5C00C4684D /* Goal_collection.storyboard */,
+				5F2F94E01E8E92430073D3A2 /* Goal_add.storyboard */,
+			);
+			name = Goal;
+			sourceTree = "<group>";
+		};
+		B7B1FA0A1E91F8C700CD8CCC /* Daily_Task */ = {
+			isa = PBXGroup;
+			children = (
+				B7B1FA111E91FAA200CD8CCC /* DailyTaskViewController.swift */,
+				B7B1FA0D1E91F9D300CD8CCC /* DailyTaskTableViewCell.swift */,
+				A7504ECA1E91D7190031ABC9 /* DailyTaskTableView.storyboard */,
+				B7B1F9FD1E91E9E200CD8CCC /* Task_table.storyboard */,
+			);
+			name = Daily_Task;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,12 +190,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7504ECF1E91D7DB0031ABC9 /* Login.storyboard in Resources */,
 				A7504E5F1E8CF6840031ABC9 /* (null) in Resources */,
 				5F2F94E11E8E92430073D3A2 /* Goal_add.storyboard in Resources */,
 				A7504E5C1E8CF6840031ABC9 /* Assets.xcassets in Resources */,
-				A7504E8C1E8E8E4D0031ABC9 /* Login.storyboard in Resources */,
 				B77980111E8CFB5C00C4684D /* Goal_collection.storyboard in Resources */,
-				B77980141E8D04AC00C4684D /* Main.storyboard in Resources */,
+				B7B1F9FE1E91E9E200CD8CCC /* Task_table.storyboard in Resources */,
+				A7504ECB1E91D7190031ABC9 /* DailyTaskTableView.storyboard in Resources */,
 				A7504E5A1E8CF6840031ABC9 /* LunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,10 +209,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7504E671E8D0BF90031ABC9 /* SignUpViewController.swift in Sources */,
+				B7B1FA121E91FAA200CD8CCC /* DailyTaskViewController.swift in Sources */,
 				B779805C1E8E911000C4684D /* GoalCollectionViewCell.swift in Sources */,
+				A7504EC91E916DB40031ABC9 /* CustomTabBarController.swift in Sources */,
+				A72054BF1E92142600008F13 /* DB.swift in Sources */,
 				A7504E691E8D20190031ABC9 /* TextFieldStyle.swift in Sources */,
 				5F2F94E31E8E92900073D3A2 /* GoalAddViewController.swift in Sources */,
 				A7504E571E8CF6840031ABC9 /* LoginViewController.swift in Sources */,
+				B7B1FA0E1E91F9D300CD8CCC /* DailyTaskTableViewCell.swift in Sources */,
 				A7504E551E8CF6840031ABC9 /* AppDelegate.swift in Sources */,
 				5F2F951F1E920D330073D3A2 /* ColorButtonStyle.swift in Sources */,
 				B77980161E8D05DC00C4684D /* GoalCollectionViewController.swift in Sources */,
@@ -188,22 +232,6 @@
 				A7504E5E1E8CF6840031ABC9 /* Base */,
 			);
 			name = LunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		A7504E8A1E8E8E4D0031ABC9 /* Login.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A7504E8B1E8E8E4D0031ABC9 /* Base */,
-			);
-			name = Login.storyboard;
-			sourceTree = "<group>";
-		};
-		B77980121E8D04AC00C4684D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B77980131E8D04AC00C4684D /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
