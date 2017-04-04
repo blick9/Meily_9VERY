@@ -37,6 +37,8 @@ class LoginViewController: UIViewController {
         let email = valueValidate(value: emailTextField)
         let password = valueValidate(value: passwordTextField)
         
+        
+        
         if email == true && password == true {
             let activityIndicator = UIActivityIndicatorView()
             activityIndicator.center = self.view.center
