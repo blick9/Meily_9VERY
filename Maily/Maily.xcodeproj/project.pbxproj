@@ -12,6 +12,7 @@
 		5F2F951F1E920D330073D3A2 /* ColorButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2F951E1E920D330073D3A2 /* ColorButtonStyle.swift */; };
 		5F2F95211E9368AF0073D3A2 /* DailyTask_add.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F2F95201E9368AF0073D3A2 /* DailyTask_add.storyboard */; };
 		5F2F95231E936DFF0073D3A2 /* DailyTaskAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2F95221E936DFF0073D3A2 /* DailyTaskAddViewController.swift */; };
+		5FD24C6F1E93BC4C0087E812 /* StopPasteAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD24C6E1E93BC4C0087E812 /* StopPasteAction.swift */; };
 		A72054BF1E92142600008F13 /* DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72054BE1E92142600008F13 /* DB.swift */; };
 		A7504E551E8CF6840031ABC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7504E541E8CF6840031ABC9 /* AppDelegate.swift */; };
 		A7504E571E8CF6840031ABC9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7504E561E8CF6840031ABC9 /* LoginViewController.swift */; };
@@ -37,6 +38,7 @@
 		5F2F951E1E920D330073D3A2 /* ColorButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorButtonStyle.swift; sourceTree = "<group>"; };
 		5F2F95201E9368AF0073D3A2 /* DailyTask_add.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DailyTask_add.storyboard; sourceTree = "<group>"; };
 		5F2F95221E936DFF0073D3A2 /* DailyTaskAddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyTaskAddViewController.swift; sourceTree = "<group>"; };
+		5FD24C6E1E93BC4C0087E812 /* StopPasteAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopPasteAction.swift; sourceTree = "<group>"; };
 		A72054BE1E92142600008F13 /* DB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DB.swift; sourceTree = "<group>"; };
 		A7504E511E8CF6840031ABC9 /* Maily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7504E541E8CF6840031ABC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				A7504E541E8CF6840031ABC9 /* AppDelegate.swift */,
 				A72054BE1E92142600008F13 /* DB.swift */,
 				A7504E681E8D20190031ABC9 /* TextFieldStyle.swift */,
+				5FD24C6E1E93BC4C0087E812 /* StopPasteAction.swift */,
 				5F2F951E1E920D330073D3A2 /* ColorButtonStyle.swift */,
 				A7504E581E8CF6840031ABC9 /* LunchScreen.storyboard */,
 				B7B1FA081E91F8A400CD8CCC /* Login */,
@@ -127,10 +130,10 @@
 		B7B1FA0A1E91F8C700CD8CCC /* Daily_Task */ = {
 			isa = PBXGroup;
 			children = (
-				5F2F95201E9368AF0073D3A2 /* DailyTask_add.storyboard */,
 				B7B1FA111E91FAA200CD8CCC /* DailyTaskViewController.swift */,
 				5F2F95221E936DFF0073D3A2 /* DailyTaskAddViewController.swift */,
 				B7B1FA0D1E91F9D300CD8CCC /* DailyTaskTableViewCell.swift */,
+				5F2F95201E9368AF0073D3A2 /* DailyTask_add.storyboard */,
 				A7504ECA1E91D7190031ABC9 /* DailyTaskTableView.storyboard */,
 				B7B1F9FD1E91E9E200CD8CCC /* Task_table.storyboard */,
 			);
@@ -218,6 +221,7 @@
 				A7504E671E8D0BF90031ABC9 /* SignUpViewController.swift in Sources */,
 				B7B1FA121E91FAA200CD8CCC /* DailyTaskViewController.swift in Sources */,
 				B779805C1E8E911000C4684D /* GoalCollectionViewCell.swift in Sources */,
+				5FD24C6F1E93BC4C0087E812 /* StopPasteAction.swift in Sources */,
 				A7504EC91E916DB40031ABC9 /* CustomTabBarController.swift in Sources */,
 				A72054BF1E92142600008F13 /* DB.swift in Sources */,
 				A7504E691E8D20190031ABC9 /* TextFieldStyle.swift in Sources */,

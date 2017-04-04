@@ -11,20 +11,30 @@ import UIKit
 class DailyTaskAddViewController: UIViewController {
     let dateFormatter = DateFormatter()
     let datePicker = UIDatePicker()
-    
+    let today = Date()
     @IBOutlet weak var taskTitleTextField: UITextField!
     @IBOutlet weak var datePickerTextField: UITextField!
-    @IBOutlet weak var priority3Button: UIButton!
-    @IBOutlet weak var priority2Button: UIButton!
-    @IBOutlet weak var priority1Button: UIButton!
-        
+    @IBOutlet weak var dailyTaskMemo: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setDatePicker()
+        setMemo()
+        dateFormatter.locale = Locale(identifier: "ko_KR")
+        dateFormatter.dateStyle = .full
+        dateFormatter.timeStyle = .none
+//        dateFormatter.dateFormat = "YYYY년 MM월 dd일, EEEE"
+        datePickerTextField.textColor = UIColor.white
+        datePickerTextField.text = dateFormatter.string(from: today)
+        
+        datePickerTextField.borderStyle = .none
     }
     @IBAction func cancleButtonTouched(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    func setMemo() {
+         dailyTaskMemo.layer.cornerRadius = 5
     }
 
     
@@ -35,18 +45,14 @@ class DailyTaskAddViewController: UIViewController {
         datePicker.locale = Locale(identifier: "ko_KR")
         toolbar.sizeToFit()
         toolbar.setItems([doneButton], animated: false)
+        
         datePickerTextField.inputAccessoryView = toolbar
         datePickerTextField.inputView = datePicker
-        datePickerTextField.setValue(UIColor.white, forKey:"textColor")
+//        datePickerTextField.setValue(UIColor.white, forKey:"textColor")
     }
- 
     
     func donePressed() {
         let selectedYear = datePicker.date
-        dateFormatter.dateFormat = "YYYY년 MM월 dd일(EEEE)"
-        dateFormatter.locale = Locale(identifier: "ko_KR")
-        //        dateFormatter.dateStyle = .full
-        //        dateFormatter.timeStyle = .none
         datePickerTextField.text = dateFormatter.string(from: selectedYear)
         self.view.endEditing(true)
     }
