@@ -74,30 +74,30 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="emE-G5-Aen">
                                 <rect key="frame" x="25" y="69" width="325" height="70"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MjX-8g-3ax" customClass="ColorButtonStyle" customModule="Maily" customModuleProvider="target">
-                                        <rect key="frame" x="167.66666666666666" y="20" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.63921568627450975" green="0.95294117647058818" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3j-OC-yOi" customClass="ColorButtonStyle" customModule="Maily" customModuleProvider="target">
-                                        <rect key="frame" x="112.66666666666666" y="20" width="30" height="30"/>
+                                        <rect key="frame" x="89" y="20" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.63921568627450975" green="1" blue="0.64313725490196072" alpha="1" colorSpace="calibratedRGB"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6V-1J-FRD" customClass="ColorButtonStyle" customModule="Maily" customModuleProvider="target">
-                                        <rect key="frame" x="57.666666666666686" y="20" width="30" height="30"/>
+                                        <rect key="frame" x="28" y="20" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="0.99215686274509807" blue="0.63921568627450975" alpha="1" colorSpace="calibratedRGB"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqQ-Fd-gRE" customClass="ColorButtonStyle" customModule="Maily" customModuleProvider="target">
-                                        <rect key="frame" x="222.66666666666669" y="20" width="30.000000000000028" height="30"/>
+                                        <rect key="frame" x="209" y="20" width="30.000000000000028" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.73333333333333328" green="0.63921568627450975" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ud-zq-a1F" customClass="ColorButtonStyle" customModule="Maily" customModuleProvider="target">
-                                        <rect key="frame" x="277.66666666666669" y="20" width="30" height="30"/>
+                                        <rect key="frame" x="272" y="20" width="30" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="0.63921568630000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MjX-8g-3ax" customClass="ColorButtonStyle" customModule="Maily" customModuleProvider="target">
+                                        <rect key="frame" x="147" y="20" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.63921568627450975" green="0.95294117647058818" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.17252564430236816" green="0.17256247997283936" blue="0.17252331972122192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -108,35 +108,35 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R1k-76-gP5">
                                 <rect key="frame" x="25" y="169" width="325" height="70"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZV-ya-dMt">
-                                        <rect key="frame" x="20" y="20" width="30" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZV-ya-dMt">
+                                        <rect key="frame" x="20" y="18" width="25" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="book_icon"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qqk-Uo-KyK">
-                                        <rect key="frame" x="70" y="20" width="30" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qqk-Uo-KyK">
+                                        <rect key="frame" x="69" y="20" width="21" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="pencil_icon"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xhK-9T-jKR">
-                                        <rect key="frame" x="120" y="20" width="30" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6y-qe-SEB">
+                                        <rect key="frame" x="176" y="20" width="31" height="28"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="clock_icon"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6y-qe-SEB">
-                                        <rect key="frame" x="170" y="20" width="30" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6lW-pJ-6JM">
+                                        <rect key="frame" x="228" y="17" width="28" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="shopping_icon"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6lW-pJ-6JM">
-                                        <rect key="frame" x="220" y="20" width="30" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jia-hy-A87">
+                                        <rect key="frame" x="277" y="18" width="32" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="money_icon"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jia-hy-A87">
-                                        <rect key="frame" x="270" y="20" width="30" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xhK-9T-jKR">
+                                        <rect key="frame" x="115" y="21" width="38" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="exercise_icon"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1725256443" green="0.17256247999999999" blue="0.17252331970000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -189,4 +189,12 @@
             <point key="canvasLocation" x="-167.19999999999999" y="-182.15892053973016"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="book_icon" width="25" height="34"/>
+        <image name="clock_icon" width="31" height="28"/>
+        <image name="exercise_icon" width="38" height="27"/>
+        <image name="money_icon" width="32" height="32"/>
+        <image name="pencil_icon" width="21" height="30"/>
+        <image name="shopping_icon" width="28" height="32"/>
+    </resources>
 </document>
