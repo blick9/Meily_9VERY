@@ -88,6 +88,7 @@
 				A7504E681E8D20190031ABC9 /* TextFieldStyle.swift */,
 				5F2F951E1E920D330073D3A2 /* ColorButtonStyle.swift */,
 				A7504E581E8CF6840031ABC9 /* LunchScreen.storyboard */,
+				A7504EC81E916DB40031ABC9 /* CustomTabBarController.swift */,
 				B7B1FA081E91F8A400CD8CCC /* Login */,
 				B7B1FA091E91F8BB00CD8CCC /* Goal */,
 				B7B1FA0A1E91F8C700CD8CCC /* Daily_Task */,
@@ -113,7 +114,6 @@
 				B77980151E8D05DC00C4684D /* GoalCollectionViewController.swift */,
 				5F2F94E21E8E92900073D3A2 /* GoalAddViewController.swift */,
 				B779805B1E8E911000C4684D /* GoalCollectionViewCell.swift */,
-				A7504EC81E916DB40031ABC9 /* CustomTabBarController.swift */,
 				B77980101E8CFB5C00C4684D /* Goal_collection.storyboard */,
 				5F2F94E01E8E92430073D3A2 /* Goal_add.storyboard */,
 			);

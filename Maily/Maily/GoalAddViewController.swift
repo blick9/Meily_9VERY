@@ -19,10 +19,17 @@ class GoalAddViewController: UIViewController {
     @IBOutlet weak var priority1Button: UIButton!
     var datePicker=UIDatePicker(frame: CGRect(x:300,y:375,width:216,height:38))
    
+    @IBOutlet weak var categoryBackground: UIView!
+    @IBOutlet weak var colorChipBackground: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         datePicker.tintColor = UIColor.black
         datePicker.backgroundColor = UIColor.white
+        
+        categoryBackground.layer.cornerRadius = CGFloat(categoryBackground.frame.height/2)
+        colorChipBackground.layer.cornerRadius = CGFloat(colorChipBackground.frame.height/2)
+        
       
     }
 
