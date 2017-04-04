@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6HB-6e-gUr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6HB-6e-gUr">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -25,6 +25,14 @@
                                 <rect key="frame" x="110" y="333" width="210" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.58032697439193726" green="0.58042973279953003" blue="0.58032047748565674" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1sk-kw-BKG" userLabel="DatePickerTextField">
+                                <rect key="frame" x="112" y="381" width="208" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.58032697440000003" green="0.58042973279999999" blue="0.58032047750000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -156,8 +164,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="목표 만들기" id="awS-Jd-iBL">
-                        <barButtonItem key="leftBarButtonItem" title="취소" id="hWB-xp-UhZ"/>
-                        <barButtonItem key="rightBarButtonItem" title="저장" id="Z95-kr-RdS"/>
+                        <barButtonItem key="leftBarButtonItem" title="취소" id="hWB-xp-UhZ">
+                            <color key="tintColor" red="0.96561902761459351" green="0.73070687055587769" blue="0.81185543537139893" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="cancleButtonTouched:" destination="0v0-2P-Tr7" id="IFC-18-sMG"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="저장" id="Z95-kr-RdS">
+                            <color key="tintColor" red="0.96561902759999996" green="0.73070687059999995" blue="0.81185543540000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="categoryBackground" destination="R1k-76-gP5" id="j0C-Ty-PUv"/>
