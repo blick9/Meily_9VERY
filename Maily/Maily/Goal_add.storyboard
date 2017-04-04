@@ -165,11 +165,14 @@
                     </view>
                     <navigationItem key="navigationItem" title="목표 만들기" id="awS-Jd-iBL">
                         <barButtonItem key="leftBarButtonItem" title="취소" id="hWB-xp-UhZ">
+                            <color key="tintColor" red="0.96561902761459351" green="0.73070687055587769" blue="0.81185543537139893" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="cancleButtonTouched:" destination="0v0-2P-Tr7" id="IFC-18-sMG"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="저장" id="Z95-kr-RdS"/>
+                        <barButtonItem key="rightBarButtonItem" title="저장" id="Z95-kr-RdS">
+                            <color key="tintColor" red="0.96561902759999996" green="0.73070687059999995" blue="0.81185543540000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="DatePickerTextField" destination="1sk-kw-BKG" id="8Gv-Tv-SD1"/>

@@ -17,19 +17,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        let isLogin = false
+//        let isLogin = false
         
         
-        if isLogin == false {
-            let loginSB = UIStoryboard(name: "Login", bundle: nil)
-            let loginVC = loginSB.instantiateViewController(withIdentifier: "LoginMain") as? LoginViewController
-            self.window?.rootViewController = loginVC
-        } else {
-            let goalCollectionSB = UIStoryboard(name: "Goal_collection", bundle: nil)
-            let goalCollectionVC = goalCollectionSB.instantiateViewController(withIdentifier: "MainTab")
-//            let collectionVC = UINavigationController(rootViewController: goalCollectionVC)
-            self.window?.rootViewController = goalCollectionVC
-        }
+//        if isLogin == false {
+//            let loginSB = UIStoryboard(name: "Login", bundle: nil)
+//            let loginVC = loginSB.instantiateViewController(withIdentifier: "LoginMain") as? LoginViewController
+//            self.window?.rootViewController = loginVC
+//        } else {
+//            let goalCollectionSB = UIStoryboard(name: "Goal_collection", bundle: nil)
+//            let goalCollectionVC = goalCollectionSB.instantiateViewController(withIdentifier: "MainTab")
+////            let collectionVC = UINavigationController(rootViewController: goalCollectionVC)
+//            self.window?.rootViewController = goalCollectionVC
+//        }
         
         // Change NavigationBar Design
 //        let image = UIImage(named: "TopBar")
