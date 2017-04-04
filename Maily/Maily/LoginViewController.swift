@@ -51,7 +51,7 @@ class LoginViewController: UIViewController {
             let goalCollectionVC = goalCollectionSB.instantiateViewController(withIdentifier: "MainTab")
 //            let test = UINavigationController(rootViewController: goalCollectionVC)
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            appDelegate.window?.rootViewController = goalCollectionVC
+            appDelegate.window?.rootViewController = CustomTabBarController()
         }
     }
     

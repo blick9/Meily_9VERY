@@ -9,6 +9,23 @@
 import UIKit
 import Foundation
 
+class User {
+    private var email : String
+    private var password : String
+    private var confirmPassword : String?
+    init(email : String, password : String, confirmPassword : String) {
+        self.email = email
+        self.password = password
+        self.confirmPassword = confirmPassword
+    }
+    
+    init(email : String, password : String) {
+        self.email = email
+        self.password = password
+        self.confirmPassword = nil
+    }
+}
+
 class Goal {
     private var goalTitle : String
     private var dueDate : NSDate
@@ -61,6 +78,4 @@ class DataBase {
     func getDailyMemoDataArray() -> [DailyMemo] {
         return dailyMemoDataArray
     }
-    
-    
 }

@@ -17,13 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        let isLogin = true
+        let isLogin = false
         
         if isLogin == false {
             let loginSB = UIStoryboard(name: "Login", bundle: nil)
             let loginVC = loginSB.instantiateViewController(withIdentifier: "LoginMain") as? LoginViewController
             self.window?.rootViewController = loginVC
-            print("Login VC")
         } else {
             window = UIWindow(frame: UIScreen.main.bounds)
             window?.makeKeyAndVisible()

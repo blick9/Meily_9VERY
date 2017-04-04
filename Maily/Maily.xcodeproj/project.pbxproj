@@ -11,8 +11,8 @@
 		5F2F94E31E8E92900073D3A2 /* GoalAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2F94E21E8E92900073D3A2 /* GoalAddViewController.swift */; };
 		5F2F951F1E920D330073D3A2 /* ColorButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2F951E1E920D330073D3A2 /* ColorButtonStyle.swift */; };
 		A72054BF1E92142600008F13 /* DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72054BE1E92142600008F13 /* DB.swift */; };
-		A72054C21E92370E00008F13 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72054C11E92370E00008F13 /* SettingViewController.swift */; };
-		A72054C61E92396300008F13 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A72054C51E92396300008F13 /* Setting.storyboard */; };
+		A72054C91E93748F00008F13 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A72054C71E93748F00008F13 /* Setting.storyboard */; };
+		A72054CA1E93748F00008F13 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72054C81E93748F00008F13 /* SettingViewController.swift */; };
 		A7504E551E8CF6840031ABC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7504E541E8CF6840031ABC9 /* AppDelegate.swift */; };
 		A7504E571E8CF6840031ABC9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7504E561E8CF6840031ABC9 /* LoginViewController.swift */; };
 		A7504E5A1E8CF6840031ABC9 /* LunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7504E581E8CF6840031ABC9 /* LunchScreen.storyboard */; };
@@ -36,8 +36,8 @@
 		5F2F94E21E8E92900073D3A2 /* GoalAddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalAddViewController.swift; sourceTree = "<group>"; };
 		5F2F951E1E920D330073D3A2 /* ColorButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorButtonStyle.swift; sourceTree = "<group>"; };
 		A72054BE1E92142600008F13 /* DB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DB.swift; sourceTree = "<group>"; };
-		A72054C11E92370E00008F13 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
-		A72054C51E92396300008F13 /* Setting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		A72054C71E93748F00008F13 /* Setting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Setting.storyboard; path = Maily/Setting.storyboard; sourceTree = "<group>"; };
+		A72054C81E93748F00008F13 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = Maily/SettingViewController.swift; sourceTree = "<group>"; };
 		A7504E511E8CF6840031ABC9 /* Maily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7504E541E8CF6840031ABC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7504E561E8CF6840031ABC9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -71,8 +71,8 @@
 		A72054C01E9236DB00008F13 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
-				A72054C11E92370E00008F13 /* SettingViewController.swift */,
-				A72054C51E92396300008F13 /* Setting.storyboard */,
+				A72054C81E93748F00008F13 /* SettingViewController.swift */,
+				A72054C71E93748F00008F13 /* Setting.storyboard */,
 			);
 			name = Setting;
 			path = ..;
@@ -210,8 +210,8 @@
 				5F2F94E11E8E92430073D3A2 /* Goal_add.storyboard in Resources */,
 				A7504E5C1E8CF6840031ABC9 /* Assets.xcassets in Resources */,
 				B77980111E8CFB5C00C4684D /* Goal_collection.storyboard in Resources */,
-				A72054C61E92396300008F13 /* Setting.storyboard in Resources */,
 				B7B1F9FE1E91E9E200CD8CCC /* Task_table.storyboard in Resources */,
+				A72054C91E93748F00008F13 /* Setting.storyboard in Resources */,
 				A7504ECB1E91D7190031ABC9 /* DailyTaskTableView.storyboard in Resources */,
 				A7504E5A1E8CF6840031ABC9 /* LunchScreen.storyboard in Resources */,
 			);
@@ -227,8 +227,8 @@
 				A7504E671E8D0BF90031ABC9 /* SignUpViewController.swift in Sources */,
 				B7B1FA121E91FAA200CD8CCC /* DailyTaskViewController.swift in Sources */,
 				B779805C1E8E911000C4684D /* GoalCollectionViewCell.swift in Sources */,
-				A72054C21E92370E00008F13 /* SettingViewController.swift in Sources */,
 				A7504EC91E916DB40031ABC9 /* CustomTabBarController.swift in Sources */,
+				A72054CA1E93748F00008F13 /* SettingViewController.swift in Sources */,
 				A72054BF1E92142600008F13 /* DB.swift in Sources */,
 				A7504E691E8D20190031ABC9 /* TextFieldStyle.swift in Sources */,
 				5F2F94E31E8E92900073D3A2 /* GoalAddViewController.swift in Sources */,
