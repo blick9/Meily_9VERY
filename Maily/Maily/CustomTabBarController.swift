@@ -32,7 +32,7 @@ class CustomTabBarController : UITabBarController {
         let settingVC = settingSB.instantiateViewController(withIdentifier: "SettingMain")
         settingVC.tabBarItem.image = UIImage(named: "Tap_Setting")
         
-        viewControllers = [goalCollectionVC, settingVC]
+        viewControllers = [dailyTaskVC, goalCollectionVC, settingVC]
         removeTabBarTextItems()
     }
     
