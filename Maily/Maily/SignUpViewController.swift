@@ -53,6 +53,7 @@ class SignUpViewController: UIViewController {
 
     func passwordValidate(password: UITextField) {
 
+        print(password.text)
         let alphanumerics = CharacterSet.alphanumerics
         let digits = CharacterSet.decimalDigits
         

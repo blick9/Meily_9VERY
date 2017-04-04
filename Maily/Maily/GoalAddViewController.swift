@@ -18,9 +18,14 @@ class GoalAddViewController: UIViewController {
     @IBOutlet weak var priority2Button: UIButton!
     @IBOutlet weak var priority1Button: UIButton!
    
+    @IBOutlet weak var categoryBackground: UIView!
+    @IBOutlet weak var colorChipBackground: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setDatePicker()
+        categoryBackground.layer.cornerRadius = CGFloat(categoryBackground.frame.height/2)
+        colorChipBackground.layer.cornerRadius = CGFloat(colorChipBackground.frame.height/2)
     }
 
     override func didReceiveMemoryWarning() {

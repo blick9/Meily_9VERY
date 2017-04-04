@@ -24,8 +24,6 @@ class GoalCollectionViewController: UICollectionViewController {
         addGoalButton.addTarget(self, action: #selector(presentGoalAddView), for: .touchUpInside)
         self.view.addSubview(addGoalButton)
         
-       // goalInnerView.layer.cornerRadius = 5
-
 
         //UIScreen.main.bounds
         
@@ -75,7 +73,7 @@ class GoalCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        var cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! GoalCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! GoalCollectionViewCell
         cell.goalCardTitle.text = goalTitlesArray[indexPath.row]
         
         return cell
