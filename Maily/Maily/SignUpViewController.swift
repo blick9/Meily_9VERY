@@ -39,8 +39,7 @@ class SignUpViewController: UIViewController {
             signUpButton.isHighlighted = false
         }
     }
-    
-    
+
     func emailValidate(email: UITextField) {
         if email.text?.unicodeScalars.isEmpty == false {
             isActivate.email = true
