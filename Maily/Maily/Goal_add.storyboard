@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6HB-6e-gUr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -25,6 +25,14 @@
                                 <rect key="frame" x="110" y="333" width="210" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.58032697439193726" green="0.58042973279953003" blue="0.58032047748565674" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1sk-kw-BKG" userLabel="DatePickerTextField" customClass="StopPasteAction" customModule="Maily" customModuleProvider="target">
+                                <rect key="frame" x="112" y="381" width="208" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.58032697440000003" green="0.58042973279999999" blue="0.58032047750000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -147,21 +155,29 @@
                         </subviews>
                         <color key="backgroundColor" red="0.21957963705062866" green="0.21962407231330872" blue="0.21957683563232422" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="emE-G5-Aen" firstAttribute="top" secondItem="27q-1F-lyL" secondAttribute="bottom" constant="26" id="3zr-mC-lEx"/>
                             <constraint firstItem="emE-G5-Aen" firstAttribute="leading" secondItem="dYJ-eG-Toy" secondAttribute="leading" constant="25" id="Bxz-ne-OEG"/>
                             <constraint firstAttribute="trailing" secondItem="emE-G5-Aen" secondAttribute="trailing" constant="25" id="IJk-f8-8hN"/>
                             <constraint firstItem="R1k-76-gP5" firstAttribute="top" secondItem="emE-G5-Aen" secondAttribute="bottom" constant="24" id="Kjh-C5-l0r"/>
-                            <constraint firstItem="emE-G5-Aen" firstAttribute="top" secondItem="27q-1F-lyL" secondAttribute="bottom" constant="26" id="dXz-Lb-yVG"/>
                             <constraint firstAttribute="trailing" secondItem="R1k-76-gP5" secondAttribute="trailing" constant="25" id="mIV-oc-LKz"/>
                             <constraint firstItem="R1k-76-gP5" firstAttribute="leading" secondItem="dYJ-eG-Toy" secondAttribute="leading" constant="25" id="uGA-zw-y0q"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="목표 만들기" id="awS-Jd-iBL">
-                        <barButtonItem key="leftBarButtonItem" title="취소" id="hWB-xp-UhZ"/>
-                        <barButtonItem key="rightBarButtonItem" title="저장" id="Z95-kr-RdS"/>
+                        <barButtonItem key="leftBarButtonItem" title="취소" id="hWB-xp-UhZ">
+                            <color key="tintColor" red="0.96561902761459351" green="0.73070687055587769" blue="0.81185543537139893" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="cancleButtonTouched:" destination="0v0-2P-Tr7" id="IFC-18-sMG"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="저장" id="Z95-kr-RdS">
+                            <color key="tintColor" red="0.96561902759999996" green="0.73070687059999995" blue="0.81185543540000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="categoryBackground" destination="R1k-76-gP5" id="j0C-Ty-PUv"/>
                         <outlet property="colorChipBackground" destination="emE-G5-Aen" id="RTP-gG-myh"/>
+                        <outlet property="datePickerTextField" destination="1sk-kw-BKG" id="ZYF-Ex-c60"/>
                         <outlet property="goalTitleTextField" destination="ggq-J3-Any" id="CSd-D4-xb7"/>
                         <outlet property="priority1Button" destination="Egu-JU-JI9" id="Yd3-kx-zhc"/>
                         <outlet property="priority2Button" destination="ddH-EN-siY" id="yVg-rr-qAf"/>

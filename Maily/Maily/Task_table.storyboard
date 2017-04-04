@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bET-cN-s3c">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -82,6 +82,9 @@
                                 <rect key="frame" x="262" y="500" width="96" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Add_Bt"/>
+                                <connections>
+                                    <segue destination="uTu-xI-4Co" kind="show" id="oXC-oS-3pT"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.23137254901960785" green="0.23137254901960785" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -98,10 +101,18 @@
             </objects>
             <point key="canvasLocation" x="-3676" y="-1677.2113943028487"/>
         </scene>
+        <!--AddTask-->
+        <scene sceneID="fqN-l6-dPJ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DailyTask_add" referencedIdentifier="AddTask" id="uTu-xI-4Co" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rmU-vT-a8n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3097" y="-1482"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="BJY-0f-Ghs">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bET-cN-s3c" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="TaskMain" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bET-cN-s3c" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2Rg-YU-fWC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

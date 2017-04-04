@@ -19,17 +19,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let isLogin = false
         
-        
-//        if isLogin == false {
-//            let loginSB = UIStoryboard(name: "Login", bundle: nil)
-//            let loginVC = loginSB.instantiateViewController(withIdentifier: "LoginMain") as? LoginViewController
-//            self.window?.rootViewController = loginVC
-//        } else {
-//            let goalCollectionSB = UIStoryboard(name: "Goal_collection", bundle: nil)
-//            let goalCollectionVC = goalCollectionSB.instantiateViewController(withIdentifier: "MainTab")
-////            let collectionVC = UINavigationController(rootViewController: goalCollectionVC)
-//            self.window?.rootViewController = goalCollectionVC
-//        }
+        if isLogin == false {
+            let loginSB = UIStoryboard(name: "Login", bundle: nil)
+            let loginVC = loginSB.instantiateViewController(withIdentifier: "LoginMain") as? LoginViewController
+            self.window?.rootViewController = loginVC
+        } else {
+            window = UIWindow(frame: UIScreen.main.bounds)
+            window?.makeKeyAndVisible()
+            self.window?.rootViewController = CustomTabBarController()
+        }
         
         // Change NavigationBar Design
 //        let image = UIImage(named: "TopBar")
