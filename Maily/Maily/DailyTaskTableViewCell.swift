@@ -12,8 +12,12 @@ class DailyTaskTableViewCell: UITableViewCell {
     
     @IBOutlet weak var dailyCell: UIView!
     
+
     @IBOutlet weak var dailyTaskLabel: UILabel!
     @IBOutlet weak var dailyTaskIcon: UIImageView!
+    @IBOutlet weak var dailyTaskColorBar: UIView!
+    
+    @IBOutlet weak var dailyTaskGoal: UILabel!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -41,7 +45,7 @@ class DailyTaskTableViewCell: UITableViewCell {
 //        dailyCell.layer.shadowColor = UIColor.blue.cgColor
 //        dailyCell.layer.shadowOffset = CGSize(width: 3, height: 3)
 //        dailyCell.layer.shadowOpacity = 0.3
-        dailyCell.layer.cornerRadius = 5
+        dailyCell.layer.cornerRadius = 3
     }
     
     

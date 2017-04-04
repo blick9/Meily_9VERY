@@ -71,40 +71,6 @@
                                 <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="emE-G5-Aen">
-                                <rect key="frame" x="25" y="69" width="325" height="70"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3j-OC-yOi" customClass="ColorButtonStyle" customModule="Maily" customModuleProvider="target">
-                                        <rect key="frame" x="89" y="20" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.63921568627450975" green="1" blue="0.64313725490196072" alpha="1" colorSpace="calibratedRGB"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6V-1J-FRD" customClass="ColorButtonStyle" customModule="Maily" customModuleProvider="target">
-                                        <rect key="frame" x="28" y="20" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="0.99215686274509807" blue="0.63921568627450975" alpha="1" colorSpace="calibratedRGB"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqQ-Fd-gRE" customClass="ColorButtonStyle" customModule="Maily" customModuleProvider="target">
-                                        <rect key="frame" x="209" y="20" width="30.000000000000028" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.73333333333333328" green="0.63921568627450975" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ud-zq-a1F" customClass="ColorButtonStyle" customModule="Maily" customModuleProvider="target">
-                                        <rect key="frame" x="272" y="20" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="0.63921568630000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MjX-8g-3ax" customClass="ColorButtonStyle" customModule="Maily" customModuleProvider="target">
-                                        <rect key="frame" x="147" y="20" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.63921568627450975" green="0.95294117647058818" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.17252564430236816" green="0.17256247997283936" blue="0.17252331972122192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="jdS-4g-zy0"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R1k-76-gP5">
                                 <rect key="frame" x="25" y="169" width="325" height="70"/>
                                 <subviews>
@@ -144,13 +110,47 @@
                                     <constraint firstAttribute="height" constant="70" id="DuY-Ue-4sw"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="emE-G5-Aen">
+                                <rect key="frame" x="25" y="87" width="325" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3j-OC-yOi" customClass="ColorButtonStyle" customModule="Maily" customModuleProvider="target">
+                                        <rect key="frame" x="89" y="20" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.63921568627450975" green="1" blue="0.64313725490196072" alpha="1" colorSpace="calibratedRGB"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6V-1J-FRD" customClass="ColorButtonStyle" customModule="Maily" customModuleProvider="target">
+                                        <rect key="frame" x="28" y="20" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="0.99215686274509807" blue="0.63921568627450975" alpha="1" colorSpace="calibratedRGB"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqQ-Fd-gRE" customClass="ColorButtonStyle" customModule="Maily" customModuleProvider="target">
+                                        <rect key="frame" x="209" y="20" width="30.000000000000028" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.73333333333333328" green="0.63921568627450975" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ud-zq-a1F" customClass="ColorButtonStyle" customModule="Maily" customModuleProvider="target">
+                                        <rect key="frame" x="272" y="20" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="0.63921568630000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MjX-8g-3ax" customClass="ColorButtonStyle" customModule="Maily" customModuleProvider="target">
+                                        <rect key="frame" x="147" y="20" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.63921568627450975" green="0.95294117647058818" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.17252564430236816" green="0.17256247997283936" blue="0.17252331972122192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="jdS-4g-zy0"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.21957963705062866" green="0.21962407231330872" blue="0.21957683563232422" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="emE-G5-Aen" firstAttribute="leading" secondItem="dYJ-eG-Toy" secondAttribute="leading" constant="25" id="Bxz-ne-OEG"/>
                             <constraint firstAttribute="trailing" secondItem="emE-G5-Aen" secondAttribute="trailing" constant="25" id="IJk-f8-8hN"/>
-                            <constraint firstItem="R1k-76-gP5" firstAttribute="top" secondItem="emE-G5-Aen" secondAttribute="bottom" constant="30" id="Kjh-C5-l0r"/>
-                            <constraint firstItem="emE-G5-Aen" firstAttribute="top" secondItem="27q-1F-lyL" secondAttribute="bottom" constant="5" id="dXz-Lb-yVG"/>
+                            <constraint firstItem="R1k-76-gP5" firstAttribute="top" secondItem="emE-G5-Aen" secondAttribute="bottom" constant="12" id="Kjh-C5-l0r"/>
+                            <constraint firstItem="emE-G5-Aen" firstAttribute="top" secondItem="27q-1F-lyL" secondAttribute="bottom" constant="23" id="dXz-Lb-yVG"/>
                             <constraint firstAttribute="trailing" secondItem="R1k-76-gP5" secondAttribute="trailing" constant="25" id="mIV-oc-LKz"/>
                             <constraint firstItem="R1k-76-gP5" firstAttribute="leading" secondItem="dYJ-eG-Toy" secondAttribute="leading" constant="25" id="uGA-zw-y0q"/>
                         </constraints>

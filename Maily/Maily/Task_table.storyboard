@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,25 +21,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LIh-KF-AGL">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="82" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LIh-KF-AGL">
                                 <rect key="frame" x="12" y="10" width="354" height="657"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="5" indentationWidth="10" reuseIdentifier="cell" rowHeight="80" id="xyh-wc-0ev" customClass="DailyTaskTableViewCell" customModule="Maily" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="354" height="80"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="5" indentationWidth="10" reuseIdentifier="cell" rowHeight="82" id="xyh-wc-0ev" customClass="DailyTaskTableViewCell" customModule="Maily" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="354" height="82"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xyh-wc-0ev" id="4zI-4f-gWx">
-                                            <rect key="frame" x="0.0" y="0.0" width="354" height="80"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="354" height="82"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RPJ-Vg-5Rb">
-                                                    <rect key="frame" x="0.0" y="0.0" width="344" height="72"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="347" height="72"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="자기 전 ~80p까지 읽기!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2w1-LL-Ppd">
-                                                            <rect key="frame" x="101" y="15" width="223" height="42"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="오늘 내일 모레 언제나 나는 너를 기다리지" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2w1-LL-Ppd">
+                                                            <rect key="frame" x="77" y="32" width="245" height="25"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -50,9 +50,16 @@
                                                             <color key="backgroundColor" red="1" green="0.99215686270000003" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </view>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="book_icon" translatesAutoresizingMaskIntoConstraints="NO" id="lsb-7q-p2m">
-                                                            <rect key="frame" x="21" y="24" width="24" height="24"/>
+                                                            <rect key="frame" x="23" y="22" width="25" height="34"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;참을 수 없는 존재의 가벼움 완독!&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcc-fU-H54">
+                                                            <rect key="frame" x="77" y="16" width="245" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.35637550903598247" green="0.35990397942247732" blue="0.35990397942247732" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </view>
@@ -62,6 +69,8 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="dailyCell" destination="RPJ-Vg-5Rb" id="sqQ-kS-Cjw"/>
+                                            <outlet property="dailyTaskColorBar" destination="fUI-iN-ndU" id="N10-tt-rmj"/>
+                                            <outlet property="dailyTaskGoal" destination="jcc-fU-H54" id="xDa-t8-Gkr"/>
                                             <outlet property="dailyTaskIcon" destination="lsb-7q-p2m" id="ml6-7G-Kpi"/>
                                             <outlet property="dailyTaskLabel" destination="2w1-LL-Ppd" id="ZMd-XV-5V2"/>
                                         </connections>
@@ -69,22 +78,16 @@
                                 </prototypes>
                                 <sections/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pg0-C7-Kpr">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pg0-C7-Kpr">
                                 <rect key="frame" x="262" y="500" width="96" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Add_Bt"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.23137254901960785" green="0.23137254901960785" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="z4Q-Td-Hb3" firstAttribute="top" secondItem="pg0-C7-Kpr" secondAttribute="bottom" constant="67" id="2AY-n2-7T7"/>
-                            <constraint firstItem="LIh-KF-AGL" firstAttribute="leading" secondItem="b5Q-q0-yZq" secondAttribute="leadingMargin" constant="-4" id="Jv6-Zh-zfL"/>
-                            <constraint firstAttribute="topMargin" secondItem="LIh-KF-AGL" secondAttribute="top" constant="-10" id="VaZ-LG-vgy"/>
-                            <constraint firstItem="LIh-KF-AGL" firstAttribute="centerX" secondItem="b5Q-q0-yZq" secondAttribute="centerX" constant="1.5" id="XLh-uf-fVw"/>
-                            <constraint firstItem="z4Q-Td-Hb3" firstAttribute="top" secondItem="LIh-KF-AGL" secondAttribute="bottom" id="q5L-HM-ecz"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="오늘 목표" id="xek-LN-38a">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="cOr-4p-qkW"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="cOr-4p-qkW"/>
                     </navigationItem>
                     <connections>
                         <outlet property="dailyAddButton" destination="pg0-C7-Kpr" id="OhZ-05-Paz"/>
@@ -116,6 +119,6 @@
     </scenes>
     <resources>
         <image name="Add_Bt" width="96" height="100"/>
-        <image name="book_icon" width="24" height="24"/>
+        <image name="book_icon" width="25" height="34"/>
     </resources>
 </document>
