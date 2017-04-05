@@ -34,7 +34,7 @@ class DailyTaskViewController: UIViewController, UITableViewDelegate, UITableVie
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    
+ 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dailyArray.count
     }
@@ -51,9 +51,13 @@ class DailyTaskViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            dailyArray.remove(at: indexPath.row)
+            tableView.deleteRows (at: [indexPath] , with: .fade)
         }
     }
+    
+    
+
 
     /*
     // MARK: - Navigation

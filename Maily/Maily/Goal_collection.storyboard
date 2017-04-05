@@ -13,7 +13,7 @@
         <scene sceneID="adD-56-c9i">
             <objects>
                 <collectionViewController id="9A9-Zz-1b8" customClass="GoalCollectionViewController" customModule="Maily" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="u7B-nj-fCW">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="u7B-nj-fCW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.29800295829772949" green="0.29806005954742432" blue="0.29799938201904297" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -95,7 +95,7 @@
                 <navigationController storyboardIdentifier="MainTab" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BKC-cy-nKS" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="rDZ-VQ-aq1"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GhV-cn-SVS">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="GhV-cn-SVS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
