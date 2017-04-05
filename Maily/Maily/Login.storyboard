@@ -42,6 +42,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBh-ag-Y1G">
                                 <rect key="frame" x="63" y="520" width="249" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
                                     <segue destination="gln-gj-QNa" kind="show" id="pMC-V1-tl7"/>

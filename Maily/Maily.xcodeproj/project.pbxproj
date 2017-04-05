@@ -26,13 +26,13 @@
 		A7504EC91E916DB40031ABC9 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7504EC81E916DB40031ABC9 /* CustomTabBarController.swift */; };
 		A7504ECB1E91D7190031ABC9 /* DailyTaskTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7504ECA1E91D7190031ABC9 /* DailyTaskTableView.storyboard */; };
 		A7504ECF1E91D7DB0031ABC9 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7504ECE1E91D7DB0031ABC9 /* Login.storyboard */; };
+		A752E63A1E953BB900E10173 /* HOT Balloon Trip.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A752E6391E953BB900E10173 /* HOT Balloon Trip.jpg */; };
 		B77980111E8CFB5C00C4684D /* Goal_collection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B77980101E8CFB5C00C4684D /* Goal_collection.storyboard */; };
 		B77980161E8D05DC00C4684D /* GoalCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77980151E8D05DC00C4684D /* GoalCollectionViewController.swift */; };
 		B779805C1E8E911000C4684D /* GoalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B779805B1E8E911000C4684D /* GoalCollectionViewCell.swift */; };
 		B7B1F9FE1E91E9E200CD8CCC /* Task_table.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7B1F9FD1E91E9E200CD8CCC /* Task_table.storyboard */; };
 		B7B1FA0E1E91F9D300CD8CCC /* DailyTaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B1FA0D1E91F9D300CD8CCC /* DailyTaskTableViewCell.swift */; };
 		B7B1FA121E91FAA200CD8CCC /* DailyTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B1FA111E91FAA200CD8CCC /* DailyTaskViewController.swift */; };
-		B7B1FA441E94C44000CD8CCC /* imagedefault.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B7B1FA431E94C44000CD8CCC /* imagedefault.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,13 +56,13 @@
 		A7504EC81E916DB40031ABC9 /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		A7504ECA1E91D7190031ABC9 /* DailyTaskTableView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DailyTaskTableView.storyboard; sourceTree = "<group>"; };
 		A7504ECE1E91D7DB0031ABC9 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		A752E6391E953BB900E10173 /* HOT Balloon Trip.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "HOT Balloon Trip.jpg"; path = "../../../../../../../../../4. Photo/Background/HOT Balloon Trip.jpg"; sourceTree = "<group>"; };
 		B77980101E8CFB5C00C4684D /* Goal_collection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Goal_collection.storyboard; sourceTree = "<group>"; };
 		B77980151E8D05DC00C4684D /* GoalCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalCollectionViewController.swift; sourceTree = "<group>"; };
 		B779805B1E8E911000C4684D /* GoalCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalCollectionViewCell.swift; sourceTree = "<group>"; };
 		B7B1F9FD1E91E9E200CD8CCC /* Task_table.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Task_table.storyboard; sourceTree = "<group>"; };
 		B7B1FA0D1E91F9D300CD8CCC /* DailyTaskTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyTaskTableViewCell.swift; sourceTree = "<group>"; };
 		B7B1FA111E91FAA200CD8CCC /* DailyTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyTaskViewController.swift; sourceTree = "<group>"; };
-		B7B1FA431E94C44000CD8CCC /* imagedefault.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = imagedefault.jpg; path = ../../../Desktop/imagedefault.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +117,7 @@
 				B7B1FA091E91F8BB00CD8CCC /* Goal */,
 				B7B1FA0A1E91F8C700CD8CCC /* Daily_Task */,
 				A7504E5B1E8CF6840031ABC9 /* Assets.xcassets */,
-				B7B1FA431E94C44000CD8CCC /* imagedefault.jpg */,
+				A752E6391E953BB900E10173 /* HOT Balloon Trip.jpg */,
 				A7504E601E8CF6840031ABC9 /* Info.plist */,
 			);
 			path = Maily;
@@ -217,7 +217,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7B1FA441E94C44000CD8CCC /* imagedefault.jpg in Resources */,
 				A7504ECF1E91D7DB0031ABC9 /* Login.storyboard in Resources */,
 				A7504E5F1E8CF6840031ABC9 /* (null) in Resources */,
 				A7504E5C1E8CF6840031ABC9 /* Assets.xcassets in Resources */,
@@ -228,6 +227,7 @@
 				A7504ECB1E91D7190031ABC9 /* DailyTaskTableView.storyboard in Resources */,
 				A7504E5A1E8CF6840031ABC9 /* LunchScreen.storyboard in Resources */,
 				A72054D01E93CA2F00008F13 /* Goal_add.storyboard in Resources */,
+				A752E63A1E953BB900E10173 /* HOT Balloon Trip.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
