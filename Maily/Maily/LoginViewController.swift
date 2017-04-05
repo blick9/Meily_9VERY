@@ -10,6 +10,12 @@ import UIKit
 
 class LoginViewController: UIViewController {
     var isActivate = (email : false, pw : false)
+    
+    var attrs = [NSFontAttributeName : UIFont.systemFont(ofSize: 19),
+        NSForegroundColorAttributeName : UIColor.red,
+        NSUnderlineStyleAttributeName : 1] as [String : Any]
+    
+    var attributedString = NSMutableAttributedString(string:"")
 
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var emailTextField: UITextField!
@@ -21,7 +27,12 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setInitElement()
+    
+        let buttonTitleStr = NSMutableAttributedString(string:"My Button", attributes:attrs)
+        attributedString.append(buttonTitleStr)
+        logInButton.setAttributedTitle(buttonTitleStr, for: .normal)
     }
+    
     
     func setInitElement() {
         statusButton(isActivate: false)

@@ -49,6 +49,7 @@ class DailyTaskViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            print(indexPath)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
