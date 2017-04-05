@@ -32,6 +32,7 @@
 		B7B1F9FE1E91E9E200CD8CCC /* Task_table.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7B1F9FD1E91E9E200CD8CCC /* Task_table.storyboard */; };
 		B7B1FA0E1E91F9D300CD8CCC /* DailyTaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B1FA0D1E91F9D300CD8CCC /* DailyTaskTableViewCell.swift */; };
 		B7B1FA121E91FAA200CD8CCC /* DailyTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B1FA111E91FAA200CD8CCC /* DailyTaskViewController.swift */; };
+		B7B1FA441E94C44000CD8CCC /* imagedefault.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B7B1FA431E94C44000CD8CCC /* imagedefault.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		B7B1F9FD1E91E9E200CD8CCC /* Task_table.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Task_table.storyboard; sourceTree = "<group>"; };
 		B7B1FA0D1E91F9D300CD8CCC /* DailyTaskTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyTaskTableViewCell.swift; sourceTree = "<group>"; };
 		B7B1FA111E91FAA200CD8CCC /* DailyTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyTaskViewController.swift; sourceTree = "<group>"; };
+		B7B1FA431E94C44000CD8CCC /* imagedefault.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = imagedefault.jpg; path = ../../../Desktop/imagedefault.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				B7B1FA091E91F8BB00CD8CCC /* Goal */,
 				B7B1FA0A1E91F8C700CD8CCC /* Daily_Task */,
 				A7504E5B1E8CF6840031ABC9 /* Assets.xcassets */,
+				B7B1FA431E94C44000CD8CCC /* imagedefault.jpg */,
 				A7504E601E8CF6840031ABC9 /* Info.plist */,
 			);
 			path = Maily;
@@ -214,6 +217,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7B1FA441E94C44000CD8CCC /* imagedefault.jpg in Resources */,
 				A7504ECF1E91D7DB0031ABC9 /* Login.storyboard in Resources */,
 				A7504E5F1E8CF6840031ABC9 /* (null) in Resources */,
 				A7504E5C1E8CF6840031ABC9 /* Assets.xcassets in Resources */,

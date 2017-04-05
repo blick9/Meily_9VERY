@@ -72,6 +72,7 @@ class GoalCollectionViewController: UICollectionViewController {
         
         return cell
     }
+    
 
     // MARK: UICollectionViewDelegate
 

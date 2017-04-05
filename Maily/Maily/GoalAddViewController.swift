@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GoalAddViewController: UIViewController {
+class GoalAddViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     let dateFormatter = DateFormatter()
     let datePicker = UIDatePicker()
 
@@ -20,6 +20,8 @@ class GoalAddViewController: UIViewController {
    
     @IBOutlet weak var categoryBackground: UIView!
     @IBOutlet weak var colorChipBackground: UIView!
+    
+    @IBOutlet weak var backgroundImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +53,7 @@ class GoalAddViewController: UIViewController {
     
     func donePressed() {
         let selectedYear = datePicker.date
-        dateFormatter.dateFormat = "YYYY년 MM월 dd일(EEEE)"
+        dateFormatter.dateFormat = "YYYY년 MM월 dd일, EEEE"
         dateFormatter.locale = Locale(identifier: "ko_KR")
 //        dateFormatter.dateStyle = .full
 //        dateFormatter.timeStyle = .none
@@ -59,6 +61,20 @@ class GoalAddViewController: UIViewController {
         self.view.endEditing(true)
     }
 
+    @IBAction func imagePickButton(_ sender: Any) {
+        let imagepicker = UIImagePickerController()
+        imagepicker.delegate = self
+        imagepicker.sourceType = .photoLibrary
+        present(imagepicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerOriginalImage] {
+            backgroundImage.image = image as! UIImage
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

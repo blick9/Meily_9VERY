@@ -23,14 +23,13 @@ class GoalCollectionViewCell: UICollectionViewCell {
     
     self.layer.shadowColor = UIColor.black.cgColor
     self.layer.shadowOpacity = 0.3
-    self.layer.shadowOffset = CGSize(width: 3, height: 3)
-    self.layer.shadowRadius = 2
+    self.layer.shadowOffset = CGSize(width: 0, height: 3)
+    self.layer.shadowRadius = 3
     
     }
     
     override func layoutSubviews() {
         goalInnerView.layer.cornerRadius = 5
-
         
     }
 }
