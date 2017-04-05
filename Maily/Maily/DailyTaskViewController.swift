@@ -13,7 +13,8 @@ class DailyTaskViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var dailyTable: UITableView!
     @IBOutlet weak var dailyAddButton: UIButton!
     
-    var dailyArray = ["read ~80p befor sleep", "study until chapter2"]
+    var dailyArray = ["I'm gonna read ~80p before sleep", "영어 문법 2강까지 정리할꼬야 내가 다 할꼬야"]
+    var goalArray = ["[글쓰기 특강 완독]","[기초문법책 매일 1강씩 공부]"]
     
     
     override func viewDidLoad() {
@@ -41,6 +42,7 @@ class DailyTaskViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! DailyTaskTableViewCell
         cell.dailyTaskLabel.text = dailyArray[indexPath.row]
+        cell.dailyTaskGoal.text = goalArray[indexPath.row]
         
         return cell
         
