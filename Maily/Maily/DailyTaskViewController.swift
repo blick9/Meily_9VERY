@@ -56,7 +56,6 @@ class DailyTaskViewController: UIViewController, UITableViewDelegate, UITableVie
         }
     }
     
-    
 
 
     /*
