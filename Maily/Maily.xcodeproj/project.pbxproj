@@ -21,16 +21,17 @@
 		A7504E571E8CF6840031ABC9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7504E561E8CF6840031ABC9 /* LoginViewController.swift */; };
 		A7504E5A1E8CF6840031ABC9 /* LunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7504E581E8CF6840031ABC9 /* LunchScreen.storyboard */; };
 		A7504E5C1E8CF6840031ABC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7504E5B1E8CF6840031ABC9 /* Assets.xcassets */; };
-		A7504E5F1E8CF6840031ABC9 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		A7504E5F1E8CF6840031ABC9 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		A7504E671E8D0BF90031ABC9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7504E661E8D0BF90031ABC9 /* SignUpViewController.swift */; };
 		A7504E691E8D20190031ABC9 /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7504E681E8D20190031ABC9 /* TextFieldStyle.swift */; };
 		A7504EC91E916DB40031ABC9 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7504EC81E916DB40031ABC9 /* CustomTabBarController.swift */; };
 		A7504ECB1E91D7190031ABC9 /* DailyTaskTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7504ECA1E91D7190031ABC9 /* DailyTaskTableView.storyboard */; };
 		A7504ECF1E91D7DB0031ABC9 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7504ECE1E91D7DB0031ABC9 /* Login.storyboard */; };
-		A752E63A1E953BB900E10173 /* HOT Balloon Trip.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A752E6391E953BB900E10173 /* HOT Balloon Trip.jpg */; };
 		B77980111E8CFB5C00C4684D /* Goal_collection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B77980101E8CFB5C00C4684D /* Goal_collection.storyboard */; };
 		B77980161E8D05DC00C4684D /* GoalCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77980151E8D05DC00C4684D /* GoalCollectionViewController.swift */; };
 		B779805C1E8E911000C4684D /* GoalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B779805B1E8E911000C4684D /* GoalCollectionViewCell.swift */; };
+		B7B18C7A1E965D28000081F4 /* imagedefault.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B7B18C791E965D28000081F4 /* imagedefault.jpg */; };
+		B7B18C7C1E9678AD000081F4 /* BackgroundStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B18C7B1E9678AD000081F4 /* BackgroundStyle.swift */; };
 		B7B1F9FE1E91E9E200CD8CCC /* Task_table.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7B1F9FD1E91E9E200CD8CCC /* Task_table.storyboard */; };
 		B7B1FA0E1E91F9D300CD8CCC /* DailyTaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B1FA0D1E91F9D300CD8CCC /* DailyTaskTableViewCell.swift */; };
 		B7B1FA121E91FAA200CD8CCC /* DailyTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B1FA111E91FAA200CD8CCC /* DailyTaskViewController.swift */; };
@@ -59,11 +60,12 @@
 		A7504EC81E916DB40031ABC9 /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		A7504ECA1E91D7190031ABC9 /* DailyTaskTableView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DailyTaskTableView.storyboard; sourceTree = "<group>"; };
 		A7504ECE1E91D7DB0031ABC9 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
-		A752E6391E953BB900E10173 /* HOT Balloon Trip.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "HOT Balloon Trip.jpg"; path = "../../../../../../../../../4. Photo/Background/HOT Balloon Trip.jpg"; sourceTree = "<group>"; };
 		B38109D59AF5612B04A77229 /* Pods-Maily.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Maily.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Maily/Pods-Maily.debug.xcconfig"; sourceTree = "<group>"; };
 		B77980101E8CFB5C00C4684D /* Goal_collection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Goal_collection.storyboard; sourceTree = "<group>"; };
 		B77980151E8D05DC00C4684D /* GoalCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalCollectionViewController.swift; sourceTree = "<group>"; };
 		B779805B1E8E911000C4684D /* GoalCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalCollectionViewCell.swift; sourceTree = "<group>"; };
+		B7B18C791E965D28000081F4 /* imagedefault.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = imagedefault.jpg; sourceTree = "<group>"; };
+		B7B18C7B1E9678AD000081F4 /* BackgroundStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundStyle.swift; sourceTree = "<group>"; };
 		B7B1F9FD1E91E9E200CD8CCC /* Task_table.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Task_table.storyboard; sourceTree = "<group>"; };
 		B7B1FA0D1E91F9D300CD8CCC /* DailyTaskTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyTaskTableViewCell.swift; sourceTree = "<group>"; };
 		B7B1FA111E91FAA200CD8CCC /* DailyTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyTaskViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				A7504E541E8CF6840031ABC9 /* AppDelegate.swift */,
 				A72054BE1E92142600008F13 /* DB.swift */,
 				A7504E681E8D20190031ABC9 /* TextFieldStyle.swift */,
+				B7B18C7B1E9678AD000081F4 /* BackgroundStyle.swift */,
 				5FD24C6E1E93BC4C0087E812 /* StopPasteAction.swift */,
 				5F2F951E1E920D330073D3A2 /* ColorButtonStyle.swift */,
 				A7504EC81E916DB40031ABC9 /* CustomTabBarController.swift */,
@@ -141,7 +144,6 @@
 				B7B1FA091E91F8BB00CD8CCC /* Goal */,
 				B7B1FA0A1E91F8C700CD8CCC /* Daily_Task */,
 				A7504E5B1E8CF6840031ABC9 /* Assets.xcassets */,
-				A752E6391E953BB900E10173 /* HOT Balloon Trip.jpg */,
 				A7504E601E8CF6840031ABC9 /* Info.plist */,
 			);
 			path = Maily;
@@ -165,6 +167,7 @@
 				B779805B1E8E911000C4684D /* GoalCollectionViewCell.swift */,
 				B77980101E8CFB5C00C4684D /* Goal_collection.storyboard */,
 				A72054CF1E93CA2F00008F13 /* Goal_add.storyboard */,
+				B7B18C791E965D28000081F4 /* imagedefault.jpg */,
 			);
 			name = Goal;
 			sourceTree = "<group>";
@@ -244,8 +247,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7B18C7A1E965D28000081F4 /* imagedefault.jpg in Resources */,
 				A7504ECF1E91D7DB0031ABC9 /* Login.storyboard in Resources */,
-				A7504E5F1E8CF6840031ABC9 /* BuildFile in Resources */,
+				A7504E5F1E8CF6840031ABC9 /* (null) in Resources */,
 				A7504E5C1E8CF6840031ABC9 /* Assets.xcassets in Resources */,
 				B77980111E8CFB5C00C4684D /* Goal_collection.storyboard in Resources */,
 				B7B1F9FE1E91E9E200CD8CCC /* Task_table.storyboard in Resources */,
@@ -254,7 +258,6 @@
 				A7504ECB1E91D7190031ABC9 /* DailyTaskTableView.storyboard in Resources */,
 				A7504E5A1E8CF6840031ABC9 /* LunchScreen.storyboard in Resources */,
 				A72054D01E93CA2F00008F13 /* Goal_add.storyboard in Resources */,
-				A752E63A1E953BB900E10173 /* HOT Balloon Trip.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7504E671E8D0BF90031ABC9 /* SignUpViewController.swift in Sources */,
+				B7B18C7C1E9678AD000081F4 /* BackgroundStyle.swift in Sources */,
 				B7B1FA121E91FAA200CD8CCC /* DailyTaskViewController.swift in Sources */,
 				B779805C1E8E911000C4684D /* GoalCollectionViewCell.swift in Sources */,
 				5FD24C6F1E93BC4C0087E812 /* StopPasteAction.swift in Sources */,
@@ -441,6 +445,7 @@
 			baseConfigurationReference = B38109D59AF5612B04A77229 /* Pods-Maily.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Maily/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = febrix.9000.kuchen.Maily;
@@ -454,6 +459,7 @@
 			baseConfigurationReference = 524FF94C50722966344F637C /* Pods-Maily.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Maily/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = febrix.9000.kuchen.Maily;

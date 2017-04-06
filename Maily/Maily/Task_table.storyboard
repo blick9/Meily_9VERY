@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--오늘 목표-->
+        <!--Today's Purpose-->
         <scene sceneID="p5w-hZ-7Vb">
             <objects>
                 <viewController id="d75-HR-EvG" customClass="DailyTaskViewController" customModule="Maily" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,9 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LIh-KF-AGL">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LIh-KF-AGL">
                                 <rect key="frame" x="12" y="10" width="354" height="657"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="5" indentationWidth="10" reuseIdentifier="cell" rowHeight="90" id="xyh-wc-0ev" customClass="DailyTaskTableViewCell" customModule="Maily" customModuleProvider="target">
@@ -33,38 +33,55 @@
                                             <rect key="frame" x="0.0" y="0.0" width="354" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RPJ-Vg-5Rb">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RPJ-Vg-5Rb">
                                                     <rect key="frame" x="0.0" y="0.0" width="347" height="80"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="오늘 내일 모레 계속계속 나는 읽을거야" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2w1-LL-Ppd">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오늘 내일 모레 계속계속 나는 읽을거야" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2w1-LL-Ppd">
                                                             <rect key="frame" x="77" y="39" width="245" height="25"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="18"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fUI-iN-ndU">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fUI-iN-ndU">
                                                             <rect key="frame" x="-7" y="-3" width="354" height="8"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <color key="backgroundColor" red="1" green="0.99215686270000003" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </view>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="book_icon" translatesAutoresizingMaskIntoConstraints="NO" id="lsb-7q-p2m">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book_icon" translatesAutoresizingMaskIntoConstraints="NO" id="lsb-7q-p2m">
                                                             <rect key="frame" x="23" y="26" width="25" height="34"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;참을 수 없는 존재의 가벼움 완독!&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcc-fU-H54">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;참을 수 없는 존재의 가벼움 완독!&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcc-fU-H54">
                                                             <rect key="frame" x="77" y="20" width="245" height="21"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="11"/>
                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.35637550903598247" green="0.35990397942247732" blue="0.35990397942247732" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="fUI-iN-ndU" secondAttribute="trailing" id="3wf-a7-pSD"/>
+                                                        <constraint firstItem="jcc-fU-H54" firstAttribute="leading" secondItem="2w1-LL-Ppd" secondAttribute="leading" id="56q-Wb-7JG"/>
+                                                        <constraint firstAttribute="bottom" secondItem="2w1-LL-Ppd" secondAttribute="bottom" constant="16" id="69h-Bj-ISG"/>
+                                                        <constraint firstItem="jcc-fU-H54" firstAttribute="leading" secondItem="lsb-7q-p2m" secondAttribute="trailing" constant="29" id="7Ik-88-93I"/>
+                                                        <constraint firstItem="jcc-fU-H54" firstAttribute="top" secondItem="fUI-iN-ndU" secondAttribute="bottom" constant="15" id="8SY-IT-TVF"/>
+                                                        <constraint firstItem="lsb-7q-p2m" firstAttribute="top" secondItem="fUI-iN-ndU" secondAttribute="bottom" constant="21" id="8wr-gK-YEe"/>
+                                                        <constraint firstItem="2w1-LL-Ppd" firstAttribute="top" secondItem="fUI-iN-ndU" secondAttribute="bottom" constant="34" id="9aE-Sq-YGo"/>
+                                                        <constraint firstItem="lsb-7q-p2m" firstAttribute="leading" secondItem="RPJ-Vg-5Rb" secondAttribute="leading" constant="23" id="J8K-2b-u5d"/>
+                                                        <constraint firstAttribute="bottom" secondItem="jcc-fU-H54" secondAttribute="bottom" constant="39" id="Jnn-8f-hiB"/>
+                                                        <constraint firstAttribute="bottom" secondItem="lsb-7q-p2m" secondAttribute="bottom" constant="20" id="K0t-xc-lf1"/>
+                                                        <constraint firstItem="fUI-iN-ndU" firstAttribute="leading" secondItem="RPJ-Vg-5Rb" secondAttribute="leading" constant="-7" id="LA1-2g-7O0"/>
+                                                        <constraint firstItem="jcc-fU-H54" firstAttribute="trailing" secondItem="2w1-LL-Ppd" secondAttribute="trailing" id="Tbe-RD-5pb"/>
+                                                        <constraint firstAttribute="trailing" secondItem="jcc-fU-H54" secondAttribute="trailing" constant="25" id="jMo-6j-Bhq"/>
+                                                        <constraint firstItem="fUI-iN-ndU" firstAttribute="top" secondItem="RPJ-Vg-5Rb" secondAttribute="top" constant="-3" id="rc4-gy-I4e"/>
+                                                    </constraints>
                                                 </view>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="RPJ-Vg-5Rb" firstAttribute="top" secondItem="4zI-4f-gWx" secondAttribute="top" id="Ife-Yt-da7"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="RPJ-Vg-5Rb" secondAttribute="bottom" constant="2" id="MkU-L6-PvW"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="RPJ-Vg-5Rb" secondAttribute="trailing" constant="-1" id="gU9-4h-XMt"/>
+                                                <constraint firstItem="RPJ-Vg-5Rb" firstAttribute="leading" secondItem="4zI-4f-gWx" secondAttribute="leading" id="q0l-zv-h2p"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
@@ -79,7 +96,7 @@
                                 <sections/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pg0-C7-Kpr">
-                                <rect key="frame" x="270" y="500" width="96" height="100"/>
+                                <rect key="frame" x="267" y="527" width="96" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Add_Bt"/>
                                 <connections>
@@ -88,9 +105,15 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.23137254901960785" green="0.23137254901960785" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LIh-KF-AGL" firstAttribute="top" secondItem="b5Q-q0-yZq" secondAttribute="top" constant="10" id="1ZL-A5-bHw"/>
+                            <constraint firstItem="LIh-KF-AGL" firstAttribute="leading" secondItem="b5Q-q0-yZq" secondAttribute="leadingMargin" constant="-4" id="9lU-wr-8lx"/>
+                            <constraint firstItem="z4Q-Td-Hb3" firstAttribute="top" secondItem="LIh-KF-AGL" secondAttribute="bottom" id="N6K-it-xGH"/>
+                            <constraint firstItem="LIh-KF-AGL" firstAttribute="centerX" secondItem="b5Q-q0-yZq" secondAttribute="centerX" id="owM-Fg-gBb"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="오늘 목표" id="xek-LN-38a">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="cOr-4p-qkW"/>
+                    <navigationItem key="navigationItem" title="Today's Purpose" id="xek-LN-38a">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="cOr-4p-qkW"/>
                     </navigationItem>
                     <connections>
                         <outlet property="dailyAddButton" destination="pg0-C7-Kpr" id="OhZ-05-Paz"/>

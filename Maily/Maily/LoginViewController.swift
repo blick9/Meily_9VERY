@@ -32,7 +32,6 @@ class LoginViewController: UIViewController {
         let buttonTitleStr = NSMutableAttributedString(string:"Sign Up", attributes:attrs)
         attributedString.append(buttonTitleStr)
         signUpButton.setAttributedTitle(buttonTitleStr, for: .normal)
-        
         tempLoginSkipButton()
     }
     
