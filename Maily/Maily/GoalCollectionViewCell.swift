@@ -12,7 +12,6 @@ class GoalCollectionViewCell: UICollectionViewCell {
    // var shadowColor = UIColor.init(red: 255/0, green: 255/0, blue: 255/0, alpha: 1).cgColor
     
     @IBOutlet weak var goalInnerView: UIView!
-    
     @IBOutlet weak var goalCardImage: UIImageView!
     @IBOutlet weak var goalCardTitle: UILabel!
     @IBOutlet weak var cellBlur: UIVisualEffectView!
@@ -30,6 +29,5 @@ class GoalCollectionViewCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         goalInnerView.layer.cornerRadius = 5
-        
     }
 }

@@ -7,23 +7,23 @@
 //
 
 import UIKit
+import Foundation
 
 class DailyTaskViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var dailyTable: UITableView!
     @IBOutlet weak var dailyAddButton: UIButton!
     
-    var dailyArray = ["I'm gonna read ~80p before sleep", "영어 문법 2강까지 정리할꼬야 내가 다 할꼬야"]
-    var goalArray = ["[글쓰기 특강 완독]","[기초문법책 매일 1강씩 공부]"]
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         dailyTable.dataSource = self
         dailyTable.delegate = self
-        dailyTable.reloadData()
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadTableViewData), name: NSNotification.Name(rawValue: "reloadDailyMemoTableView"), object: nil)
         // Do any additional setup after loading the view.
-        
+    }
+    
+    func reloadTableViewData() {
+        dailyTable.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,14 +36,20 @@ class DailyTaskViewController: UIViewController, UITableViewDelegate, UITableVie
     }
  
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dailyArray.count
+        return DataBase.sharedInstance.getDailyMemoDataArray().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! DailyTaskTableViewCell
-        cell.dailyTaskLabel.text = dailyArray[indexPath.row]
-        cell.dailyTaskGoal.text = goalArray[indexPath.row]
+        let dailyMemoDataFromDB = DataBase.sharedInstance.getDailyMemoDataArray()
+        let bigGoalID = dailyMemoDataFromDB[indexPath.row]["bigGoalId"] as! String?
+        let bigGoalDataDic = DataBase.sharedInstance.getGoalDataByID(goalID: bigGoalID!)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYYY/MM/dd"
         
+        cell.dailyTaskGoal.text = ("<\((bigGoalDataDic["goalTitle"] as! String?)!)>")
+        cell.dailyTaskLabel.text = dailyMemoDataFromDB[indexPath.row]["todayPurposeMemo"] as! String?
+        cell.dailyTaskDate.text = dateFormatter.string(from: dailyMemoDataFromDB[indexPath.row]["writeDate"] as! Date)
         return cell
         
     }
@@ -51,7 +57,7 @@ class DailyTaskViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            dailyArray.remove(at: indexPath.row)
+            DataBase.sharedInstance.removeDailyMemoDataArray(index: indexPath.row)
             tableView.deleteRows (at: [indexPath] , with: .fade)
         }
     }

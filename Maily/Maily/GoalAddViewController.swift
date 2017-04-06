@@ -11,6 +11,7 @@ import UIKit
 class GoalAddViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     let dateFormatter = DateFormatter()
     let datePicker = UIDatePicker()
+    
 
     @IBOutlet weak var datePickerTextField: UITextField!
     @IBOutlet weak var goalTitleTextField: UITextField!
@@ -58,7 +59,7 @@ class GoalAddViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     func donePressed() {
         let selectedYear = datePicker.date
-        dateFormatter.dateFormat = "YYYY년 MM월 dd일, EEEE"
+        dateFormatter.dateFormat = "YYYY년 MM월 dd일(EE) 까지"
         dateFormatter.locale = Locale(identifier: "ko_KR")
 //        dateFormatter.dateStyle = .full
 //        dateFormatter.timeStyle = .none
@@ -83,15 +84,17 @@ class GoalAddViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     @IBAction func saveButtonAction(_ sender: Any) {
         if goalTitleTextField.text?.isEmpty == true {
-            presentAlert(title: "목표저장 오류", message: "목표명을 입력해주세요.", isConfirm: true)
+            presentAlert(title: "저장 에러", message: "목표명을 입력해주세요.", isConfirm: true)
         } else if datePickerTextField.text?.isEmpty == true {
-            presentAlert(title: "목표저장 오류", message: "기한을 정해주세요.", isConfirm: true)
+            presentAlert(title: "저장 에러", message: "기한을 정해주세요.", isConfirm: true)
         } else {
-            var addGoalDataInstance = Goal(image: previewImage.image!, title: goalTitleTextField.text!, dueDate: datePicker.date, priority: 1, colorTag: .blue, pictogram: .book)
-            
+            var makeID = DateFormatter()
+            makeID.dateFormat = "yymmddhhmmss"
+            var addGoalDataInstance = Goal(image: previewImage.image!, title: goalTitleTextField.text!, dueDate: datePicker.date, priority: 1, colorTag: .blue, pictogram: .book, id: makeID.string(from: Date()))
             DataBase.sharedInstance.addGoalData(goalData: addGoalDataInstance)
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadGoalCollectionView"), object: nil)
             self.dismiss(animated: true, completion: nil)
-//            presentAlert(title: "목표저장 성공", message: "목표가 저장되었습니다.", isConfirm: false)
+//            presentAlert(title: "저장 성공", message: "목표가 저장되었습니다.", isConfirm: false)
         }
     }
     

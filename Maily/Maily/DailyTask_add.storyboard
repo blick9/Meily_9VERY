@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="00q-Ve-4n7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="00q-Ve-4n7">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="• BigGoal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJt-ux-V88">
-                                <rect key="frame" x="29" y="230.5" width="68" height="19.5"/>
+                                <rect key="frame" x="29" y="230" width="68" height="20"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="16"/>
                                 <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -33,7 +33,7 @@
                                 <color key="backgroundColor" red="0.80000000000000004" green="0.80000001192092896" blue="0.80000001192092896" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B49-TT-7g1" customClass="BackgroundStyle" customModule="Maily" customModuleProvider="target">
-                                <rect key="frame" x="26" y="119" width="323" height="51.5"/>
+                                <rect key="frame" x="26" y="119" width="323" height="51"/>
                                 <color key="backgroundColor" red="0.20389500260353088" green="0.2039368748664856" blue="0.20389232039451599" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="날짜 설정" borderStyle="line" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sls-XI-8wB" userLabel="DatePickerTextField" customClass="StopPasteAction" customModule="Maily" customModuleProvider="target">
@@ -43,21 +43,21 @@
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="27"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Choose your BigGoal" clearsOnBeginEditing="YES" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="izQ-cX-n9i">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Choose your BigGoal" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="izQ-cX-n9i" customClass="StopPasteAction" customModule="Maily" customModuleProvider="target">
                                 <rect key="frame" x="43" y="258" width="283" height="24"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="• Today's Purpose" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caP-Mh-696">
-                                <rect key="frame" x="29" y="311" width="126.5" height="19.5"/>
+                                <rect key="frame" x="29" y="311" width="127" height="20"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="16"/>
                                 <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lNl-wg-ZLD">
-                                <rect key="frame" x="43" y="338" width="283" height="192.5"/>
+                                <rect key="frame" x="43" y="339" width="283" height="192"/>
                                 <color key="textColor" red="0.92931067943572998" green="0.92946994304656982" blue="0.92930072546005249" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -101,13 +101,16 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="저장" id="NSA-Ry-sik">
                             <color key="tintColor" red="0.96470588235294119" green="0.72941176470588232" blue="0.81176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="saveButtonAction:" destination="Tsu-Zw-cuZ" id="hd6-Aw-i3O"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="dailyTaskMemo" destination="lNl-wg-ZLD" id="t6P-uO-QwM"/>
+                        <outlet property="bigGoalTextField" destination="izQ-cX-n9i" id="23i-MC-9OB"/>
                         <outlet property="datePickerBackground" destination="B49-TT-7g1" id="vRI-bA-WAN"/>
                         <outlet property="datePickerTextField" destination="sls-XI-8wB" id="iU0-Tz-yEM"/>
-                        <outlet property="taskTitleTextField" destination="izQ-cX-n9i" id="pL1-qb-MKB"/>
+                        <outlet property="todayPurposeMemoTextView" destination="lNl-wg-ZLD" id="6fT-bO-t3K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2OV-te-qOS" userLabel="First Responder" sceneMemberID="firstResponder"/>

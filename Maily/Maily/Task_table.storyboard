@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -36,42 +36,55 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RPJ-Vg-5Rb">
                                                     <rect key="frame" x="0.0" y="0.0" width="347" height="80"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오늘 내일 모레 계속계속 나는 읽을거야" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2w1-LL-Ppd">
-                                                            <rect key="frame" x="77" y="39" width="245" height="25"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Purpose Memo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2w1-LL-Ppd">
+                                                            <rect key="frame" x="70" y="35" width="272" height="24"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="18"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fUI-iN-ndU">
-                                                            <rect key="frame" x="-7" y="-3" width="354" height="8"/>
+                                                            <rect key="frame" x="-7" y="-3" width="354" height="9"/>
                                                             <color key="backgroundColor" red="1" green="0.99215686270000003" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </view>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book_icon" translatesAutoresizingMaskIntoConstraints="NO" id="lsb-7q-p2m">
-                                                            <rect key="frame" x="23" y="26" width="25" height="34"/>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="book_icon" translatesAutoresizingMaskIntoConstraints="NO" id="lsb-7q-p2m">
+                                                            <rect key="frame" x="18" y="26" width="35" height="35"/>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;참을 수 없는 존재의 가벼움 완독!&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcc-fU-H54">
-                                                            <rect key="frame" x="77" y="20" width="245" height="21"/>
-                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="11"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Goal&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcc-fU-H54">
+                                                            <rect key="frame" x="70" y="17" width="259" height="20"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017/04/07" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnM-Wi-qU3">
+                                                            <rect key="frame" x="70" y="53" width="272" height="24"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="24" id="Wt6-5p-MHE"/>
+                                                                <constraint firstAttribute="width" constant="272" id="w6E-S3-jhP"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="10"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.35637550903598247" green="0.35990397942247732" blue="0.35990397942247732" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
+                                                        <constraint firstItem="fnM-Wi-qU3" firstAttribute="trailing" secondItem="RPJ-Vg-5Rb" secondAttribute="trailingMargin" constant="3" id="0jB-ZJ-M7d"/>
                                                         <constraint firstAttribute="trailing" secondItem="fUI-iN-ndU" secondAttribute="trailing" id="3wf-a7-pSD"/>
                                                         <constraint firstItem="jcc-fU-H54" firstAttribute="leading" secondItem="2w1-LL-Ppd" secondAttribute="leading" id="56q-Wb-7JG"/>
-                                                        <constraint firstAttribute="bottom" secondItem="2w1-LL-Ppd" secondAttribute="bottom" constant="16" id="69h-Bj-ISG"/>
-                                                        <constraint firstItem="jcc-fU-H54" firstAttribute="leading" secondItem="lsb-7q-p2m" secondAttribute="trailing" constant="29" id="7Ik-88-93I"/>
-                                                        <constraint firstItem="jcc-fU-H54" firstAttribute="top" secondItem="fUI-iN-ndU" secondAttribute="bottom" constant="15" id="8SY-IT-TVF"/>
+                                                        <constraint firstAttribute="bottom" secondItem="2w1-LL-Ppd" secondAttribute="bottom" constant="21" id="69h-Bj-ISG"/>
+                                                        <constraint firstItem="jcc-fU-H54" firstAttribute="leading" secondItem="lsb-7q-p2m" secondAttribute="trailing" constant="17" id="7Ik-88-93I"/>
+                                                        <constraint firstItem="jcc-fU-H54" firstAttribute="top" secondItem="fUI-iN-ndU" secondAttribute="bottom" constant="11" id="8SY-IT-TVF"/>
                                                         <constraint firstItem="lsb-7q-p2m" firstAttribute="top" secondItem="fUI-iN-ndU" secondAttribute="bottom" constant="21" id="8wr-gK-YEe"/>
-                                                        <constraint firstItem="2w1-LL-Ppd" firstAttribute="top" secondItem="fUI-iN-ndU" secondAttribute="bottom" constant="34" id="9aE-Sq-YGo"/>
+                                                        <constraint firstItem="2w1-LL-Ppd" firstAttribute="top" secondItem="fUI-iN-ndU" secondAttribute="bottom" constant="29" id="9aE-Sq-YGo"/>
                                                         <constraint firstItem="lsb-7q-p2m" firstAttribute="leading" secondItem="RPJ-Vg-5Rb" secondAttribute="leading" constant="23" id="J8K-2b-u5d"/>
-                                                        <constraint firstAttribute="bottom" secondItem="jcc-fU-H54" secondAttribute="bottom" constant="39" id="Jnn-8f-hiB"/>
-                                                        <constraint firstAttribute="bottom" secondItem="lsb-7q-p2m" secondAttribute="bottom" constant="20" id="K0t-xc-lf1"/>
+                                                        <constraint firstAttribute="bottom" secondItem="jcc-fU-H54" secondAttribute="bottom" constant="43" id="Jnn-8f-hiB"/>
+                                                        <constraint firstAttribute="bottom" secondItem="lsb-7q-p2m" secondAttribute="bottom" constant="19" id="K0t-xc-lf1"/>
                                                         <constraint firstItem="fUI-iN-ndU" firstAttribute="leading" secondItem="RPJ-Vg-5Rb" secondAttribute="leading" constant="-7" id="LA1-2g-7O0"/>
-                                                        <constraint firstItem="jcc-fU-H54" firstAttribute="trailing" secondItem="2w1-LL-Ppd" secondAttribute="trailing" id="Tbe-RD-5pb"/>
-                                                        <constraint firstAttribute="trailing" secondItem="jcc-fU-H54" secondAttribute="trailing" constant="25" id="jMo-6j-Bhq"/>
+                                                        <constraint firstItem="jcc-fU-H54" firstAttribute="trailing" secondItem="2w1-LL-Ppd" secondAttribute="trailing" constant="-13" id="Tbe-RD-5pb"/>
+                                                        <constraint firstItem="fnM-Wi-qU3" firstAttribute="top" secondItem="jcc-fU-H54" secondAttribute="bottom" constant="16" id="ZBk-zh-Q6j"/>
+                                                        <constraint firstItem="fnM-Wi-qU3" firstAttribute="trailing" secondItem="2w1-LL-Ppd" secondAttribute="trailing" id="ocF-Wt-cYz"/>
                                                         <constraint firstItem="fUI-iN-ndU" firstAttribute="top" secondItem="RPJ-Vg-5Rb" secondAttribute="top" constant="-3" id="rc4-gy-I4e"/>
+                                                        <constraint firstItem="fnM-Wi-qU3" firstAttribute="leading" secondItem="2w1-LL-Ppd" secondAttribute="leading" id="uaN-Ww-f1u"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -87,6 +100,7 @@
                                         <connections>
                                             <outlet property="dailyCell" destination="RPJ-Vg-5Rb" id="sqQ-kS-Cjw"/>
                                             <outlet property="dailyTaskColorBar" destination="fUI-iN-ndU" id="N10-tt-rmj"/>
+                                            <outlet property="dailyTaskDate" destination="fnM-Wi-qU3" id="3aB-bq-ng2"/>
                                             <outlet property="dailyTaskGoal" destination="jcc-fU-H54" id="xDa-t8-Gkr"/>
                                             <outlet property="dailyTaskIcon" destination="lsb-7q-p2m" id="ml6-7G-Kpi"/>
                                             <outlet property="dailyTaskLabel" destination="2w1-LL-Ppd" id="ZMd-XV-5V2"/>

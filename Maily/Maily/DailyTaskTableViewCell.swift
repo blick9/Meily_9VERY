@@ -17,10 +17,10 @@ class DailyTaskTableViewCell: UITableViewCell {
     @IBOutlet weak var dailyTaskIcon: UIImageView!
     @IBOutlet weak var dailyTaskColorBar: UIView!
     @IBOutlet weak var dailyTaskGoal: UILabel!
+    @IBOutlet weak var dailyTaskDate: UILabel!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
         
         self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowOpacity = 0.2

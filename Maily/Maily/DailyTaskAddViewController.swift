@@ -8,18 +8,25 @@
 
 import UIKit
 
-class DailyTaskAddViewController: UIViewController,UITextViewDelegate {
+class DailyTaskAddViewController: UIViewController,UITextViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     let dateFormatter = DateFormatter()
     let datePicker = UIDatePicker()
+    let pickerView = UIPickerView()
     let today = Date()
-    @IBOutlet weak var taskTitleTextField: UITextField!
+    var selectGoalIdValue = String()
+    
     @IBOutlet weak var datePickerTextField: UITextField!
-    @IBOutlet weak var dailyTaskMemo: UITextView!
+    @IBOutlet weak var bigGoalTextField: UITextField!
+    @IBOutlet weak var todayPurposeMemoTextView: UITextView!
     @IBOutlet weak var datePickerBackground: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        
         setDatePicker()
+        setGoalPicker()
         setMemo()
         dateFormatter.locale = Locale(identifier: "ko_KR")
 //        dateFormatter.dateStyle = .full
@@ -30,11 +37,11 @@ class DailyTaskAddViewController: UIViewController,UITextViewDelegate {
         datePickerTextField.text = dateFormatter.string(from: today)
         datePickerTextField.borderStyle = .none
         
-        taskTitleTextField.attributedPlaceholder = NSAttributedString(string: "Choose BigGoal", attributes: [NSForegroundColorAttributeName: UIColor.darkGray])
+        bigGoalTextField.attributedPlaceholder = NSAttributedString(string: "Choose BigGoal", attributes: [NSForegroundColorAttributeName: UIColor.darkGray])
         
 
-        dailyTaskMemo.layer.borderColor = UIColor.init(red: 204/255, green: 204/255, blue: 204/255, alpha: 0.2).cgColor
-        dailyTaskMemo.layer.borderWidth = 1
+        todayPurposeMemoTextView.layer.borderColor = UIColor.init(red: 204/255, green: 204/255, blue: 204/255, alpha: 0.2).cgColor
+        todayPurposeMemoTextView.layer.borderWidth = 1
 
     }
     
@@ -54,19 +61,50 @@ class DailyTaskAddViewController: UIViewController,UITextViewDelegate {
     }
     
     
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return DataBase.sharedInstance.getGoalDataArray().count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        let goalDataArray = DataBase.sharedInstance.getGoalDataArray()
+        return goalDataArray[row]["goalTitle"] as! String?
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let goalDataArray = DataBase.sharedInstance.getGoalDataArray()
+        bigGoalTextField.text = goalDataArray[row]["goalTitle"] as! String?
+        selectGoalIdValue = goalDataArray[row]["id"] as! String
+    }
     
     @IBAction func cancleButtonTouched(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
     func setMemo() {
-         dailyTaskMemo.layer.cornerRadius = 5
+         todayPurposeMemoTextView.layer.cornerRadius = 5
     }
 
+    func setGoalPicker() {
+        let toolbar = UIToolbar()
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(goalPickerDonePressed))
+        toolbar.sizeToFit()
+        toolbar.setItems([doneButton], animated: false)
+        
+        bigGoalTextField.inputAccessoryView = toolbar
+        bigGoalTextField.inputView = pickerView
+    }
+    
+    func goalPickerDonePressed() {
+        self.view.endEditing(true)
+    }
     
     func setDatePicker() {
         let toolbar = UIToolbar()
-        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(datePickerDonePressed))
         datePicker.datePickerMode = .date
         datePicker.locale = Locale(identifier: "ko_KR")
         toolbar.sizeToFit()
@@ -77,11 +115,41 @@ class DailyTaskAddViewController: UIViewController,UITextViewDelegate {
 //        datePickerTextField.setValue(UIColor.white, forKey:"textColor")
     }
     
-    func donePressed() {
+    func datePickerDonePressed() {
         let selectedYear = datePicker.date
         datePickerTextField.text = dateFormatter.string(from: selectedYear)
         self.view.endEditing(true)
     }
 
-
+    @IBAction func saveButtonAction(_ sender: Any) {
+        if bigGoalTextField.text?.isEmpty == true {
+            presentAlert(title: "저장 에러", message: "목표를 선택해주세요.", isConfirm: true)
+        } else if todayPurposeMemoTextView.text?.isEmpty == true {
+            presentAlert(title: "저장 에러", message: "메모를 입력해주세요.", isConfirm: true)
+        } else {
+            var makeID = DateFormatter()
+            makeID.dateFormat = "yymmddhhmmss"
+            var addDailyMemoInstance = DailyMemo(bigGoalId: selectGoalIdValue, writeDate: datePicker.date, todayPurposeMemo: todayPurposeMemoTextView.text, id: makeID.string(from: Date()))
+            
+            DataBase.sharedInstance.addDailyMemoData(dailyMemo: addDailyMemoInstance)
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadDailyMemoTableView"), object: nil)
+            self.dismiss(animated: true, completion: nil)
+            //            presentAlert(title: "저장 성공", message: "목표가 저장되었습니다.", isConfirm: false)
+        }
+    }
+    
+    
+    func presentAlert(title : String, message : String, isConfirm : Bool) {
+        if isConfirm == true {
+            let existConfirmButtonAlert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            let okButton = UIAlertAction(title: "확인", style: .default, handler: nil)
+            existConfirmButtonAlert.addAction(okButton)
+            present(existConfirmButtonAlert, animated: true, completion: nil)
+        } else {
+            let normalAlert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            present(normalAlert, animated: true, completion: {
+                self.dismiss(animated: true, completion: nil)
+            })
+        }
+    }
 }

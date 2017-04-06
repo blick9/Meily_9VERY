@@ -11,11 +11,6 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class GoalCollectionViewController: UICollectionViewController {
-    
-    
-    
-    var goalTitlesArray = ["lose weight 3kg until March","All pass weekly Test","333","444","51135452434","dafdasf","asdfasdf","asdfasdf"]
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,12 +19,16 @@ class GoalCollectionViewController: UICollectionViewController {
         addGoalButton.addTarget(self, action: #selector(presentGoalAddView), for: .touchUpInside)
         self.view.addSubview(addGoalButton)
         
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadCollectionViewData), name: NSNotification.Name(rawValue: "reloadGoalCollectionView"), object: nil)
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+    }
+    
+    func reloadCollectionViewData() {
+        collectionView?.reloadData()
     }
     
     func presentGoalAddView() {
@@ -63,13 +62,17 @@ class GoalCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return goalTitlesArray.count
+        return DataBase.sharedInstance.getGoalDataArray().count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! GoalCollectionViewCell
-        cell.goalCardTitle.text = goalTitlesArray[indexPath.row]
+        let goalDataFromDB = DataBase.sharedInstance.getGoalDataArray()
+        dump(goalDataFromDB)
+        cell.goalCardTitle.text = goalDataFromDB[indexPath.row]["goalTitle"] as! String?
+        cell.goalCardImage.image = goalDataFromDB[indexPath.row]["image"] as! UIImage?
         
+//        cell.goalCardImage.image = goalDataFromDB[indexPath.row]
         return cell
     }
     

@@ -35,32 +35,36 @@ class Goal {
         case book
         case pencil, exercise, clock, shopping, money
     }
-    private var image : UIImage
-    private var goalTitle : String
-    private var dueDate : Date
-    private var priority : Int
-    private var colorTag : color
-    private var pictogram : pictogram
+    fileprivate var image : UIImage
+    fileprivate var goalTitle : String
+    fileprivate var dueDate : Date
+    fileprivate var priority : Int
+    fileprivate var colorTag : color
+    fileprivate var pictogram : pictogram
+    fileprivate var idValue : String
 
-    init(image : UIImage, title : String, dueDate : Date, priority : Int, colorTag : color, pictogram : pictogram) {
+    init(image : UIImage, title : String, dueDate : Date, priority : Int, colorTag : color, pictogram : pictogram, id : String) {
         self.image = image
         self.goalTitle = title
         self.dueDate = dueDate
         self.priority = priority
         self.colorTag = colorTag
         self.pictogram = pictogram
+        self.idValue = id
     }
 }
 
 class DailyMemo {
-    private var goal : Goal
-    private var writeDate : Date
-    private var memoContents : String
+    fileprivate var bigGoalId : String
+    fileprivate var writeDate : Date
+    fileprivate var todayPurposeMemo : String
+    fileprivate var idValue : String
     
-    init(goal : Goal, writeDate : Date, memoContents : String) {
-        self.goal = goal
+    init(bigGoalId : String, writeDate : Date, todayPurposeMemo : String, id : String) {
+        self.bigGoalId = bigGoalId
         self.writeDate = writeDate
-        self.memoContents = memoContents
+        self.todayPurposeMemo = todayPurposeMemo
+        self.idValue = id
     }
 }
 
@@ -83,11 +87,56 @@ class DataBase {
         dailyMemoDataArray.append(dailyMemo)
     }
     
-    func getGoalDataArray() -> [Goal] {
-        return goalDataArray
+    func getGoalDataArray() -> [[String:Any]] {
+        var tempArray = [Any]()
+        for i in goalDataArray {
+            var tempDic = [String:Any]()
+            tempDic["image"] = i.image
+            tempDic["goalTitle"] = i.goalTitle
+            tempDic["dueDate"] = i.dueDate
+            tempDic["colorTag"] = i.colorTag
+            tempDic["pictogram"] = i.pictogram
+            tempDic["priority"] = i.priority
+            tempDic["id"] = i.idValue
+            tempArray.append(tempDic)
+        }
+        return tempArray as! [[String : Any]]
     }
     
-    func getDailyMemoDataArray() -> [DailyMemo] {
-        return dailyMemoDataArray
+    func getDailyMemoDataArray() -> [[String:Any]] {
+        var tempArray = [Any]()
+        for i in dailyMemoDataArray {
+            var tempDic = [String:Any]()
+            tempDic["bigGoalId"] = i.bigGoalId
+            tempDic["writeDate"] = i.writeDate
+            tempDic["todayPurposeMemo"] = i.todayPurposeMemo
+            tempDic["colidValueorTag"] = i.idValue
+            tempArray.append(tempDic)
+        }
+        return tempArray as! [[String : Any]]
+    }
+    
+    func getGoalDataByID(goalID : String) -> [String:Any] {
+        var tempDic = [String:Any]()
+        for i in goalDataArray {
+            if i.idValue == goalID {
+                tempDic["image"] = i.image
+                tempDic["goalTitle"] = i.goalTitle
+                tempDic["dueDate"] = i.dueDate
+                tempDic["colorTag"] = i.colorTag
+                tempDic["pictogram"] = i.pictogram
+                tempDic["priority"] = i.priority
+                tempDic["id"] = i.idValue
+            }
+        }
+        return tempDic
+    }
+    
+    func removeDailyMemoDataArray(index : Int) {
+        dailyMemoDataArray.remove(at: index)
+    }
+    
+    func removeGoalDataArray(index : Int) {
+        goalDataArray.remove(at: index)
     }
 }
