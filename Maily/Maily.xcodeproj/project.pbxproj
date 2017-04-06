@@ -21,13 +21,12 @@
 		A7504E571E8CF6840031ABC9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7504E561E8CF6840031ABC9 /* LoginViewController.swift */; };
 		A7504E5A1E8CF6840031ABC9 /* LunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7504E581E8CF6840031ABC9 /* LunchScreen.storyboard */; };
 		A7504E5C1E8CF6840031ABC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7504E5B1E8CF6840031ABC9 /* Assets.xcassets */; };
-		A7504E5F1E8CF6840031ABC9 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		A7504E5F1E8CF6840031ABC9 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		A7504E671E8D0BF90031ABC9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7504E661E8D0BF90031ABC9 /* SignUpViewController.swift */; };
 		A7504E691E8D20190031ABC9 /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7504E681E8D20190031ABC9 /* TextFieldStyle.swift */; };
 		A7504EC91E916DB40031ABC9 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7504EC81E916DB40031ABC9 /* CustomTabBarController.swift */; };
 		A7504ECB1E91D7190031ABC9 /* DailyTaskTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7504ECA1E91D7190031ABC9 /* DailyTaskTableView.storyboard */; };
 		A7504ECF1E91D7DB0031ABC9 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7504ECE1E91D7DB0031ABC9 /* Login.storyboard */; };
-		A752E63A1E953BB900E10173 /* HOT Balloon Trip.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A752E6391E953BB900E10173 /* HOT Balloon Trip.jpg */; };
 		B77980111E8CFB5C00C4684D /* Goal_collection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B77980101E8CFB5C00C4684D /* Goal_collection.storyboard */; };
 		B77980161E8D05DC00C4684D /* GoalCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77980151E8D05DC00C4684D /* GoalCollectionViewController.swift */; };
 		B779805C1E8E911000C4684D /* GoalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B779805B1E8E911000C4684D /* GoalCollectionViewCell.swift */; };
@@ -59,7 +58,6 @@
 		A7504EC81E916DB40031ABC9 /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		A7504ECA1E91D7190031ABC9 /* DailyTaskTableView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DailyTaskTableView.storyboard; sourceTree = "<group>"; };
 		A7504ECE1E91D7DB0031ABC9 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
-		A752E6391E953BB900E10173 /* HOT Balloon Trip.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "HOT Balloon Trip.jpg"; path = "../../../../../../../../../4. Photo/Background/HOT Balloon Trip.jpg"; sourceTree = "<group>"; };
 		B38109D59AF5612B04A77229 /* Pods-Maily.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Maily.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Maily/Pods-Maily.debug.xcconfig"; sourceTree = "<group>"; };
 		B77980101E8CFB5C00C4684D /* Goal_collection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Goal_collection.storyboard; sourceTree = "<group>"; };
 		B77980151E8D05DC00C4684D /* GoalCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalCollectionViewController.swift; sourceTree = "<group>"; };
@@ -141,7 +139,6 @@
 				B7B1FA091E91F8BB00CD8CCC /* Goal */,
 				B7B1FA0A1E91F8C700CD8CCC /* Daily_Task */,
 				A7504E5B1E8CF6840031ABC9 /* Assets.xcassets */,
-				A752E6391E953BB900E10173 /* HOT Balloon Trip.jpg */,
 				A7504E601E8CF6840031ABC9 /* Info.plist */,
 			);
 			path = Maily;
@@ -245,7 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7504ECF1E91D7DB0031ABC9 /* Login.storyboard in Resources */,
-				A7504E5F1E8CF6840031ABC9 /* BuildFile in Resources */,
+				A7504E5F1E8CF6840031ABC9 /* (null) in Resources */,
 				A7504E5C1E8CF6840031ABC9 /* Assets.xcassets in Resources */,
 				B77980111E8CFB5C00C4684D /* Goal_collection.storyboard in Resources */,
 				B7B1F9FE1E91E9E200CD8CCC /* Task_table.storyboard in Resources */,
@@ -254,7 +251,6 @@
 				A7504ECB1E91D7190031ABC9 /* DailyTaskTableView.storyboard in Resources */,
 				A7504E5A1E8CF6840031ABC9 /* LunchScreen.storyboard in Resources */,
 				A72054D01E93CA2F00008F13 /* Goal_add.storyboard in Resources */,
-				A752E63A1E953BB900E10173 /* HOT Balloon Trip.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
