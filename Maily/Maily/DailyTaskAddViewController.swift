@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DailyTaskAddViewController: UIViewController {
+class DailyTaskAddViewController: UIViewController,UITextViewDelegate {
     let dateFormatter = DateFormatter()
     let datePicker = UIDatePicker()
     let today = Date()
@@ -28,7 +28,29 @@ class DailyTaskAddViewController: UIViewController {
         datePickerTextField.text = dateFormatter.string(from: today)
         
         datePickerTextField.borderStyle = .none
+        
+        taskTitleTextField.attributedPlaceholder = NSAttributedString(string: "Choose BigGoal", attributes: [NSForegroundColorAttributeName: UIColor.darkGray])
+        //dailyTaskMemo.text = "Describe today your Promise :)"
+
     }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if (textView.text == "Describe today your Promise :)") {
+            textView.text = ""
+        }
+        textView.becomeFirstResponder()
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if (textView.text == "") {
+            textView.text = "Describe today your Promise :)"
+            textView.textColor = UIColor.darkGray
+        }
+        textView.resignFirstResponder()
+    }
+    
+    
+    
     @IBAction func cancleButtonTouched(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
