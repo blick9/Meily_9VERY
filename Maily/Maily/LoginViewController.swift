@@ -11,8 +11,8 @@ import UIKit
 class LoginViewController: UIViewController {
     var isActivate = (email : false, pw : false)
     
-    var attrs = [NSFontAttributeName : UIFont.systemFont(ofSize: 19),
-        NSForegroundColorAttributeName : UIColor.red,
+    var attrs = [NSFontAttributeName : UIFont.systemFont(ofSize: 25),
+        NSForegroundColorAttributeName : UIColor.white,
         NSUnderlineStyleAttributeName : 1] as [String : Any]
     
     var attributedString = NSMutableAttributedString(string:"")
@@ -28,9 +28,9 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         setInitElement()
     
-        let buttonTitleStr = NSMutableAttributedString(string:"My Button", attributes:attrs)
+        let buttonTitleStr = NSMutableAttributedString(string:"Sign Up", attributes:attrs)
         attributedString.append(buttonTitleStr)
-        logInButton.setAttributedTitle(buttonTitleStr, for: .normal)
+        signUpButton.setAttributedTitle(buttonTitleStr, for: .normal)
     }
     
     

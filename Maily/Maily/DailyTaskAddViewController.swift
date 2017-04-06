@@ -15,22 +15,26 @@ class DailyTaskAddViewController: UIViewController,UITextViewDelegate {
     @IBOutlet weak var taskTitleTextField: UITextField!
     @IBOutlet weak var datePickerTextField: UITextField!
     @IBOutlet weak var dailyTaskMemo: UITextView!
+    @IBOutlet weak var datePickerBackground: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setDatePicker()
         setMemo()
         dateFormatter.locale = Locale(identifier: "ko_KR")
-        dateFormatter.dateStyle = .full
+//        dateFormatter.dateStyle = .full
         dateFormatter.timeStyle = .none
-//        dateFormatter.dateFormat = "YYYY년 MM월 dd일, EEEE"
+        dateFormatter.dateFormat = "YYYY년 MM월 dd일, EEEE"
         datePickerTextField.textColor = UIColor.white
+//        init(red: 246/255, green: 186/255, blue: 207/255, alpha: 1)
         datePickerTextField.text = dateFormatter.string(from: today)
-        
         datePickerTextField.borderStyle = .none
         
         taskTitleTextField.attributedPlaceholder = NSAttributedString(string: "Choose BigGoal", attributes: [NSForegroundColorAttributeName: UIColor.darkGray])
-        //dailyTaskMemo.text = "Describe today your Promise :)"
+        
+
+        dailyTaskMemo.layer.borderColor = UIColor.init(red: 204/255, green: 204/255, blue: 204/255, alpha: 0.2).cgColor
+        dailyTaskMemo.layer.borderWidth = 1
 
     }
     

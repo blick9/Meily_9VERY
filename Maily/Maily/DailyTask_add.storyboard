@@ -6,12 +6,11 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--오늘 할 일-->
+        <!--Make Purpose-->
         <scene sceneID="jbg-g5-YDI">
             <objects>
                 <viewController id="Tsu-Zw-cuZ" customClass="DailyTaskAddViewController" customModule="Maily" customModuleProvider="target" sceneMemberID="viewController">
@@ -23,90 +22,77 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="veF-67-2ub">
-                                <rect key="frame" x="52" y="154" width="278" height="1"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="• BigGoal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJt-ux-V88">
-                                <rect key="frame" x="44" y="200" width="130" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="130" id="2Y4-XI-3vW"/>
-                                    <constraint firstAttribute="height" constant="21" id="h2U-Sf-EiJ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="14"/>
+                                <rect key="frame" x="29" y="230.5" width="68" height="19.5"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="16"/>
                                 <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bgs-Vj-QDC">
+                                <rect key="frame" x="43" y="282" width="283" height="1"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000001192092896" blue="0.80000001192092896" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B49-TT-7g1" customClass="BackgroundStyle" customModule="Maily" customModuleProvider="target">
+                                <rect key="frame" x="26" y="119" width="323" height="51.5"/>
+                                <color key="backgroundColor" red="0.20389500260353088" green="0.2039368748664856" blue="0.20389232039451599" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="날짜 설정" borderStyle="line" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sls-XI-8wB" userLabel="DatePickerTextField" customClass="StopPasteAction" customModule="Maily" customModuleProvider="target">
+                                <rect key="frame" x="35" y="127" width="305" height="34"/>
+                                <color key="backgroundColor" red="0.17254901960784313" green="0.17254901960784313" blue="0.17254901960784313" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="27"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Choose your BigGoal" clearsOnBeginEditing="YES" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="izQ-cX-n9i">
+                                <rect key="frame" x="43" y="258" width="283" height="24"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="• Today's Purpose" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caP-Mh-696">
-                                <rect key="frame" x="46" y="285" width="191" height="23"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="191" id="JOa-lt-mIO"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="14"/>
+                                <rect key="frame" x="29" y="311" width="126.5" height="19.5"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="16"/>
                                 <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lNl-wg-ZLD">
-                                <rect key="frame" x="44" y="318" width="297" height="189"/>
-                                <color key="backgroundColor" white="0.10000000000000001" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="189" id="e7K-UE-8D4"/>
-                                </constraints>
+                                <rect key="frame" x="43" y="338" width="283" height="192.5"/>
                                 <color key="textColor" red="0.92931067943572998" green="0.92946994304656982" blue="0.92930072546005249" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="19"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <connections>
                                     <outlet property="delegate" destination="Tsu-Zw-cuZ" id="TTi-28-N2F"/>
                                 </connections>
                             </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="날짜 설정" borderStyle="line" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sls-XI-8wB" userLabel="DatePickerTextField" customClass="StopPasteAction" customModule="Maily" customModuleProvider="target">
-                                <rect key="frame" x="48" y="121" width="278" height="30"/>
-                                <color key="backgroundColor" red="0.99019607843137258" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="25"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
-                            </textField>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bgs-Vj-QDC">
-                                <rect key="frame" x="58" y="259" width="283" height="1"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Choose your BigGoal" clearsOnBeginEditing="YES" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="izQ-cX-n9i">
-                                <rect key="frame" x="58" y="229" width="283" height="30"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="19"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.23134317994117737" green="0.23138946294784546" blue="0.2313401997089386" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="bgs-Vj-QDC" firstAttribute="leading" secondItem="Gj9-bu-xIO" secondAttribute="leadingMargin" constant="42" id="8EI-lO-0Yi"/>
-                            <constraint firstItem="veF-67-2ub" firstAttribute="leading" secondItem="Gj9-bu-xIO" secondAttribute="leadingMargin" constant="36" id="8tE-bk-TR7"/>
+                            <constraint firstItem="sls-XI-8wB" firstAttribute="centerX" secondItem="B49-TT-7g1" secondAttribute="centerX" id="3HC-9C-DYh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="B49-TT-7g1" secondAttribute="trailing" constant="10" id="5wz-Q7-aEn"/>
+                            <constraint firstItem="bgs-Vj-QDC" firstAttribute="leading" secondItem="Gj9-bu-xIO" secondAttribute="leadingMargin" constant="27" id="8EI-lO-0Yi"/>
                             <constraint firstItem="bgs-Vj-QDC" firstAttribute="top" secondItem="izQ-cX-n9i" secondAttribute="bottom" id="AEy-bO-aZo"/>
-                            <constraint firstItem="sls-XI-8wB" firstAttribute="leading" secondItem="Gj9-bu-xIO" secondAttribute="leadingMargin" constant="32" id="CRM-Mk-u8P"/>
-                            <constraint firstItem="jJt-ux-V88" firstAttribute="leading" secondItem="lNl-wg-ZLD" secondAttribute="leading" id="If6-eh-fwT"/>
-                            <constraint firstItem="jJt-ux-V88" firstAttribute="leading" secondItem="Gj9-bu-xIO" secondAttribute="leadingMargin" constant="28" id="Jch-b0-MUi"/>
-                            <constraint firstItem="sls-XI-8wB" firstAttribute="top" secondItem="z4Y-pg-Y38" secondAttribute="bottom" constant="57" id="M3n-1E-Vel"/>
-                            <constraint firstItem="veF-67-2ub" firstAttribute="centerX" secondItem="Gj9-bu-xIO" secondAttribute="centerXWithinMargins" id="Pmx-X6-YEC"/>
-                            <constraint firstItem="bgs-Vj-QDC" firstAttribute="top" secondItem="Gj9-bu-xIO" secondAttribute="top" constant="259" id="VNl-sR-YIP"/>
-                            <constraint firstItem="gM8-dm-pWw" firstAttribute="top" secondItem="lNl-wg-ZLD" secondAttribute="bottom" constant="160" id="WlR-U8-jzl"/>
+                            <constraint firstItem="jJt-ux-V88" firstAttribute="leading" secondItem="Gj9-bu-xIO" secondAttribute="leadingMargin" constant="13" id="Jch-b0-MUi"/>
+                            <constraint firstItem="jJt-ux-V88" firstAttribute="top" secondItem="B49-TT-7g1" secondAttribute="bottom" constant="60" id="Peh-Zy-9EY"/>
+                            <constraint firstItem="B49-TT-7g1" firstAttribute="centerY" secondItem="sls-XI-8wB" secondAttribute="centerY" constant="1.5" id="U3R-XJ-fSH"/>
+                            <constraint firstItem="bgs-Vj-QDC" firstAttribute="top" secondItem="Gj9-bu-xIO" secondAttribute="top" constant="282" id="VNl-sR-YIP"/>
+                            <constraint firstItem="gM8-dm-pWw" firstAttribute="top" secondItem="lNl-wg-ZLD" secondAttribute="bottom" constant="136" id="WlR-U8-jzl"/>
                             <constraint firstItem="lNl-wg-ZLD" firstAttribute="trailing" secondItem="bgs-Vj-QDC" secondAttribute="trailing" id="Wzs-lz-zTq"/>
-                            <constraint firstItem="caP-Mh-696" firstAttribute="leading" secondItem="Gj9-bu-xIO" secondAttribute="leadingMargin" constant="30" id="XSV-RZ-OrB"/>
-                            <constraint firstItem="jJt-ux-V88" firstAttribute="top" secondItem="veF-67-2ub" secondAttribute="bottom" constant="45" id="b6l-oR-39v"/>
-                            <constraint firstItem="lNl-wg-ZLD" firstAttribute="top" secondItem="caP-Mh-696" secondAttribute="bottom" constant="10" id="cn4-7E-RIr"/>
-                            <constraint firstAttribute="bottom" secondItem="bgs-Vj-QDC" secondAttribute="bottom" constant="407" id="fPf-JP-aco"/>
+                            <constraint firstItem="caP-Mh-696" firstAttribute="leading" secondItem="Gj9-bu-xIO" secondAttribute="leadingMargin" constant="13" id="XSV-RZ-OrB"/>
+                            <constraint firstItem="lNl-wg-ZLD" firstAttribute="top" secondItem="caP-Mh-696" secondAttribute="bottom" constant="8" id="cn4-7E-RIr"/>
+                            <constraint firstItem="lNl-wg-ZLD" firstAttribute="leading" secondItem="bgs-Vj-QDC" secondAttribute="leading" id="fP0-ye-IbR"/>
+                            <constraint firstAttribute="bottom" secondItem="bgs-Vj-QDC" secondAttribute="bottom" constant="384" id="fPf-JP-aco"/>
                             <constraint firstItem="bgs-Vj-QDC" firstAttribute="leading" secondItem="izQ-cX-n9i" secondAttribute="leading" id="hT5-ad-9CT"/>
                             <constraint firstItem="lNl-wg-ZLD" firstAttribute="trailing" secondItem="izQ-cX-n9i" secondAttribute="trailing" id="hbX-OB-arL"/>
-                            <constraint firstItem="veF-67-2ub" firstAttribute="top" secondItem="sls-XI-8wB" secondAttribute="bottom" constant="3" id="n38-9u-vt8"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="veF-67-2ub" secondAttribute="bottom" constant="512" id="qUC-Ua-hX3"/>
-                            <constraint firstItem="caP-Mh-696" firstAttribute="top" secondItem="bgs-Vj-QDC" secondAttribute="bottom" constant="25" id="sAv-EN-8KF"/>
-                            <constraint firstItem="veF-67-2ub" firstAttribute="top" secondItem="Gj9-bu-xIO" secondAttribute="topMargin" constant="154" id="tf7-NS-hVA"/>
-                            <constraint firstItem="izQ-cX-n9i" firstAttribute="top" secondItem="jJt-ux-V88" secondAttribute="bottom" constant="8" symbolic="YES" id="u2r-RT-Scb"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="lNl-wg-ZLD" secondAttribute="trailing" constant="18" id="uOo-uJ-Nvq"/>
+                            <constraint firstItem="B49-TT-7g1" firstAttribute="centerX" secondItem="Gj9-bu-xIO" secondAttribute="centerX" id="ix4-hk-Oq5"/>
+                            <constraint firstItem="caP-Mh-696" firstAttribute="top" secondItem="bgs-Vj-QDC" secondAttribute="bottom" constant="28" id="sAv-EN-8KF"/>
+                            <constraint firstItem="izQ-cX-n9i" firstAttribute="top" secondItem="jJt-ux-V88" secondAttribute="bottom" constant="8" id="u2r-RT-Scb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lNl-wg-ZLD" secondAttribute="trailing" constant="33" id="uOo-uJ-Nvq"/>
+                            <constraint firstItem="B49-TT-7g1" firstAttribute="top" secondItem="Gj9-bu-xIO" secondAttribute="topMargin" constant="119" id="wLZ-L1-IWf"/>
                             <constraint firstItem="sls-XI-8wB" firstAttribute="centerX" secondItem="Gj9-bu-xIO" secondAttribute="centerX" id="xRJ-qq-uUj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="오늘 할 일" id="Pwv-pT-UaY">
+                    <navigationItem key="navigationItem" title="Make Purpose" id="Pwv-pT-UaY">
                         <barButtonItem key="leftBarButtonItem" title="취소" id="TGO-cl-2rR">
                             <color key="tintColor" red="0.96561902759999996" green="0.73070687059999995" blue="0.81185543540000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -114,11 +100,12 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="저장" id="NSA-Ry-sik">
-                            <color key="tintColor" red="0.96561902759999996" green="0.73070687059999995" blue="0.81185543540000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.96470588235294119" green="0.72941176470588232" blue="0.81176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="dailyTaskMemo" destination="lNl-wg-ZLD" id="t6P-uO-QwM"/>
+                        <outlet property="datePickerBackground" destination="B49-TT-7g1" id="vRI-bA-WAN"/>
                         <outlet property="datePickerTextField" destination="sls-XI-8wB" id="iU0-Tz-yEM"/>
                         <outlet property="taskTitleTextField" destination="izQ-cX-n9i" id="pL1-qb-MKB"/>
                     </connections>
