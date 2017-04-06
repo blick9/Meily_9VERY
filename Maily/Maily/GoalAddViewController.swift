@@ -28,6 +28,9 @@ class GoalAddViewController: UIViewController, UIImagePickerControllerDelegate, 
         setDatePicker()
         categoryBackground.layer.cornerRadius = CGFloat(categoryBackground.frame.height/2)
         colorChipBackground.layer.cornerRadius = CGFloat(colorChipBackground.frame.height/2)
+        goalTitleTextField.attributedPlaceholder = NSAttributedString(string: "Write Your Goal!", attributes: [NSForegroundColorAttributeName: UIColor.darkGray])
+        datePickerTextField.attributedPlaceholder = NSAttributedString(string: "Select Due Date", attributes: [NSForegroundColorAttributeName: UIColor.darkGray])
+
     }
 
     override func didReceiveMemoryWarning() {
