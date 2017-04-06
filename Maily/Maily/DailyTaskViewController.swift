@@ -23,7 +23,7 @@ class DailyTaskViewController: UIViewController, UITableViewDelegate, UITableVie
         dailyTable.delegate = self
         dailyTable.reloadData()
         
-        self.navigationItem.rightBarButtonItem = self.editButtonItem
+      //  self.navigationItem.rightBarButtonItem = self.editButtonItem
         // Do any additional setup after loading the view.
         
     }
@@ -73,7 +73,8 @@ class DailyTaskViewController: UIViewController, UITableViewDelegate, UITableVie
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
         
-        editAction.backgroundColor = UIColor.lightGray
+        deleteAction.backgroundColor = UIColor.init(red: 255/255, green: 140/255, blue: 155/255, alpha: 1)
+        editAction.backgroundColor = UIColor.init(red: 110/255, green: 175/255, blue: 255/255, alpha: 1)
         return [deleteAction, editAction]
     }
     
