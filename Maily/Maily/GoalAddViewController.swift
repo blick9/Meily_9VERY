@@ -21,7 +21,7 @@ class GoalAddViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var categoryBackground: UIView!
     @IBOutlet weak var colorChipBackground: UIView!
     
-    @IBOutlet weak var backgroundImage: UIImageView!
+    @IBOutlet weak var previewImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +38,10 @@ class GoalAddViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBAction func cancleButtonTouched(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    // 컬러버튼 하나 픽업 구현
+    // 픽토그램 하나 픽업 구현
+    // 우선순위 하나 픽업 구현
     
     func setDatePicker() {
          let toolbar = UIToolbar()
@@ -71,8 +75,37 @@ class GoalAddViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] {
-            backgroundImage.image = image as! UIImage
+            previewImage.image = image as! UIImage
             self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    
+    @IBAction func saveButtonAction(_ sender: Any) {
+        if goalTitleTextField.text?.isEmpty == true {
+            presentAlert(title: "목표저장 오류", message: "목표명을 입력해주세요.", isConfirm: true)
+        } else if datePickerTextField.text?.isEmpty == true {
+            presentAlert(title: "목표저장 오류", message: "기한을 정해주세요.", isConfirm: true)
+        } else {
+            var addGoalDataInstance = Goal(image: previewImage.image!, title: goalTitleTextField.text!, dueDate: datePicker.date, priority: 1, colorTag: .blue, pictogram: .book)
+            
+            DataBase.sharedInstance.addGoalData(goalData: addGoalDataInstance)
+            self.dismiss(animated: true, completion: nil)
+//            presentAlert(title: "목표저장 성공", message: "목표가 저장되었습니다.", isConfirm: false)
+        }
+    }
+    
+    func presentAlert(title : String, message : String, isConfirm : Bool) {
+        if isConfirm == true {
+            let existConfirmButtonAlert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            let okButton = UIAlertAction(title: "확인", style: .default, handler: nil)
+            existConfirmButtonAlert.addAction(okButton)
+            present(existConfirmButtonAlert, animated: true, completion: nil)
+        } else {
+            let normalAlert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            present(normalAlert, animated: true, completion: {
+                self.dismiss(animated: true, completion: nil)
+            })
         }
     }
     

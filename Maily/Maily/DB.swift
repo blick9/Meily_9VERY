@@ -27,13 +27,23 @@ class User {
 }
 
 class Goal {
+    enum color {
+        case yellow
+        case green, blue, purple, pink
+    }
+    enum pictogram {
+        case book
+        case pencil, exercise, clock, shopping, money
+    }
+    private var image : UIImage
     private var goalTitle : String
-    private var dueDate : NSDate
+    private var dueDate : Date
     private var priority : Int
-    private var colorTag : UIColor
-    private var pictogram : UIImage
+    private var colorTag : color
+    private var pictogram : pictogram
 
-    init(title : String, dueDate : NSDate, priority : Int, colorTag : UIColor, pictogram : UIImage) {
+    init(image : UIImage, title : String, dueDate : Date, priority : Int, colorTag : color, pictogram : pictogram) {
+        self.image = image
         self.goalTitle = title
         self.dueDate = dueDate
         self.priority = priority
@@ -44,10 +54,10 @@ class Goal {
 
 class DailyMemo {
     private var goal : Goal
-    private var writeDate : NSDate
+    private var writeDate : Date
     private var memoContents : String
     
-    init(goal : Goal, writeDate : NSDate, memoContents : String) {
+    init(goal : Goal, writeDate : Date, memoContents : String) {
         self.goal = goal
         self.writeDate = writeDate
         self.memoContents = memoContents
