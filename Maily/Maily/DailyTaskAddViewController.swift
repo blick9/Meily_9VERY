@@ -8,14 +8,18 @@
 
 import UIKit
 
-class DailyTaskAddViewController: UIViewController,UITextViewDelegate {
+class DailyTaskAddViewController: UIViewController,UITextViewDelegate, UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate {
     let dateFormatter = DateFormatter()
     let datePicker = UIDatePicker()
     let today = Date()
+    
     @IBOutlet weak var taskTitleTextField: UITextField!
+    @IBOutlet weak var goalPicker: UIPickerView!
     @IBOutlet weak var datePickerTextField: UITextField!
     @IBOutlet weak var dailyTaskMemo: UITextView!
     @IBOutlet weak var datePickerBackground: UIView!
+    
+    var bigGoalArray = ["aaaeeeggg","wwweeeeeww","wgegwwweggg"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +39,11 @@ class DailyTaskAddViewController: UIViewController,UITextViewDelegate {
 
         dailyTaskMemo.layer.borderColor = UIColor.init(red: 204/255, green: 204/255, blue: 204/255, alpha: 0.2).cgColor
         dailyTaskMemo.layer.borderWidth = 1
+        
+        goalPicker.backgroundColor = UIColor.init(red: 59/255, green: 59/255, blue: 59/255, alpha: 1)
+        goalPicker.tintColor = UIColor.white
+        goalPicker.isHidden = true
+        
 
     }
     
@@ -82,6 +91,38 @@ class DailyTaskAddViewController: UIViewController,UITextViewDelegate {
         datePickerTextField.text = dateFormatter.string(from: selectedYear)
         self.view.endEditing(true)
     }
+    
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return bigGoalArray.count
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return bigGoalArray[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.taskTitleTextField.text = self.bigGoalArray[row]
+        self.goalPicker.isHidden = true
+        
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == self.taskTitleTextField {
+            self.goalPicker.isHidden = false
+        }
+        else {
+            self.goalPicker.isHidden = true
+        }
+    }
+    
+    
+
+    
 
 
 }

@@ -22,6 +22,8 @@ class DailyTaskViewController: UIViewController, UITableViewDelegate, UITableVie
         dailyTable.dataSource = self
         dailyTable.delegate = self
         dailyTable.reloadData()
+        
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
         // Do any additional setup after loading the view.
         
     }
@@ -49,12 +51,53 @@ class DailyTaskViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+   /* func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             dailyArray.remove(at: indexPath.row)
             tableView.deleteRows (at: [indexPath] , with: .fade)
         }
+        else if editingStyle == .insert {
+        }
     }
+ */
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let editAction  = UITableViewRowAction(style: .normal, title: "Edit") { (rowAction, indexPath) in
+            print("Share Button tapped. Row item value = \(self.dailyArray[indexPath.row])")
+            self.editSegue(indexPath: indexPath)
+        }
+        
+        let deleteAction  = UITableViewRowAction(style: .default, title: "Delete") { (rowAction, indexPath) in
+            print("Delete Button tapped. Row item value = \(self.dailyArray[indexPath.row])")
+            self.dailyArray.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+        
+        editAction.backgroundColor = UIColor.lightGray
+        return [deleteAction, editAction]
+    }
+    
+    func editSegue (indexPath: IndexPath) {
+        
+    }
+    
+    /*
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let dailyTask = dailyArray[sourceIndexPath.row]
+        dailyArray.remove(at: sourceIndexPath.row)
+        dailyArray.insert(dailyTask, at: destinationIndexPath.row)
+        
+    }
+  */
     
 
 
