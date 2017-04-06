@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import Alamofire
 
 class LoginViewController: UIViewController {
     var isActivate = (email : false, pw : false)
     
-    var attrs = [NSFontAttributeName : UIFont.systemFont(ofSize: 19),
-        NSForegroundColorAttributeName : UIColor.red,
+    var attrs = [NSFontAttributeName : UIFont.systemFont(ofSize: 25),
+        NSForegroundColorAttributeName : UIColor.white,
         NSUnderlineStyleAttributeName : 1] as [String : Any]
     
     var attributedString = NSMutableAttributedString(string:"")
@@ -28,9 +29,9 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         setInitElement()
     
-        let buttonTitleStr = NSMutableAttributedString(string:"My Button", attributes:attrs)
+        let buttonTitleStr = NSMutableAttributedString(string:"Sign Up", attributes:attrs)
         attributedString.append(buttonTitleStr)
-        logInButton.setAttributedTitle(buttonTitleStr, for: .normal)
+        signUpButton.setAttributedTitle(buttonTitleStr, for: .normal)
     }
     
     
@@ -67,10 +68,49 @@ class LoginViewController: UIViewController {
     
 
     @IBAction func logInActionButton(_ sender: Any) {
-        let loginUser = User(email: emailTextField.text!, password: passwordTextField.text!)
+        let emailValue = emailTextField.text
+        let passwordValue = passwordTextField.text
         
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.window?.rootViewController = CustomTabBarController()
+        LogIn(email: emailValue!, password: passwordValue!) { (statusCode) in
+            switch statusCode {
+            case 404 :
+                // 존재하지 않는 이메일
+                self.presentAlert(title: "로그인 실패", message: "존재하지 않는 이메일입니다.\n회원가입 후 이용해주세요.", isLogin: false)
+            case 406 :
+                // 비밀번호
+                self.presentAlert(title: "로그인 실패", message: "비밀번호가 일치하지 않습니다.\n다시 시도해주세요.", isLogin: false)
+            case 200 :
+                // 성공
+                self.presentAlert(title: "로그인 성공", message: "", isLogin: true)
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.window?.rootViewController = CustomTabBarController()
+            default:
+                break
+            }
+        }
+    }
+    
+    func LogIn(email : String, password : String, completion : @escaping (Int) -> Void) {
+        let parameter = ["email":email, "password":password]
+        Alamofire.request("http://127.0.0.1:8080/api/user/login", method: .post, parameters: parameter, encoding: JSONEncoding.default, headers: nil).response { (Response) in
+            let statusCode = (Response.response?.statusCode)!
+            completion(statusCode)
+        }
+    }
+    
+    
+    func presentAlert(title : String, message : String, isLogin : Bool) {
+        if isLogin == false {
+            let existConfirmButtonAlert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            let okButton = UIAlertAction(title: "확인", style: .default, handler: nil)
+            existConfirmButtonAlert.addAction(okButton)
+            present(existConfirmButtonAlert, animated: true, completion: nil)
+        } else {
+            let normalAlert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            present(normalAlert, animated: true, completion: {
+                self.dismiss(animated: true, completion: nil)
+            })
+        }
     }
     
     func checkEnableLogInButton() {
