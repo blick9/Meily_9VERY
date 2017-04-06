@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--설정-->
         <scene sceneID="sEA-Mm-Ls8">
             <objects>
                 <viewController id="9gh-KP-e6V" sceneMemberID="viewController">
@@ -20,13 +20,34 @@
                     <view key="view" contentMode="scaleToFill" id="23q-1L-p4R">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYz-Qr-Whe">
+                                <rect key="frame" x="160" y="128" width="55" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Log Out"/>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mjU-yW-0kP">
+                                <rect key="frame" x="0.0" y="73" width="375" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKW-cO-jKH">
+                                        <rect key="frame" x="180" y="13" width="16" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
+                                        <color key="textColor" red="0.75008223684210529" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.46513157894736845" green="0.46513157894736845" blue="0.46513157894736845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.23137254901960785" green="0.23137254901960785" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="93g-BX-tzD"/>
+                    <navigationItem key="navigationItem" title="설정" id="93g-BX-tzD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qyX-3e-uMO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="969" y="180"/>
+            <point key="canvasLocation" x="968.79999999999995" y="179.46026986506749"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Gxt-pt-1EA">

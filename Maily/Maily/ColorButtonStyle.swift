@@ -25,5 +25,3 @@ class ColorButtonStyle: UIButton {
         self.layer.borderWidth = self.isSelected ? 3 : 0
     }
 }
-
-

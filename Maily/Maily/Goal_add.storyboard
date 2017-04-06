@@ -84,7 +84,7 @@
                                         <state key="normal" image="exercise_icon"/>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.1725256443" green="0.17256247999999999" blue="0.17252331970000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.17254901960784313" green="0.17254901960784313" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="DuY-Ue-4sw"/>
                                 </constraints>

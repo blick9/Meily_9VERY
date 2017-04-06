@@ -32,6 +32,8 @@ class LoginViewController: UIViewController {
         let buttonTitleStr = NSMutableAttributedString(string:"Sign Up", attributes:attrs)
         attributedString.append(buttonTitleStr)
         signUpButton.setAttributedTitle(buttonTitleStr, for: .normal)
+        
+        tempLoginSkipButton()
     }
     
     
@@ -65,7 +67,6 @@ class LoginViewController: UIViewController {
             checkEnableLogInButton()
         }
     }
-    
 
     @IBAction func logInActionButton(_ sender: Any) {
         let emailValue = emailTextField.text
@@ -82,12 +83,19 @@ class LoginViewController: UIViewController {
             case 200 :
                 // 성공
                 self.presentAlert(title: "로그인 성공", message: "", isLogin: true)
-                let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                appDelegate.window?.rootViewController = CustomTabBarController()
+                self.successLogIn(LogInID: emailValue!)
+//                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//                appDelegate.window?.rootViewController = CustomTabBarController()
+                self.switchViewToMain()
             default:
                 break
             }
         }
+    }
+    
+    // 로그인 성공 시 서버로 전송하는 값
+    func successLogIn(LogInID : String) {
+        
     }
     
     func LogIn(email : String, password : String, completion : @escaping (Int) -> Void) {
@@ -131,6 +139,11 @@ class LoginViewController: UIViewController {
         }
     }
     
+    func switchViewToMain() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = CustomTabBarController()
+    }
+    
     func activityIndicator() {
         let activityIndicator = UIActivityIndicatorView()
         activityIndicator.center = self.view.center
@@ -138,6 +151,14 @@ class LoginViewController: UIViewController {
         activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.whiteLarge
         activityIndicator.startAnimating()
         view.addSubview(activityIndicator)
+    }
+    
+    func tempLoginSkipButton() {
+        var skipButton = UIButton(frame: CGRect(x: self.view.center.x, y: 200, width: 100, height: 100))
+        skipButton.setTitle("Skip Button", for: .normal)
+        skipButton.setTitleColor(UIColor.red, for: .normal)
+        skipButton.addTarget(self, action: #selector(switchViewToMain), for: .touchUpInside)
+        self.view.addSubview(skipButton)
     }
 }
 

@@ -47,17 +47,22 @@ class SignUpViewController: UIViewController {
             indicateNotice(message: "")
             print("http://127.0.0.1:8080/api/user/list/\(emailValue)")
             
-            Alamofire.request("http://127.0.0.1:8080/api/user/list/\(emailValue)").response { (Response) in
-                let statusCode = Response.response?.statusCode
-                switch statusCode! {
-                case 202 :
-                    self.isActivate.email = true
-                    self.indicateNotice(message: "가입할 수 있는 이메일입니다.")
-                case 409 :
-                    self.isActivate.email = false
-                    self.indicateNotice(message: "이미 등록된 이메일입니다.")
-                default:
-                    break
+            if emailValue.unicodeScalars.contains("@") == false || emailValue.unicodeScalars.contains(".") == false {
+                self.isActivate.email = false
+                self.indicateNotice(message: "이메일 형식이 올바르지 않습니다.")
+            } else {
+                Alamofire.request("http://127.0.0.1:8080/api/user/list/\(emailValue)").response { (Response) in
+                    let statusCode = Response.response?.statusCode
+                    switch statusCode! {
+                    case 202 :
+                        self.isActivate.email = true
+                        self.indicateNotice(message: "가입할 수 있는 이메일입니다.")
+                    case 409 :
+                        self.isActivate.email = false
+                        self.indicateNotice(message: "이미 등록된 이메일입니다.")
+                    default:
+                        break
+                    }
                 }
             }
         }
@@ -145,7 +150,6 @@ class SignUpViewController: UIViewController {
     
     func presentAlert(title : String, message : String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-//        let okButton = UIAlertAction(title: "확인", style: .default, handler: nil)
         let okButton = UIAlertAction(title: "확인", style: .default) { _ in
             self.dismiss(animated: true, completion: nil)
         }

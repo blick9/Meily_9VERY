@@ -60,8 +60,10 @@ class DataBase {
         return instance
     }()
     
+    private var userID = String()
     private var goalDataArray = [Goal]()
     private var dailyMemoDataArray = [DailyMemo]()
+    
     
     func addGoalData(goalData : Goal) {
         goalDataArray.append(goalData)
