@@ -42,6 +42,7 @@ class DailyTaskAddViewController: UIViewController,UITextViewDelegate, UIPickerV
         datePickerTextField.borderStyle = .none
         
         bigGoalTextField.attributedPlaceholder = NSAttributedString(string: "Choose BigGoal", attributes: [NSForegroundColorAttributeName: UIColor.darkGray])
+        bigGoalTextField.borderStyle = .none
         
 
 

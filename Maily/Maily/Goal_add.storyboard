@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,28 +24,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Write your Goal!" textAlignment="natural" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="ggq-J3-Any">
-                                <rect key="frame" x="38" y="381" width="312" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Write your Goal!" textAlignment="natural" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="ggq-J3-Any">
+                                <rect key="frame" x="38" y="377" width="312" height="28"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="• Goal Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgH-0R-369">
-                                <rect key="frame" x="25" y="352" width="84" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="• BigGoal Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgH-0R-369">
+                                <rect key="frame" x="25" y="352" width="121" height="17"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="14"/>
                                 <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="• Due Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKI-zH-xQc">
-                                <rect key="frame" x="25" y="438" width="95" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="• Due Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKI-zH-xQc">
+                                <rect key="frame" x="25" y="432" width="95" height="17"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="14"/>
                                 <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="• Priority" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47l-21-sJL">
-                                <rect key="frame" x="25" y="525" width="86" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="• Priority" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47l-21-sJL">
+                                <rect key="frame" x="25" y="529" width="86" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="86" id="GVs-N0-l0q"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="14"/>
                                 <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -135,15 +139,16 @@
                                     <constraint firstAttribute="height" constant="55" id="jdS-4g-zy0"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EMn-HA-ThM">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EMn-HA-ThM">
                                 <rect key="frame" x="38" y="407" width="308" height="1"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.80000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p7s-39-7Ea">
-                                <rect key="frame" x="38" y="498" width="308" height="1"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p7s-39-7Ea">
+                                <rect key="frame" x="38" y="482" width="308" height="1"/>
                                 <color key="backgroundColor" white="0.80000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="lSY-Y4-2Wj"/>
+                                </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagedefault.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="U03-ex-BlD">
                                 <rect key="frame" x="0.0" y="64" width="375" height="99"/>
@@ -162,16 +167,12 @@
                                     <action selector="imagePickButton:" destination="0v0-2P-Tr7" eventType="touchUpInside" id="hKy-Hw-ZsW"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1sk-kw-BKG" userLabel="DatePickerTextField" customClass="StopPasteAction" customModule="Maily" customModuleProvider="target">
-                                <rect key="frame" x="38" y="467" width="247" height="30"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="19"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rzs-7G-anG">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rzs-7G-anG">
                                 <rect key="frame" x="38" y="548" width="58" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="PJ0-2P-iex"/>
+                                    <constraint firstAttribute="width" constant="58" id="mbI-R4-3Ma"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="22"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="★★★">
@@ -184,9 +185,8 @@
                                     <color key="titleColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="0.80215827338129497" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddH-EN-siY">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddH-EN-siY">
                                 <rect key="frame" x="116" y="548" width="38" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="22"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="★★">
@@ -199,9 +199,11 @@
                                     <color key="titleColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="0.80215827338129497" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Egu-JU-JI9">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Egu-JU-JI9">
                                 <rect key="frame" x="174" y="548" width="22" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="22" id="rcU-C6-C7K"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="22"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="★">
@@ -214,6 +216,13 @@
                                     <color key="titleColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="0.80215827338129497" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1sk-kw-BKG" userLabel="DatePickerTextField" customClass="StopPasteAction" customModule="Maily" customModuleProvider="target">
+                                <rect key="frame" x="38" y="457" width="247" height="23"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.21957963705062866" green="0.21962407231330872" blue="0.21957683563232422" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -221,29 +230,50 @@
                             <constraint firstItem="emE-G5-Aen" firstAttribute="top" secondItem="27q-1F-lyL" secondAttribute="bottom" constant="117" id="3zr-mC-lEx"/>
                             <constraint firstAttribute="trailing" secondItem="ggq-J3-Any" secondAttribute="trailing" constant="25" id="45v-4Y-LJk"/>
                             <constraint firstItem="6WQ-ZW-UcS" firstAttribute="top" secondItem="U03-ex-BlD" secondAttribute="top" id="5I9-Xb-5Ws"/>
+                            <constraint firstItem="p7s-39-7Ea" firstAttribute="top" secondItem="1sk-kw-BKG" secondAttribute="bottom" constant="2" id="5Mm-dg-gPo"/>
                             <constraint firstAttribute="trailing" secondItem="1sk-kw-BKG" secondAttribute="trailing" constant="90" id="5cI-P4-4D3"/>
                             <constraint firstItem="emE-G5-Aen" firstAttribute="leading" secondItem="dYJ-eG-Toy" secondAttribute="leading" constant="25" id="Bxz-ne-OEG"/>
+                            <constraint firstItem="EMn-HA-ThM" firstAttribute="leading" secondItem="p7s-39-7Ea" secondAttribute="leading" id="DTt-Bm-gJs"/>
                             <constraint firstItem="HgH-0R-369" firstAttribute="top" secondItem="R1k-76-gP5" secondAttribute="bottom" constant="37" id="FrC-pT-hal"/>
                             <constraint firstItem="emE-G5-Aen" firstAttribute="top" secondItem="6WQ-ZW-UcS" secondAttribute="bottom" constant="18" id="G9H-wj-jxU"/>
                             <constraint firstItem="6WQ-ZW-UcS" firstAttribute="leading" secondItem="dYJ-eG-Toy" secondAttribute="leading" id="GYk-4i-4TF"/>
                             <constraint firstItem="6WQ-ZW-UcS" firstAttribute="leading" secondItem="U03-ex-BlD" secondAttribute="leading" id="Gnh-BW-CrJ"/>
                             <constraint firstItem="6WQ-ZW-UcS" firstAttribute="top" secondItem="27q-1F-lyL" secondAttribute="bottom" id="I8y-ee-6nB"/>
                             <constraint firstAttribute="trailing" secondItem="emE-G5-Aen" secondAttribute="trailing" constant="25" id="IJk-f8-8hN"/>
+                            <constraint firstItem="vKI-zH-xQc" firstAttribute="top" secondItem="EMn-HA-ThM" secondAttribute="bottom" constant="24" id="K15-Bh-cps"/>
                             <constraint firstItem="R1k-76-gP5" firstAttribute="top" secondItem="emE-G5-Aen" secondAttribute="bottom" constant="24" id="Kjh-C5-l0r"/>
                             <constraint firstItem="ggq-J3-Any" firstAttribute="top" secondItem="HgH-0R-369" secondAttribute="bottom" constant="8" id="KqE-Op-L27"/>
+                            <constraint firstItem="ddH-EN-siY" firstAttribute="leading" secondItem="rzs-7G-anG" secondAttribute="trailing" constant="20" id="N46-eR-8vR"/>
+                            <constraint firstItem="rzs-7G-anG" firstAttribute="baseline" secondItem="Egu-JU-JI9" secondAttribute="firstBaseline" id="Oli-lk-9Wh"/>
                             <constraint firstItem="HgH-0R-369" firstAttribute="leading" secondItem="dYJ-eG-Toy" secondAttribute="leading" constant="25" id="OoX-b5-ICj"/>
+                            <constraint firstItem="rzs-7G-anG" firstAttribute="baseline" secondItem="Egu-JU-JI9" secondAttribute="baseline" id="PLB-AW-YEr"/>
+                            <constraint firstItem="EMn-HA-ThM" firstAttribute="leading" secondItem="ggq-J3-Any" secondAttribute="leading" id="QEj-So-fxE"/>
+                            <constraint firstItem="rzs-7G-anG" firstAttribute="top" secondItem="47l-21-sJL" secondAttribute="bottom" constant="2" id="Rdo-9n-wOh"/>
                             <constraint firstItem="6WQ-ZW-UcS" firstAttribute="bottom" secondItem="U03-ex-BlD" secondAttribute="bottom" id="W02-cT-jp9"/>
+                            <constraint firstAttribute="bottom" secondItem="p7s-39-7Ea" secondAttribute="bottom" constant="184" id="WZl-1x-Lr5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vKI-zH-xQc" secondAttribute="trailing" constant="239" id="Wve-8t-OBj"/>
                             <constraint firstItem="vKI-zH-xQc" firstAttribute="leading" secondItem="dYJ-eG-Toy" secondAttribute="leadingMargin" constant="9" id="Ysg-vT-SHt"/>
                             <constraint firstItem="6WQ-ZW-UcS" firstAttribute="centerX" secondItem="U03-ex-BlD" secondAttribute="centerX" id="bEx-XA-mI9"/>
+                            <constraint firstItem="rzs-7G-anG" firstAttribute="top" secondItem="Egu-JU-JI9" secondAttribute="top" id="be7-pB-HE6"/>
+                            <constraint firstItem="EMn-HA-ThM" firstAttribute="leading" secondItem="rzs-7G-anG" secondAttribute="leading" id="dka-Km-gox"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EMn-HA-ThM" secondAttribute="trailing" constant="13" id="dqm-Fu-r0j"/>
+                            <constraint firstItem="ggq-J3-Any" firstAttribute="bottom" secondItem="EMn-HA-ThM" secondAttribute="top" constant="-2" id="h4f-HH-2Vy"/>
+                            <constraint firstItem="rzs-7G-anG" firstAttribute="baseline" secondItem="ddH-EN-siY" secondAttribute="baseline" id="hSx-bF-jdj"/>
                             <constraint firstItem="6WQ-ZW-UcS" firstAttribute="centerY" secondItem="U03-ex-BlD" secondAttribute="centerY" id="ir9-g8-epg"/>
-                            <constraint firstAttribute="trailing" secondItem="HgH-0R-369" secondAttribute="trailing" constant="266" id="jo7-eV-fax"/>
+                            <constraint firstItem="t2d-26-5y8" firstAttribute="top" secondItem="rzs-7G-anG" secondAttribute="bottom" constant="89" id="itU-Ba-Wq5"/>
+                            <constraint firstAttribute="trailing" secondItem="HgH-0R-369" secondAttribute="trailing" constant="229" id="jo7-eV-fax"/>
                             <constraint firstItem="vKI-zH-xQc" firstAttribute="top" secondItem="ggq-J3-Any" secondAttribute="bottom" constant="27" id="lTM-Z7-0ff"/>
+                            <constraint firstItem="EMn-HA-ThM" firstAttribute="trailing" secondItem="p7s-39-7Ea" secondAttribute="trailing" id="lw7-XI-52X"/>
                             <constraint firstAttribute="trailing" secondItem="R1k-76-gP5" secondAttribute="trailing" constant="25" id="mIV-oc-LKz"/>
                             <constraint firstItem="ggq-J3-Any" firstAttribute="leading" secondItem="dYJ-eG-Toy" secondAttribute="leading" constant="38" id="muT-my-emN"/>
                             <constraint firstItem="1sk-kw-BKG" firstAttribute="leading" secondItem="dYJ-eG-Toy" secondAttribute="leading" constant="38" id="psu-Gw-E6T"/>
+                            <constraint firstItem="rzs-7G-anG" firstAttribute="firstBaseline" secondItem="ddH-EN-siY" secondAttribute="baseline" id="rSf-XZ-nGH"/>
+                            <constraint firstItem="rzs-7G-anG" firstAttribute="top" secondItem="ddH-EN-siY" secondAttribute="top" id="rWr-TJ-Z76"/>
+                            <constraint firstItem="rzs-7G-anG" firstAttribute="baseline" secondItem="ddH-EN-siY" secondAttribute="firstBaseline" id="sKB-yH-CgH"/>
                             <constraint firstItem="R1k-76-gP5" firstAttribute="leading" secondItem="dYJ-eG-Toy" secondAttribute="leading" constant="25" id="uGA-zw-y0q"/>
                             <constraint firstItem="6WQ-ZW-UcS" firstAttribute="centerX" secondItem="emE-G5-Aen" secondAttribute="centerX" id="x8j-3F-wXx"/>
+                            <constraint firstItem="Egu-JU-JI9" firstAttribute="leading" secondItem="ddH-EN-siY" secondAttribute="trailing" constant="20" id="zAp-0y-DkG"/>
+                            <constraint firstItem="47l-21-sJL" firstAttribute="leading" secondItem="vKI-zH-xQc" secondAttribute="leading" id="zKu-xz-ZUN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Make BigGoal" id="awS-Jd-iBL">
