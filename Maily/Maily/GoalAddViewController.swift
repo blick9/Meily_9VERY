@@ -11,18 +11,32 @@ import UIKit
 class GoalAddViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     let dateFormatter = DateFormatter()
     let datePicker = UIDatePicker()
+    var priorityValue : Goal.Priority = .low
+    var colorTagValue : Goal.Color = .blue
+    var pictogramValue : Goal.Pictogram = .book
     
-
     @IBOutlet weak var datePickerTextField: UITextField!
     @IBOutlet weak var goalTitleTextField: UITextField!
+    @IBOutlet weak var categoryBackground: UIView!
+    @IBOutlet weak var colorChipBackground: UIView!
+    @IBOutlet weak var previewImage: UIImageView!
+    
+    @IBOutlet weak var colorYellowButton: UIButton!
+    @IBOutlet weak var colorGreenButton: UIButton!
+    @IBOutlet weak var colorBlueButton: UIButton!
+    @IBOutlet weak var colorPurpleButton: UIButton!
+    @IBOutlet weak var colorPinkButton: UIButton!
+    
+    @IBOutlet weak var pictoBookButton: UIButton!
+    @IBOutlet weak var pictoPencleButton: UIButton!
+    @IBOutlet weak var pictoExerciseButton: UIButton!
+    @IBOutlet weak var pictoClockButton: UIButton!
+    @IBOutlet weak var pictoShoppingButton: UIButton!
+    @IBOutlet weak var pictoMoneyButton: UIButton!
+    
     @IBOutlet weak var priority3Button: UIButton!
     @IBOutlet weak var priority2Button: UIButton!
     @IBOutlet weak var priority1Button: UIButton!
-   
-    @IBOutlet weak var categoryBackground: UIView!
-    @IBOutlet weak var colorChipBackground: UIView!
-    
-    @IBOutlet weak var previewImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +44,26 @@ class GoalAddViewController: UIViewController, UIImagePickerControllerDelegate, 
         goalTitleTextField.attributedPlaceholder = NSAttributedString(string: "Write Your Goal!", attributes: [NSForegroundColorAttributeName: UIColor.darkGray])
         datePickerTextField.attributedPlaceholder = NSAttributedString(string: "Select Due Date", attributes: [NSForegroundColorAttributeName: UIColor.darkGray])
         goalTitleTextField.borderStyle = .none
+        relateButton()
+    }
+    
+    func relateButton() {
+        colorYellowButton.addTarget(self, action: #selector(colorButton(_:)), for: .touchUpInside)
+        colorGreenButton.addTarget(self, action: #selector(colorButton(_:)), for: .touchUpInside)
+        colorBlueButton.addTarget(self, action: #selector(colorButton(_:)), for: .touchUpInside)
+        colorPurpleButton.addTarget(self, action: #selector(colorButton(_:)), for: .touchUpInside)
+        colorPinkButton.addTarget(self, action: #selector(colorButton(_:)), for: .touchUpInside)
+        
+        pictoBookButton.addTarget(self, action: #selector(pictogramButton(_:)), for: .touchUpInside)
+        pictoPencleButton.addTarget(self, action: #selector(pictogramButton(_:)), for: .touchUpInside)
+        pictoExerciseButton.addTarget(self, action: #selector(pictogramButton(_:)), for: .touchUpInside)
+        pictoClockButton.addTarget(self, action: #selector(pictogramButton(_:)), for: .touchUpInside)
+        pictoShoppingButton.addTarget(self, action: #selector(pictogramButton(_:)), for: .touchUpInside)
+        pictoMoneyButton.addTarget(self, action: #selector(pictogramButton(_:)), for: .touchUpInside)
+        
+        priority3Button.addTarget(self, action: #selector(priorityButton(_:)), for: .touchUpInside)
+        priority2Button.addTarget(self, action: #selector(priorityButton(_:)), for: .touchUpInside)
+        priority1Button.addTarget(self, action: #selector(priorityButton(_:)), for: .touchUpInside)
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,9 +74,59 @@ class GoalAddViewController: UIViewController, UIImagePickerControllerDelegate, 
         self.dismiss(animated: true, completion: nil)
     }
     
-    // 컬러버튼 하나 픽업 구현
-    // 픽토그램 하나 픽업 구현
-    // 우선순위 하나 픽업 구현
+    func colorButton(_ button:UIButton) {
+        switch button.tag {
+        case 1:
+            colorTagValue = .yellow
+        case 2:
+            colorTagValue = .green
+        case 3:
+            colorTagValue = .blue
+        case 4:
+            colorTagValue = .purple
+        case 5:
+            colorTagValue = .pink
+        default :
+            break
+        }
+    }
+    
+    func pictogramButton(_ button:UIButton) {
+        button.isSelected = !button.isSelected
+        button.alpha = button.isSelected ? 1 : 0.5
+        switch button.tag {
+        case 1:
+            pictogramValue = .book
+        case 2:
+            pictogramValue = .pencil
+        case 3:
+            pictogramValue = .exercise
+        case 4:
+            pictogramValue = .clock
+        case 5:
+            pictogramValue = .shopping
+        case 6:
+            pictogramValue = .money
+        default :
+            break
+        }
+    }
+
+    
+    func priorityButton(_ button:UIButton) {
+        button.isSelected = !button.isSelected
+        switch button.tag {
+        case 3:
+            priorityValue = .high
+        case 2:
+            priorityValue = .middle
+        case 1:
+            priorityValue = .low
+        default :
+            break
+        }
+    }
+    
     
     func setDatePicker() {
          let toolbar = UIToolbar()
@@ -90,7 +174,7 @@ class GoalAddViewController: UIViewController, UIImagePickerControllerDelegate, 
         } else {
             var makeID = DateFormatter()
             makeID.dateFormat = "yymmddhhmmss"
-            var addGoalDataInstance = Goal(image: previewImage.image!, title: goalTitleTextField.text!, dueDate: datePicker.date, priority: 1, colorTag: .blue, pictogram: .book, id: makeID.string(from: Date()))
+            var addGoalDataInstance = Goal(image: previewImage.image!, title: goalTitleTextField.text!, dueDate: datePicker.date, priority: priorityValue, colorTag: colorTagValue, pictogram: pictogramValue, id: makeID.string(from: Date()))
             DataBase.sharedInstance.addGoalData(goalData: addGoalDataInstance)
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadGoalCollectionView"), object: nil)
             self.dismiss(animated: true, completion: nil)

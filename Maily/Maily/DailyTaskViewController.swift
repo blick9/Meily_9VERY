@@ -44,12 +44,18 @@ class DailyTaskViewController: UIViewController, UITableViewDelegate, UITableVie
         let dailyMemoDataFromDB = DataBase.sharedInstance.getDailyMemoDataArray()
         let bigGoalID = dailyMemoDataFromDB[indexPath.row]["bigGoalId"] as! String?
         let bigGoalDataDic = DataBase.sharedInstance.getGoalDataByID(goalID: bigGoalID!)
+        let pictogram = bigGoalDataDic["pictogram"] as? Goal.Pictogram
+        let colorTag = bigGoalDataDic["colorTag"] as? Goal.Color
+        let priorityStar = bigGoalDataDic["priority"] as? Goal.Priority
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YYYY/MM/dd"
         
         cell.dailyTaskGoal.text = ("<\((bigGoalDataDic["goalTitle"] as! String?)!)>")
         cell.dailyTaskLabel.text = dailyMemoDataFromDB[indexPath.row]["todayPurposeMemo"] as! String?
         cell.dailyTaskDate.text = dateFormatter.string(from: dailyMemoDataFromDB[indexPath.row]["writeDate"] as! Date)
+        cell.dailyTaskIcon.image = pictogram?.applyPictogram()
+        cell.dailyTaskColorBar.backgroundColor = colorTag?.applyColor()
+        cell.dailyTaskGoalPriority.text = priorityStar?.convertStar()
         return cell
         
     }

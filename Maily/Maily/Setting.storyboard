@@ -12,7 +12,7 @@
         <!--설정-->
         <scene sceneID="sEA-Mm-Ls8">
             <objects>
-                <viewController id="9gh-KP-e6V" sceneMemberID="viewController">
+                <viewController id="9gh-KP-e6V" customClass="SettingViewController" customModule="Maily" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UoL-bK-8Tg"/>
                         <viewControllerLayoutGuide type="bottom" id="zsb-zd-gSH"/>
@@ -25,16 +25,19 @@
                                 <rect key="frame" x="160" y="128" width="55" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <action selector="logOutButtonAction:" destination="9gh-KP-e6V" eventType="touchUpInside" id="lTo-6E-CLl"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mjU-yW-0kP">
                                 <rect key="frame" x="0.0" y="73" width="375" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKW-cO-jKH">
-                                        <rect key="frame" x="180" y="13" width="16" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="E-mail" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKW-cO-jKH">
+                                        <rect key="frame" x="0.0" y="13" width="375" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
-                                        <color key="textColor" red="0.75008223684210529" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.90353618421052639" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -44,6 +47,9 @@
                         <color key="backgroundColor" red="0.23137254901960785" green="0.23137254901960785" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="설정" id="93g-BX-tzD"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="iKW-cO-jKH" id="Wq4-3Y-SmK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qyX-3e-uMO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

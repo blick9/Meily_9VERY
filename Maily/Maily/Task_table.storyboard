@@ -34,23 +34,23 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RPJ-Vg-5Rb">
-                                                    <rect key="frame" x="0.0" y="0.0" width="347" height="80"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="354" height="80"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Purpose Memo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2w1-LL-Ppd">
-                                                            <rect key="frame" x="70" y="35" width="272" height="24"/>
+                                                            <rect key="frame" x="70" y="36" width="272" height="23"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="18"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fUI-iN-ndU">
-                                                            <rect key="frame" x="-7" y="-3" width="354" height="9"/>
+                                                            <rect key="frame" x="-7" y="-3" width="361" height="10"/>
                                                             <color key="backgroundColor" red="1" green="0.99215686270000003" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </view>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="book_icon" translatesAutoresizingMaskIntoConstraints="NO" id="lsb-7q-p2m">
-                                                            <rect key="frame" x="18" y="26" width="35" height="35"/>
+                                                            <rect key="frame" x="16" y="26" width="35" height="35"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Goal&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcc-fU-H54">
-                                                            <rect key="frame" x="70" y="17" width="259" height="20"/>
+                                                            <rect key="frame" x="70" y="18" width="227" height="19"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -65,23 +65,36 @@
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="★★★" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APt-WU-34C">
+                                                            <rect key="frame" x="299" y="15" width="40" height="19"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="40" id="uIJ-Z2-VdY"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="15"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.35637550903598247" green="0.35990397942247732" blue="0.35990397942247732" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstItem="fnM-Wi-qU3" firstAttribute="trailing" secondItem="RPJ-Vg-5Rb" secondAttribute="trailingMargin" constant="3" id="0jB-ZJ-M7d"/>
+                                                        <constraint firstItem="fnM-Wi-qU3" firstAttribute="trailing" secondItem="RPJ-Vg-5Rb" secondAttribute="trailingMargin" constant="-4" id="0jB-ZJ-M7d"/>
+                                                        <constraint firstItem="2w1-LL-Ppd" firstAttribute="top" secondItem="APt-WU-34C" secondAttribute="bottom" constant="2" id="1fm-RU-4CT"/>
                                                         <constraint firstAttribute="trailing" secondItem="fUI-iN-ndU" secondAttribute="trailing" id="3wf-a7-pSD"/>
                                                         <constraint firstItem="jcc-fU-H54" firstAttribute="leading" secondItem="2w1-LL-Ppd" secondAttribute="leading" id="56q-Wb-7JG"/>
                                                         <constraint firstAttribute="bottom" secondItem="2w1-LL-Ppd" secondAttribute="bottom" constant="21" id="69h-Bj-ISG"/>
-                                                        <constraint firstItem="jcc-fU-H54" firstAttribute="leading" secondItem="lsb-7q-p2m" secondAttribute="trailing" constant="17" id="7Ik-88-93I"/>
+                                                        <constraint firstItem="jcc-fU-H54" firstAttribute="leading" secondItem="lsb-7q-p2m" secondAttribute="trailing" constant="19" id="7Ik-88-93I"/>
                                                         <constraint firstItem="jcc-fU-H54" firstAttribute="top" secondItem="fUI-iN-ndU" secondAttribute="bottom" constant="11" id="8SY-IT-TVF"/>
-                                                        <constraint firstItem="lsb-7q-p2m" firstAttribute="top" secondItem="fUI-iN-ndU" secondAttribute="bottom" constant="21" id="8wr-gK-YEe"/>
+                                                        <constraint firstItem="lsb-7q-p2m" firstAttribute="top" secondItem="fUI-iN-ndU" secondAttribute="bottom" constant="20" id="8wr-gK-YEe"/>
                                                         <constraint firstItem="2w1-LL-Ppd" firstAttribute="top" secondItem="fUI-iN-ndU" secondAttribute="bottom" constant="29" id="9aE-Sq-YGo"/>
-                                                        <constraint firstItem="lsb-7q-p2m" firstAttribute="leading" secondItem="RPJ-Vg-5Rb" secondAttribute="leading" constant="23" id="J8K-2b-u5d"/>
+                                                        <constraint firstItem="lsb-7q-p2m" firstAttribute="leading" secondItem="RPJ-Vg-5Rb" secondAttribute="leading" constant="16" id="J8K-2b-u5d"/>
+                                                        <constraint firstItem="APt-WU-34C" firstAttribute="top" secondItem="fUI-iN-ndU" secondAttribute="bottom" constant="8" id="JB5-8T-rPE"/>
                                                         <constraint firstAttribute="bottom" secondItem="jcc-fU-H54" secondAttribute="bottom" constant="43" id="Jnn-8f-hiB"/>
                                                         <constraint firstAttribute="bottom" secondItem="lsb-7q-p2m" secondAttribute="bottom" constant="19" id="K0t-xc-lf1"/>
                                                         <constraint firstItem="fUI-iN-ndU" firstAttribute="leading" secondItem="RPJ-Vg-5Rb" secondAttribute="leading" constant="-7" id="LA1-2g-7O0"/>
-                                                        <constraint firstItem="jcc-fU-H54" firstAttribute="trailing" secondItem="2w1-LL-Ppd" secondAttribute="trailing" constant="-13" id="Tbe-RD-5pb"/>
+                                                        <constraint firstItem="jcc-fU-H54" firstAttribute="trailing" secondItem="2w1-LL-Ppd" secondAttribute="trailing" constant="-45" id="Tbe-RD-5pb"/>
+                                                        <constraint firstItem="APt-WU-34C" firstAttribute="top" secondItem="RPJ-Vg-5Rb" secondAttribute="topMargin" constant="7" id="YOB-Zx-4Gu"/>
                                                         <constraint firstItem="fnM-Wi-qU3" firstAttribute="top" secondItem="jcc-fU-H54" secondAttribute="bottom" constant="16" id="ZBk-zh-Q6j"/>
+                                                        <constraint firstAttribute="trailing" secondItem="APt-WU-34C" secondAttribute="trailing" constant="15" id="efC-qd-GDd"/>
                                                         <constraint firstItem="fnM-Wi-qU3" firstAttribute="trailing" secondItem="2w1-LL-Ppd" secondAttribute="trailing" id="ocF-Wt-cYz"/>
                                                         <constraint firstItem="fUI-iN-ndU" firstAttribute="top" secondItem="RPJ-Vg-5Rb" secondAttribute="top" constant="-3" id="rc4-gy-I4e"/>
                                                         <constraint firstItem="fnM-Wi-qU3" firstAttribute="leading" secondItem="2w1-LL-Ppd" secondAttribute="leading" id="uaN-Ww-f1u"/>
@@ -92,7 +105,7 @@
                                             <constraints>
                                                 <constraint firstItem="RPJ-Vg-5Rb" firstAttribute="top" secondItem="4zI-4f-gWx" secondAttribute="top" id="Ife-Yt-da7"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="RPJ-Vg-5Rb" secondAttribute="bottom" constant="2" id="MkU-L6-PvW"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="RPJ-Vg-5Rb" secondAttribute="trailing" constant="-1" id="gU9-4h-XMt"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="RPJ-Vg-5Rb" secondAttribute="trailing" constant="-8" id="gU9-4h-XMt"/>
                                                 <constraint firstItem="RPJ-Vg-5Rb" firstAttribute="leading" secondItem="4zI-4f-gWx" secondAttribute="leading" id="q0l-zv-h2p"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -102,6 +115,7 @@
                                             <outlet property="dailyTaskColorBar" destination="fUI-iN-ndU" id="N10-tt-rmj"/>
                                             <outlet property="dailyTaskDate" destination="fnM-Wi-qU3" id="3aB-bq-ng2"/>
                                             <outlet property="dailyTaskGoal" destination="jcc-fU-H54" id="xDa-t8-Gkr"/>
+                                            <outlet property="dailyTaskGoalPriority" destination="APt-WU-34C" id="97T-2z-Hja"/>
                                             <outlet property="dailyTaskIcon" destination="lsb-7q-p2m" id="ml6-7G-Kpi"/>
                                             <outlet property="dailyTaskLabel" destination="2w1-LL-Ppd" id="ZMd-XV-5V2"/>
                                         </connections>
@@ -110,7 +124,7 @@
                                 <sections/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pg0-C7-Kpr">
-                                <rect key="frame" x="267" y="527" width="96" height="100"/>
+                                <rect key="frame" x="270" y="500" width="96" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Add_Bt"/>
                                 <connections>

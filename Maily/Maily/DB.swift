@@ -27,23 +27,69 @@ class User {
 }
 
 class Goal {
-    enum color {
-        case yellow
-        case green, blue, purple, pink
+    enum Color {
+        case yellow, green, blue, purple, pink
+        func applyColor() -> UIColor {
+            switch self {
+            case .yellow:
+                return UIColor(red: 255/255, green: 253/255, blue: 163/255, alpha: 1)
+            case .green:
+                return UIColor(red: 163/255, green: 255/255, blue: 163/255, alpha: 1)
+            case .blue:
+                return UIColor(red: 163/255, green: 242/255, blue: 255/255, alpha: 1)
+            case .purple:
+                return UIColor(red: 187/255, green: 163/255, blue: 255/255, alpha: 1)
+            case .pink:
+                return UIColor(red: 255/255, green: 163/255, blue: 247/255, alpha: 1)
+            }
+        }
     }
-    enum pictogram {
-        case book
-        case pencil, exercise, clock, shopping, money
+    
+    enum Pictogram {
+        case book, pencil, exercise, clock, shopping, money
+        func applyPictogram() -> UIImage {
+            switch self {
+            case .book:
+                return #imageLiteral(resourceName: "book_icon")
+            case .pencil:
+                return #imageLiteral(resourceName: "pencil_icon")
+            case .exercise:
+                return #imageLiteral(resourceName: "exercise_icon")
+            case .clock:
+                return #imageLiteral(resourceName: "clock_icon")
+            case .shopping:
+                return #imageLiteral(resourceName: "shopping_icon")
+            case .money:
+                return #imageLiteral(resourceName: "money_icon")
+            }
+        }
     }
+    
+    enum Priority {
+        case high
+        case middle
+        case low
+        func convertStar() -> String {
+            switch self {
+            case .high:
+                return "★★★"
+            case .middle:
+                return "★★"
+            case .low:
+                return "★"
+            }
+        }
+    }
+    
     fileprivate var image : UIImage
     fileprivate var goalTitle : String
     fileprivate var dueDate : Date
-    fileprivate var priority : Int
-    fileprivate var colorTag : color
-    fileprivate var pictogram : pictogram
+    fileprivate var priority : Priority
+    fileprivate var colorTag : Color
+    fileprivate var pictogram : Pictogram
     fileprivate var idValue : String
 
-    init(image : UIImage, title : String, dueDate : Date, priority : Int, colorTag : color, pictogram : pictogram, id : String) {
+    init(image : UIImage, title : String, dueDate : Date, priority : Priority, colorTag : Color, pictogram : Pictogram, id : String) {
         self.image = image
         self.goalTitle = title
         self.dueDate = dueDate
@@ -74,7 +120,7 @@ class DataBase {
         return instance
     }()
     
-    private var userID = String()
+    private var currentUserEmail : String?
     private var goalDataArray = [Goal]()
     private var dailyMemoDataArray = [DailyMemo]()
     
@@ -85,6 +131,14 @@ class DataBase {
     
     func addDailyMemoData(dailyMemo : DailyMemo) {
         dailyMemoDataArray.append(dailyMemo)
+    }
+    
+    func setCurrentUser(email : String) {
+        currentUserEmail = email
+    }
+    
+    func getCurrentUserEmail() -> String? {
+        return currentUserEmail
     }
     
     func getGoalDataArray() -> [[String:Any]] {

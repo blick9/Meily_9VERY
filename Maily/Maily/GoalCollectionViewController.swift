@@ -68,11 +68,12 @@ class GoalCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! GoalCollectionViewCell
         let goalDataFromDB = DataBase.sharedInstance.getGoalDataArray()
+        let pictogram = goalDataFromDB[indexPath.row]["priority"] as! Goal.Priority
+        
         dump(goalDataFromDB)
         cell.goalCardTitle.text = goalDataFromDB[indexPath.row]["goalTitle"] as! String?
         cell.goalCardImage.image = goalDataFromDB[indexPath.row]["image"] as! UIImage?
-        
-//        cell.goalCardImage.image = goalDataFromDB[indexPath.row]
+        cell.goalPriority.text = pictogram.convertStar()
         return cell
     }
     

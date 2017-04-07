@@ -14,6 +14,7 @@ class GoalCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var goalInnerView: UIView!
     @IBOutlet weak var goalCardImage: UIImageView!
     @IBOutlet weak var goalCardTitle: UILabel!
+    @IBOutlet weak var goalPriority: UILabel!
     @IBOutlet weak var cellBlur: UIVisualEffectView!
     
     

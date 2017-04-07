@@ -82,7 +82,10 @@ class LoginViewController: UIViewController {
             case 200 :
                 // 성공
                 self.presentAlert(title: "로그인 성공", message: "", isLogin: true)
-                self.successLogIn(LogInID: emailValue!)
+                DataBase.sharedInstance.setCurrentUser(email: emailValue!)
+                self.successLogIn(LogInID: emailValue!, completion: { (string) in
+                    DataBase.sharedInstance.setCurrentUser(email: emailValue!)
+                })
 //                let appDelegate = UIApplication.shared.delegate as! AppDelegate
 //                appDelegate.window?.rootViewController = CustomTabBarController()
                 self.switchViewToMain()
@@ -93,8 +96,11 @@ class LoginViewController: UIViewController {
     }
     
     // 로그인 성공 시 서버로 전송하는 값
-    func successLogIn(LogInID : String) {
-        
+    func successLogIn(LogInID : String, completion : @escaping (String)-> Void) {
+        let parameter = ["email" : LogInID]
+        Alamofire.request("http://127.0.0.1:8080/api/login/certifylogin", method: .post, parameters: parameter, encoding: JSONEncoding.default, headers: nil).responseString { (response) in
+            completion(response.description)
+        }
     }
     
     func LogIn(email : String, password : String, completion : @escaping (Int) -> Void) {

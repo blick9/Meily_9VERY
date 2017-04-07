@@ -18,6 +18,7 @@ class DailyTaskTableViewCell: UITableViewCell {
     @IBOutlet weak var dailyTaskColorBar: UIView!
     @IBOutlet weak var dailyTaskGoal: UILabel!
     @IBOutlet weak var dailyTaskDate: UILabel!
+    @IBOutlet weak var dailyTaskGoalPriority: UILabel!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

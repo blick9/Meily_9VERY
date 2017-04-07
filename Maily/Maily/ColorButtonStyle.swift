@@ -19,7 +19,6 @@ class ColorButtonStyle: UIButton {
     }
     
     func toggle() {
-        print("toggle")
         self.isSelected = !self.isSelected
         self.alpha = self.isSelected ? 1 : 0.5
         self.layer.borderWidth = self.isSelected ? 3 : 0
