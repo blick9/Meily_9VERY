@@ -12,7 +12,7 @@ class GoalAddViewController: UIViewController, UIImagePickerControllerDelegate, 
     let dateFormatter = DateFormatter()
     let datePicker = UIDatePicker()
     var priorityValue : Goal.Priority = .low
-    var colorTagValue : Goal.Color = .blue
+    var colorTagValue : Goal.Color = .yellow
     var pictogramValue : Goal.Pictogram = .book
     
     @IBOutlet weak var datePickerTextField: UITextField!
