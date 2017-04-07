@@ -29,8 +29,8 @@
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="• Goal Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgH-0R-369">
-                                <rect key="frame" x="25" y="352" width="84" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="• BigGoal Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgH-0R-369">
+                                <rect key="frame" x="25" y="352" width="113" height="21"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="14"/>
                                 <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -237,7 +237,7 @@
                             <constraint firstItem="vKI-zH-xQc" firstAttribute="leading" secondItem="dYJ-eG-Toy" secondAttribute="leadingMargin" constant="9" id="Ysg-vT-SHt"/>
                             <constraint firstItem="6WQ-ZW-UcS" firstAttribute="centerX" secondItem="U03-ex-BlD" secondAttribute="centerX" id="bEx-XA-mI9"/>
                             <constraint firstItem="6WQ-ZW-UcS" firstAttribute="centerY" secondItem="U03-ex-BlD" secondAttribute="centerY" id="ir9-g8-epg"/>
-                            <constraint firstAttribute="trailing" secondItem="HgH-0R-369" secondAttribute="trailing" constant="266" id="jo7-eV-fax"/>
+                            <constraint firstAttribute="trailing" secondItem="HgH-0R-369" secondAttribute="trailing" constant="237" id="jo7-eV-fax"/>
                             <constraint firstItem="vKI-zH-xQc" firstAttribute="top" secondItem="ggq-J3-Any" secondAttribute="bottom" constant="27" id="lTM-Z7-0ff"/>
                             <constraint firstAttribute="trailing" secondItem="R1k-76-gP5" secondAttribute="trailing" constant="25" id="mIV-oc-LKz"/>
                             <constraint firstItem="ggq-J3-Any" firstAttribute="leading" secondItem="dYJ-eG-Toy" secondAttribute="leading" constant="38" id="muT-my-emN"/>

@@ -143,7 +143,7 @@ class GoalAddViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     func donePressed() {
         let selectedYear = datePicker.date
-        dateFormatter.dateFormat = "YYYY년 MM월 dd일(EE) 까지"
+        dateFormatter.dateFormat = "~ YYYY년 MM월 dd일(EE)"
         dateFormatter.locale = Locale(identifier: "ko_KR")
 //        dateFormatter.dateStyle = .full
 //        dateFormatter.timeStyle = .none
