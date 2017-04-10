@@ -10,8 +10,9 @@ import UIKit
 import Alamofire
 
 class LoginViewController: UIViewController {
-    var isActivate = (email : false, pw : false)
+    var isActivated = (email : false, pw : false)
     
+    // Make Underline
     var attrs = [NSFontAttributeName : UIFont.systemFont(ofSize: 25),
         NSForegroundColorAttributeName : UIColor.white,
         NSUnderlineStyleAttributeName : 1] as [String : Any]
@@ -24,49 +25,49 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var logInButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
     
-    
+    //TODO: Make Apply Filter Action
     override func viewDidLoad() {
         super.viewDidLoad()
-        setInitElement()
     
-        let buttonTitleStr = NSMutableAttributedString(string:"Sign Up", attributes:attrs)
+        let buttonTitleStr = NSMutableAttributedString(string: "Sign Up", attributes:attrs)
         attributedString.append(buttonTitleStr)
         signUpButton.setAttributedTitle(buttonTitleStr, for: .normal)
+        
+        statusButton(isActivated: false)
+        emailTextField.addTarget(self, action: #selector(emailValidate(email:)), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(passwordValidate(password:)), for: .editingChanged)
+        
 //        tempLoginSkipButton()
     }
     
-    
-    func setInitElement() {
-        statusButton(isActivate: false)
-        emailTextField.addTarget(self, action: #selector(emailValidate(email:)), for: .editingChanged)
-        passwordTextField.addTarget(self, action: #selector(passwordValidate(password:)), for: .editingChanged)
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK:- Validate Input TextField
     func emailValidate(email : UITextField) {
         if email.text?.isEmpty == true {
-            isActivate.email = false
+            isActivated.email = false
             checkEnableLogInButton()
         } else {
-            isActivate.email = true
+            isActivated.email = true
             checkEnableLogInButton()
         }
     }
     
     func passwordValidate(password : UITextField) {
         if password.text?.isEmpty == true {
-            isActivate.pw = false
+            isActivated.pw = false
             checkEnableLogInButton()
         } else {
-            isActivate.pw = true
+            isActivated.pw = true
             checkEnableLogInButton()
         }
     }
+    // MARK:-
 
+    
     @IBAction func logInActionButton(_ sender: Any) {
         let emailValue = emailTextField.text
         let passwordValue = passwordTextField.text
@@ -86,8 +87,6 @@ class LoginViewController: UIViewController {
                 self.successLogIn(LogInID: emailValue!, completion: { (string) in
                     DataBase.sharedInstance.setCurrentUser(email: emailValue!)
                 })
-//                let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//                appDelegate.window?.rootViewController = CustomTabBarController()
                 self.switchViewToMain()
             default:
                 break
@@ -111,13 +110,12 @@ class LoginViewController: UIViewController {
         }
     }
     
-    
     func presentAlert(title : String, message : String, isLogin : Bool) {
         if isLogin == false {
-            let existConfirmButtonAlert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            let existOkButtonAlert = UIAlertController(title: title, message: message, preferredStyle: .alert)
             let okButton = UIAlertAction(title: "확인", style: .default, handler: nil)
-            existConfirmButtonAlert.addAction(okButton)
-            present(existConfirmButtonAlert, animated: true, completion: nil)
+            existOkButtonAlert.addAction(okButton)
+            present(existOkButtonAlert, animated: true, completion: nil)
         } else {
             let normalAlert = UIAlertController(title: title, message: message, preferredStyle: .alert)
             present(normalAlert, animated: true, completion: {
@@ -127,15 +125,15 @@ class LoginViewController: UIViewController {
     }
     
     func checkEnableLogInButton() {
-        if isActivate.email == true && isActivate.pw == true {
-            statusButton(isActivate: true)
+        if isActivated.email == true && isActivated.pw == true {
+            statusButton(isActivated: true)
         } else {
-            statusButton(isActivate: false)
+            statusButton(isActivated: false)
         }
     }
     
-    func statusButton(isActivate: Bool) {
-        if isActivate == false {
+    func statusButton(isActivated: Bool) {
+        if isActivated == false {
             logInButton.isEnabled = false
             logInButton.isHighlighted = true
         } else {
@@ -149,6 +147,7 @@ class LoginViewController: UIViewController {
         appDelegate.window?.rootViewController = CustomTabBarController()
     }
     
+    //MARK: NOT USE
     func activityIndicator() {
         let activityIndicator = UIActivityIndicatorView()
         activityIndicator.center = self.view.center

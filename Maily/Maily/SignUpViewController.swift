@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 
 class SignUpViewController: UIViewController {
-    var isActivate = (email : false, pw : false, confimPw : false)
+    var isActivated = (email : false, pw : false, confimPw : false)
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -20,19 +20,15 @@ class SignUpViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        setInitElement()
-    }
-    
-    func setInitElement() {
-        statusButton(isActivate: false)
+        
+        statusButton(isActivated: false)
         emailTextField.addTarget(self, action: #selector(emailValidate(email:)), for: .editingChanged)
         passwordTextField.addTarget(self, action: #selector(passwordValidate(password:)), for: .editingChanged)
         confirmPasswordTextField.addTarget(self, action: #selector(confirmPasswordValidate(confirmPassword:)), for: .editingChanged)
     }
     
-    func statusButton(isActivate: Bool) {
-        if isActivate == false {
+    func statusButton(isActivated: Bool) {
+        if isActivated == false {
             signUpButton.isEnabled = false
             signUpButton.isHighlighted = true
         } else {
@@ -43,23 +39,24 @@ class SignUpViewController: UIViewController {
 
     func emailValidate(email: UITextField) {
         if let emailValue = email.text {
-            isActivate.email = emailValue.unicodeScalars.isEmpty ? false : true
-            indicateNotice(message: "")
+            isActivated.email = emailValue.unicodeScalars.isEmpty ? false : true
+            indicateNoticeLabel(message: "")
             print("http://127.0.0.1:8080/api/user/list/\(emailValue)")
             
             if emailValue.unicodeScalars.contains("@") == false || emailValue.unicodeScalars.contains(".") == false {
-                self.isActivate.email = false
-                self.indicateNotice(message: "이메일 형식이 올바르지 않습니다.")
+                self.isActivated.email = false
+                self.indicateNoticeLabel(message: "이메일 형식이 올바르지 않습니다.")
             } else {
+                // TODO: Get func 분리
                 Alamofire.request("http://127.0.0.1:8080/api/user/list/\(emailValue)").response { (Response) in
                     let statusCode = Response.response?.statusCode
                     switch statusCode! {
                     case 202 :
-                        self.isActivate.email = true
-                        self.indicateNotice(message: "가입할 수 있는 이메일입니다.")
+                        self.isActivated.email = true
+                        self.indicateNoticeLabel(message: "가입할 수 있는 이메일입니다.")
                     case 409 :
-                        self.isActivate.email = false
-                        self.indicateNotice(message: "이미 등록된 이메일입니다.")
+                        self.isActivated.email = false
+                        self.indicateNoticeLabel(message: "이미 등록된 이메일입니다.")
                     default:
                         break
                     }
@@ -69,39 +66,39 @@ class SignUpViewController: UIViewController {
     }
 
     func passwordValidate(password: UITextField) {
-        print(password.text)
-        let alphanumerics = CharacterSet.alphanumerics
-        let digits = CharacterSet.decimalDigits
+//        print(password.text)
+//        let alphanumerics = CharacterSet.alphanumerics
+//        let digits = CharacterSet.decimalDigits
         
 //        for char in (password.text?.unicodeScalars)! {
 //            print(char)
 //        }
         
-        if (password.text?.unicodeScalars.count)! >= 4 { // 4자리 이상, 영문 + 숫자 포함
-            isActivate.pw = true
-            indicateNotice(message: "")
+        if (password.text?.unicodeScalars.count)! >= 4 { // TODO: 4자리 이상, 영문 + 숫자 포함
+            isActivated.pw = true
+            indicateNoticeLabel(message: "")
         } else {
-            isActivate.pw = false
-            indicateNotice(message: "비밀번호는 4자리 이상으로 입력해주세요.")
+            isActivated.pw = false
+            indicateNoticeLabel(message: "비밀번호는 4자리 이상으로 입력해주세요.")
         }
     }
     
     func confirmPasswordValidate(confirmPassword: UITextField) {
         if confirmPassword.text == passwordTextField.text {
-            isActivate.confimPw = true
-            indicateNotice(message: "")
+            isActivated.confimPw = true
+            indicateNoticeLabel(message: "")
         } else {
-            isActivate.confimPw = false
-            indicateNotice(message: "비밀번호가 일치하지 않습니다.")
+            isActivated.confimPw = false
+            indicateNoticeLabel(message: "비밀번호가 일치하지 않습니다.")
         }
     }
     
-    func indicateNotice(message: String) {
+    func indicateNoticeLabel(message: String) {
         noticeLabel.text = message
-        if isActivate.email == true && isActivate.pw == true && isActivate.confimPw == true {
-            statusButton(isActivate: true)
+        if isActivated.email == true && isActivated.pw == true && isActivated.confimPw == true {
+            statusButton(isActivated: true)
         } else {
-            statusButton(isActivate: false)
+            statusButton(isActivated: false)
         }
     }
     
@@ -143,8 +140,8 @@ class SignUpViewController: UIViewController {
                 }
             })
         } else {
-            isActivate.confimPw = false
-            indicateNotice(message: "비밀번호가 일치하지 않습니다.")
+            isActivated.confimPw = false
+            indicateNoticeLabel(message: "비밀번호가 일치하지 않습니다.")
         }
     }
     
