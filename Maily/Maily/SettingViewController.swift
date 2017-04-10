@@ -35,7 +35,8 @@ class SettingViewController: UIViewController {
         let loginSB = UIStoryboard(name: "Login", bundle: nil)
         let loginVC = loginSB.instantiateViewController(withIdentifier: "LoginMain") as? LoginViewController
         appDelegate.window?.rootViewController = loginVC
-
+        // 로그아웃 시 노티 호출
+        emailLabel.text = "로그인 정보가 없습니다."
     }
 
     

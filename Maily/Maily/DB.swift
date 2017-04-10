@@ -87,6 +87,7 @@ class Goal {
     fileprivate var priority : Priority
     fileprivate var colorTag : Color
     fileprivate var pictogram : Pictogram
+    fileprivate var memoData : [DailyMemo]
     fileprivate var idValue : String
 
     init(image : UIImage, title : String, dueDate : Date, priority : Priority, colorTag : Color, pictogram : Pictogram, id : String) {
@@ -97,6 +98,11 @@ class Goal {
         self.colorTag = colorTag
         self.pictogram = pictogram
         self.idValue = id
+        self.memoData = [DailyMemo]()
+    }
+    
+    func saveDailyMemo(memoInstance : DailyMemo) {
+        memoData.append(memoInstance)
     }
 }
 

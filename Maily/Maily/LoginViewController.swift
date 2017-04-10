@@ -25,8 +25,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var logInButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
     
-    //TODO: Make Apply Filter Action
-    override func viewDidLoad() {
+     override func viewDidLoad() {
         super.viewDidLoad()
     
         let buttonTitleStr = NSMutableAttributedString(string: "Sign Up", attributes:attrs)
