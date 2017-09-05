@@ -24,7 +24,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var logInButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
-    
+        
      override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -157,7 +157,7 @@ class LoginViewController: UIViewController {
     }
     
     func tempLoginSkipButton() {
-        var skipButton = UIButton(frame: CGRect(x: self.view.center.x, y: 200, width: 100, height: 100))
+        let skipButton = UIButton(frame: CGRect(x: self.view.center.x, y: 200, width: 100, height: 100))
         skipButton.setTitle("Skip Button", for: .normal)
         skipButton.setTitleColor(UIColor.red, for: .normal)
         skipButton.addTarget(self, action: #selector(switchViewToMain), for: .touchUpInside)
